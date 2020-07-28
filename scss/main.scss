@@ -29,6 +29,11 @@ h6 {
     display: inline;
 }
 
+p, a {
+    margin-bottom: 1rem !important;
+    display: block;
+}
+
 section {
     padding: 15vh 0;
 }
