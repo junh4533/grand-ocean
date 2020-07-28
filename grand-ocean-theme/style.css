@@ -30,5 +30,12 @@ h6 {
 section {
   padding: 15vh 0; }
 
+#main {
+  padding: 20px;
+  box-sizing: border-box; }
+
+.woocommerce-loop-product__title {
+  color: red; }
+
 /* Mobile devices */
 /* Tablets */
