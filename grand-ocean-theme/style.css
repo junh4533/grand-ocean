@@ -40,5 +40,12 @@ section {
   #footer #footer-logo {
     width: 100%; }
 
+#main {
+  padding: 20px;
+  box-sizing: border-box; }
+
+.woocommerce-loop-product__title {
+  color: red; }
+
 /* Mobile devices */
 /* Tablets */

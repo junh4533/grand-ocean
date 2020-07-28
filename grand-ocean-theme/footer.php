@@ -8,7 +8,8 @@
                         <i class="fas fa-map-marker-alt"></i> Google Maps
                         <i class="fab fa-weixin"></i> WeChat
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT5btQn6gFp08LW8Vtqx728BKDWoDvI_OQ4Qg&usqp=CAU" alt="WeChat QR Code">
-                        <p>English</p> <p>中文</p>
+                        <p class="d-inline">English</p> 
+                        <p>中文</p>
                     </div>
                     <div class="col-6">
                         <p>Site Links</p>
