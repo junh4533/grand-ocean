@@ -36,6 +36,14 @@ p, a {
 section {
   padding: 15vh 0; }
 
+#navbar-logo {
+  width: 200px; }
+
+.navbar .nav-link {
+  color: #CBAF8A !important;
+  text-transform: uppercase;
+  font-weight: 700; }
+
 #footer {
   background: #222222;
   color: #C9C1B6; }
