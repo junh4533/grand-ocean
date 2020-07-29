@@ -90,7 +90,58 @@ p, a {
   box-sizing: border-box; }
 
 .woocommerce-loop-product__title {
-  color: red; }
+  color: #C8102E; }
+
+.woocommerce-Price-amount {
+  color: #222222; }
+
+.woocommerce ul.products li.product .button {
+  border-radius: 0;
+  background: #D3D3D3;
+  color: #222222;
+  transition: all 0.5s ease-out; }
+  .woocommerce ul.products li.product .button:hover {
+    color: white;
+    background: #C8102E; }
+
+.cart-icon {
+  width: fit-content; }
+
+.cart-contents {
+  position: relative;
+  display: flex !important;
+  align-items: center;
+  justify-content: center; }
+
+.cart-contents:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f07a";
+  font-size: 2rem;
+  color: #C8102E; }
+
+.cart-contents:hover {
+  text-decoration: none; }
+
+.cart-contents-count {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 15%;
+  right: -10%;
+  width: 1rem;
+  height: 1rem;
+  font-size: 0.75rem;
+  color: #D3D3D3;
+  background: #222222;
+  border-radius: 50%;
+  padding: 3px;
+  box-sizing: border-box; }
+
+.woocommerce ul.products li.product a p {
+  color: #222222;
+  font-size: 1rem; }
 
 /* Mobile devices */
 /* Tablets */
