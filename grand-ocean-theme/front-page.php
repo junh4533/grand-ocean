@@ -1,5 +1,10 @@
 <!-- Template for the home page -->
 
 <?php get_header();?>
- <h1>Hello world</h1>
+
+<section id="home">
+    <div class="tint"></div>
+    <div id="home-content"><h1>鲜</h1></div>
+</section>
+
 <?php get_footer();?>

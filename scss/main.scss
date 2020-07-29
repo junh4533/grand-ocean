@@ -35,15 +35,11 @@ p, a {
     display: block;
 }
 
-section {
-    padding: 15vh 0;
-}
-
 @import 'navbar';
 @import 'footer';
+@import 'front-page';
 @import 'contact-us';
 @import 'woocommerce';
-
 
 /* Mobile devices */
 @media only screen and (min-width: 480px) {

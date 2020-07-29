@@ -1,0 +1,28 @@
+#home {
+    width: 100%;
+    height: 100vh;
+    background: url('https://images5.alphacoders.com/909/thumb-1920-909997.jpg') center / cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .tint {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background: rgba(0, 0, 0, .5);
+    }
+
+    #home-content {
+        position: absolute;
+        z-index: 999;
+        color: white;
+        h1 {
+            font-size: 15rem;
+            font-family: 'Long Cang', cursive;
+            color: $gold;
+        }     
+    }
+}
