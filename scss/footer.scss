@@ -1,8 +1,33 @@
 #footer {
     background: $dark-gray;
-    color: $beige-gold;
+    color: $beige;
+
+    i {
+        font-size: 150%;
+    }
 
     #footer-logo {
         width: 100%;
     }
+
+    .footer-heading {
+        display: inline-block;
+        color: $beige-gold;
+        font-weight: 900;
+        border-bottom: solid 2px $beige-gold;
+        margin-bottom: 1em;
+    }
+
+    a {
+        color: $beige !important;
+    }
+
+    #footer-logo-section {
+        display: flex;
+        // align-items: stretch; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+      
 }
