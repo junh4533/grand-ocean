@@ -43,6 +43,7 @@
 
 .cart-icon {
     width: fit-content;
+    float: right;
 }
 
 .cart-contents {
@@ -86,44 +87,83 @@
     font-size: 1rem;
 }
 
-// .title
-// {
-// font-size: 11pt;
-// font-family: verdana;
-// font-weight: bold;
-// }
-// #main {
-//     margin-bottom: 50px;
-// }
-// a {
-//     color: #34393e;
-//     text-decoration: none;
-// }
-// .woocommerce ul.products li.product .price {
-//     color: #77a464;
-//     display: block;
-//     font-weight: 400;
-//     margin-bottom: .5em;
-//     font-size: 1.2em;
-// }
-// .woocommerce ul.products li.product .woocommerce-loop-product__title{
-//     font-size:1.5em;
-//     }
-// .woocommerce nav.woocommerce-pagination ul{
-//     border:none;
-//     }
-//     .woocommerce .woocommerce-pagination ul.page-numbers li, .woocommerce-page .woocommerce-pagination ul.page-numbers li {
-//     display: inline-block;
-//     margin: 5px;
-// }
-// .woocommerce nav.woocommerce-pagination ul li span.current {
-//     background: #337ab7;
-//     color: #fff;
-//     padding: 12px;
-// }
-// .woocommerce-pagination ul.page-numbers a.page-numbers {
-//     color: #444;
-//     padding: 12px;
-//     margin: 0px;
-//     background: #ddd;
-// }
+.woocommerce img {
+    display: block;
+}
+
+// CART MODAL
+.modal-dialog {
+    width: 80%;
+    max-width: 900px;
+}
+
+.modal-content {
+    border-radius: 0;
+}
+
+.modal-header {
+    padding: 5px 15px;
+}
+
+.modal-footer {
+    border: none;
+
+    button {
+        background-color: $light-gray;
+        border-radius: 4;
+        &:focus {
+            box-shadow: none;
+        }
+        &:hover {
+            color: $dark-gray;
+        }
+    }
+}
+
+// PRODUCT IMAGE FIELD
+.woocommerce table.cart img {
+    max-width: 100px;
+}
+ // PRODUCT NAME FIELD
+.woocommerce table.shop_table td { 
+    padding: 5px 10px;
+    a {
+        color: $raspberry-red;
+        margin-bottom: 0 !important;
+    }
+}
+
+// REMOVE PRODUCT
+.woocommerce a.remove {
+    color: $raspberry-red;
+    line-height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.25s ease-out;
+    &:hover {
+        background: $raspberry-red;
+        color: $light-gray;
+    }
+}
+
+// CART TOTAL SECTION
+.woocommerce .cart-collaterals .cart_totals {
+    float: none;
+    h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
+
+// CHECKOUT BUTTON
+.woocommerce a.button.alt {
+    background-color: $light-gray;
+    color: $dark-gray;
+    border-radius: 0;
+    transition: all 0.5s ease-out;
+    &:hover {
+        background-color: $raspberry-red;
+        color: $light-gray;
+    }
+}
