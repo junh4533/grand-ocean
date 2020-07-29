@@ -62,7 +62,7 @@ function woo_cart_but() {
         $cart_url = wc_get_cart_url();  // Set Cart URL
   
         ?>
-        <div class="cart-icon"><a class="menu-item cart-contents" href="<?php echo $cart_url; ?>" title="My Basket">
+        <div class="cart-icon"><a class="menu-item cart-contents" href="" data-toggle="modal" data-target="#myModal" title="My Basket">
 	    <?php
         if ( $cart_count > 0 ) {
        ?>
@@ -77,6 +77,7 @@ function woo_cart_but() {
  
 }
 
+// ADD DESCRIPTIONS TO PRODUCTS
 add_filter( 'woocommerce_add_to_cart_fragments', 'woo_cart_but_count' );
 /**
  * Add AJAX Shortcode when cart contents update
@@ -89,7 +90,7 @@ function woo_cart_but_count( $fragments ) {
     $cart_url = wc_get_cart_url();
     
     ?>
-    <a class="cart-contents menu-item" href="<?php echo $cart_url; ?>" title="<?php _e( 'View your shopping cart' ); ?>">
+    <a class="cart-contents menu-item test" href="" data-toggle="modal" data-target="#myModal"  title="<?php _e( 'View your shopping cart' ); ?>">
 	<?php
     if ( $cart_count > 0 ) {
         ?>
@@ -108,3 +109,19 @@ function cloudways_short_des_product() {
     echo the_excerpt();
 }
 add_action( 'woocommerce_after_shop_loop_item_title', 'cloudways_short_des_product', 40 );
+
+// PREVENTS ACCESS TO PRODUCT PAGE VIA URL
+function prevent_access_to_product_page(){
+    global $post;
+    if ( is_product() ) {
+        global $wp_query;
+        $wp_query->set_404();
+        status_header(404);
+    }
+}
+
+add_action('wp','prevent_access_to_product_page');
+
+// REMOVE ABILITY TO CLICK ON PRODUCT
+remove_action( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10 );
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5 );
