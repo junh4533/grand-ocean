@@ -4,9 +4,9 @@
         <div class="row">
             <div class="col-6 col-lg-3 order-lg-2">
                 <p class="footer-heading">Site Links</p>
-                <a href="">Home</a>
-                <a href="">Products</a>
-                <a href="">Contacts</a>
+                <a href="<?php echo get_site_url(); ?>">Home</a>
+                <a href="<?php echo get_site_url(); ?>/#products">Products</a>
+                <a href="<?php echo get_site_url(); ?>/#products">Contact</a>
             </div>
 
             <div class="col-6 col-lg-3 order-lg-3">
@@ -20,10 +20,9 @@
                 <img class="my-3 img-fluid"
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT5btQn6gFp08LW8Vtqx728BKDWoDvI_OQ4Qg&usqp=CAU"
                     alt="WeChat QR Code"> <br>
-                <i class="fas fa-map-marker-alt my-3 mr-2"></i>
                 <a class="d-inline"
                     href="https://www.google.com/maps?q=35-20+College+Point+Blvd+Flushing,+NY+11354&rlz=1C1GCEA_enUS885US885&um=1&ie=UTF-8&sa=X&ved=2ahUKEwiPk6vaivPqAhXsmOAKHVwWBdYQ_AUoAXoECA0QAw"
-                    target="_blank">Google Maps</a>
+                    target="_blank"> <i class="fas fa-map-marker-alt my-3 mr-2"></i>Google Maps</a>
                 <br>
                 <i class="fab fa-weixin my-3 mr-2"></i>
                 <p class="d-inline">WeChat: Lisa307266</p>

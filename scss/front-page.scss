@@ -21,11 +21,17 @@
 }
 
 #reservation {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
 
     .form-group {
         margin-right: 1em;
+        .required-label {
+            &:after {
+                content:" *";
+                color: black;
+              }
+        }
     }
 
     .container-fluid,
