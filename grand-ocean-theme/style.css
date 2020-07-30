@@ -92,6 +92,24 @@ p, a {
       font-family: 'Long Cang', cursive;
       color: #D8C777; }
 
+#contact-us {
+  width: 100%;
+  height: 100vh;
+  background: white;
+  justify-content: center;
+  align-items: center;
+  display: flex; }
+  #contact-us .column {
+    float: left;
+    width: 50%; }
+  #contact-us h1, #contact-us h4 {
+    font-family: 'Lato', sans-serif; }
+  #contact-us .red {
+    color: #d94848 !important;
+    display: block;
+    padding-right: 3rem;
+    margin-bottom: 2rem !important; }
+
 #reservation {
   min-height: 100vh;
   width: 100%; }
@@ -145,6 +163,14 @@ p, a {
   #reservation .form-group {
     width: 30%;
     display: inline-block; }
+
+#contact-us {
+  background: white; }
+  #contact-us .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; }
 
 #main {
   padding: 20px;
