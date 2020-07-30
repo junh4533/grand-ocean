@@ -260,5 +260,14 @@ p, a {
     background-color: #C8102E;
     color: #D3D3D3; }
 
+.out-of-stock {
+  color: #C8102E;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.product-disabled {
+  background-color: #D3D3D3 !important;
+  color: #222222 !important; }
+
 /* Mobile devices */
 /* Tablets */

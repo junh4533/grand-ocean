@@ -37,7 +37,7 @@ add_action('wp_enqueue_scripts', 'load_stylesheets');
 add_action('wp_enqueue_scripts', 'load_scripts');
 
 /**
- * Override loop template and show quantities next to add to cart buttons
+ * Override loop template and show quantities next to add to cart buttons, if not in stock it will display a custom message
  */
 add_filter( 'woocommerce_loop_add_to_cart_link', 'quantity_inputs_for_woocommerce_loop_add_to_cart_link', 10, 2 );
 function quantity_inputs_for_woocommerce_loop_add_to_cart_link( $html, $product ) {
@@ -46,7 +46,12 @@ function quantity_inputs_for_woocommerce_loop_add_to_cart_link( $html, $product 
 		$html .= woocommerce_quantity_input( array(), $product, false );
 		$html .= '<button type="submit" class="button alt">' . esc_html( $product->add_to_cart_text() ) . '</button>';
 		$html .= '</form>';
-	}
+	} else if ($product && !($product->is_in_stock())) {
+		$html = '<form action="' . esc_url( $product->add_to_cart_url() ) . '" class="cart" method="post" enctype="multipart/form-data">';
+		$html .= '<div class="out-of-stock">Out of Stock</div>';
+		$html .= '<button type="submit" class="button alt product-disabled" disabled>' . esc_html( $product->add_to_cart_text() ) . '</button>';
+		$html .= '</form>';
+    }
 	return $html;
 }
 
@@ -113,11 +118,11 @@ add_action( 'woocommerce_after_shop_loop_item_title', 'cloudways_short_des_produ
 // PREVENTS ACCESS TO PRODUCT PAGE VIA URL
 function prevent_access_to_product_page(){
     global $post;
-    // if ( is_product() ) {
-    //     global $wp_query;
-    //     $wp_query->set_404();
-    //     status_header(404);
-    // }
+    if ( is_product() ) {
+        global $wp_query;
+        $wp_query->set_404();
+        status_header(404);
+    }
 }
 
 add_action('wp','prevent_access_to_product_page');
@@ -125,3 +130,9 @@ add_action('wp','prevent_access_to_product_page');
 // REMOVE ABILITY TO CLICK ON PRODUCT
 remove_action( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10 );
 remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5 );
+
+// To change add to cart text on product archives(Collection) page
+add_filter( 'woocommerce_product_add_to_cart_text', 'woocommerce_custom_product_add_to_cart_text' );  
+function woocommerce_custom_product_add_to_cart_text() {
+    return __( 'Add To Cart', 'woocommerce' );
+}
