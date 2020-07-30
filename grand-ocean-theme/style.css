@@ -42,6 +42,10 @@ p, a {
   z-index: 0;
   background: rgba(0, 0, 0, 0.5); }
 
+.btn {
+  background: #CBAF8A;
+  border-radius: 0; }
+
 #navbar-logo {
   width: 300px; }
 
@@ -91,21 +95,36 @@ p, a {
 #reservation {
   height: 100vh;
   width: 100%; }
+  #reservation .form-group {
+    margin-right: 1em; }
   #reservation .container-fluid,
   #reservation .row {
     padding: 0;
     margin: 0; }
   #reservation #order-summary {
-    background: url("https://as1.ftcdn.net/jpg/02/73/25/32/500_F_273253210_z589jBpoLnU8g0Xe7wL2UyGraHuaScCH.jpg") right/cover;
     color: white; }
+    #reservation #order-summary .bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("https://as1.ftcdn.net/jpg/02/73/25/32/500_F_273253210_z589jBpoLnU8g0Xe7wL2UyGraHuaScCH.jpg") right/cover;
+      filter: blur(2px); }
     #reservation #order-summary img {
       max-width: 100%; }
     #reservation #order-summary .item-price {
       font-size: 150%; }
     #reservation #order-summary .total-price {
-      font-size: 200%;
+      font-size: 175%;
       font-weight: 700;
       color: #D8C777; }
+    #reservation #order-summary .final-price {
+      font-size: 225%;
+      font-weight: 700;
+      color: #D8C777; }
+    #reservation #order-summary hr {
+      background: white; }
   #reservation .circle {
     display: flex;
     justify-content: center;

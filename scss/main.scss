@@ -45,6 +45,11 @@ p, a {
     background: rgba(0, 0, 0, .5);
 }
 
+.btn {
+    background: $beige-gold;
+    border-radius: 0;
+}
+
 @import 'navbar';
 @import 'footer';
 @import 'front-page';
