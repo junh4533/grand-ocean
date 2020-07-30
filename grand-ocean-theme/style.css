@@ -109,6 +109,10 @@ p, a {
     display: block;
     padding-right: 3rem;
     margin-bottom: 2rem !important; }
+  #contact-us #map {
+    text-align: left !important;
+    display: block;
+    width: 50%; }
 
 #reservation {
   min-height: 100vh;
