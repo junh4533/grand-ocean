@@ -33,6 +33,15 @@ p, a {
   margin-bottom: 1rem !important;
   display: block; }
 
+.tint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0.5); }
+
 #navbar-logo {
   width: 300px; }
 
@@ -70,12 +79,6 @@ p, a {
   display: flex;
   justify-content: center;
   align-items: center; }
-  #home .tint {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    background: rgba(0, 0, 0, 0.5); }
   #home #home-content {
     position: absolute;
     z-index: 999;
@@ -84,6 +87,42 @@ p, a {
       font-size: 15rem;
       font-family: 'Long Cang', cursive;
       color: #D8C777; }
+
+#reservation {
+  height: 100vh;
+  width: 100%; }
+  #reservation .container-fluid,
+  #reservation .row {
+    padding: 0;
+    margin: 0; }
+  #reservation #order-summary {
+    background: url("https://as1.ftcdn.net/jpg/02/73/25/32/500_F_273253210_z589jBpoLnU8g0Xe7wL2UyGraHuaScCH.jpg") right/cover;
+    color: white; }
+    #reservation #order-summary img {
+      max-width: 100%; }
+    #reservation #order-summary .item-price {
+      font-size: 150%; }
+    #reservation #order-summary .total-price {
+      font-size: 200%;
+      font-weight: 700;
+      color: #D8C777; }
+  #reservation .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #C8102E;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%; }
+    #reservation .circle p {
+      display: inline;
+      text-align: center;
+      margin: 0 !important;
+      color: white;
+      font-weight: bold; }
+  #reservation .form-group {
+    width: 30%;
+    display: inline-block; }
 
 #main {
   padding: 20px;

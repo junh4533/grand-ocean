@@ -113,11 +113,11 @@ add_action( 'woocommerce_after_shop_loop_item_title', 'cloudways_short_des_produ
 // PREVENTS ACCESS TO PRODUCT PAGE VIA URL
 function prevent_access_to_product_page(){
     global $post;
-    if ( is_product() ) {
-        global $wp_query;
-        $wp_query->set_404();
-        status_header(404);
-    }
+    // if ( is_product() ) {
+    //     global $wp_query;
+    //     $wp_query->set_404();
+    //     status_header(404);
+    // }
 }
 
 add_action('wp','prevent_access_to_product_page');
