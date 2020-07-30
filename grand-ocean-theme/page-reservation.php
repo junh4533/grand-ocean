@@ -19,12 +19,12 @@
 
                     <form action="">
                         <div class="form-group w-25">
-                            <label for="email">Phone Number</label>
-                            <input type="email" class="form-control" id="email">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone">
                         </div>
                         <div class="form-group w-25">
-                            <label for="pwd">WeChat ID</label>
-                            <input type="password" class="form-control" id="pwd">
+                            <label for="wechat">WeChat ID</label>
+                            <input type="text" class="form-control" id="wechat">
                         </div>
                     </form>
 
@@ -38,12 +38,12 @@
 
                     <form action="">
                         <div class="form-group w-75">
-                            <label for="email">Street</label>
-                            <input type="email" class="form-control" id="email">
+                            <label for="street">Street</label>
+                            <input type="text" class="form-control" id="street">
                         </div>
                         <div class="form-group w-25">
-                            <label for="pwd">State</label>
-                            <input type="password" class="form-control" id="pwd">
+                            <label for="text">State</label>
+                            <input type="text" class="form-control" id="pwd">
                         </div>
                         <div class="form-group w-25">
                             <label for="pwd">Zip Code</label>
