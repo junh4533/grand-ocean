@@ -1,11 +1,19 @@
-#navbar-logo {
-    width: 300px;
-}
+
 
 .navbar {
+    height:10vh;
+    padding: 0 1rem;
+    #navbar-logo {
+        width: 175px;
+    }
+
+    .navbar-brand {
+        margin: 0;
+    }
     .nav-link {
         color: $beige-gold !important;
         text-transform: uppercase;
         font-weight: 700;
     }
+
 }
