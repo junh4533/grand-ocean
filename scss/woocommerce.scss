@@ -167,3 +167,15 @@
         color: $light-gray;
     }
 }
+
+// OUT OF STOCK TEXT
+.out-of-stock {
+    color: $raspberry-red;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.product-disabled {
+    background-color: $light-gray !important;
+    color: $dark-gray !important;
+}

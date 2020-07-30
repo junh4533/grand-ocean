@@ -14,9 +14,10 @@
 <body <?php body_class(); //displays class names for the body ?>>
 
     <nav class="navbar navbar-expand-md navbar-light fixed-top">
+        <div class="tint" style="z-index: -1;"></div>
         <!-- Brand -->
         <a class="navbar-brand" href="<?php echo get_site_url(); ?>">
-            <img id="navbar-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-white.png" alt="Logo">
+            <img id="navbar-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-glow.png" alt="Logo">
         </a>
 
         <!-- Toggler/collapsibe Button -->

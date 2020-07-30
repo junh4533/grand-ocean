@@ -8,7 +8,7 @@
         <form class="h-100 w-100" action="">
             <div class="row h-100 w-100">
 
-                <div class="col-12 col-lg-7 d-flex align-items-center justify-content-center">
+                <div class="col-12 col-lg-7 py-5 d-flex align-items-center justify-content-center">
                     <div class="w-75">
                         <h1 class="mb-5">Reservation</h1>
 
@@ -123,7 +123,7 @@
                             <h3 class="d-inline">Details</h3>
                         </div>
                         <hr>
-                        <div class="form-group">
+                        <div class="form-group w-75">
                             <label for="comment">Comments</label>
                             <textarea class="form-control" rows="3" id="comment"></textarea>
                         </div>
@@ -131,7 +131,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-lg-5 d-flex align-items-center justify-content-center flex-column" id="order-summary">
+                <div class="col-12 col-lg-5 py-5 d-flex flex-column" id="order-summary">
                     <div class="bg"></div>
                     <div class="tint"></div>
 
