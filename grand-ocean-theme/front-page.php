@@ -31,29 +31,20 @@
     </div>
 </section>
 
-<section id="contact-us">
+<section id="contact-us" style="background: #E6E6E6">
     <div class="container">
-        <div class="column">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seafood-place.jpg" alt="Exterior of Grand Ocean Seafood Wholesale Shop" class="center">
-        </div>
-        <div class="column">
-            <h1>About Us</h1>
-            <br>
-            <p>We are an immigrant-owned seafood wholsale store located on College Point Blvd.</p>
-            <!-- <div class=row>
-                <div class=col1>
-                    <a class="red" href="<?php echo get_site_url(); ?>/#footer"><i class="fab fa-weixin"></i></a>
-                    <a class="red" href="tel:347-532-0987"><i class="fas fa-phone"></i></a>
+        <div class="row">
+            <div class="column">
+                <h1>About Us</h1>
+                <br>
+                <p>We are an immigrant-owned seafood wholsale store located on College Point Blvd.</p>
+            </div>
+            <div class="column">
+                <div class="m-5">
+                    <img class="about-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/seafood-place.jpg" alt="Exterior of Grand Ocean Seafood Wholesale Shop" class="center">
                 </div>
-                <div class=col2>
-                    <h4>Lisa307266</h4>
-                    <br>
-                    <br>
-                    <h4>(347) 532-0987</h4>
-                </div>
-            </div> 
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/map.jpg" alt="Grand Ocean Seafood Wholesale Shop on Google Maps" id="map"> -->
-        <div>
+            </div>
+         </div>
     </div>
 </section>
 
