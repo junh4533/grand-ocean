@@ -1,136 +1,69 @@
 #confirmation {
     width: 100%;
     height: 100vh;
-    background: url('https://images5.alphacoders.com/909/thumb-1920-909997.jpg') center / cover no-repeat;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://images5.alphacoders.com/909/thumb-1920-909997.jpg') center / cover no-repeat;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    a, #white{
+        color: white; 
+    } 
+    
+    #icon{
+        color: red;
+    }
 
-    // #home-content {
-    //     position: absolute;
-    //     z-index: 999;
-    //     color: white;
+    a{
+        text-align: center;
+    }
 
-    //     h1 {
-    //         font-size: 15rem;
-    //         font-family: 'Long Cang', cursive;
-    //         color: $gold;
-    //     }
-    // }
+    #receipt{
+        text-align: center;
+        background-color: white;
+    }
+
+    #number{
+        color: goldenrod;
+    }
+
+    p{
+        margin-bottom: 0;
+        margin: 10px;
+    }
+
+    #row2{
+        border-top: dashed;
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    #row3{
+        border-bottom: dashed;
+        padding-bottom: 60px;
+        margin: 0;
+    }
+    
+    #row4{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    h2{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .col-12, #white{
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) )
+    }
+
+    #white{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 15px;
+        justify-content: center;
+    }
 }
 
-// #contact-us{
-//     background: white;
-//     .center{
-//         display: block;
-//         margin-left: auto;
-//         margin-right: auto;
-//         width: 50%;
-//     }
-// }
-
-// #contact-us{
-//     width: 100%;
-//     height: 100vh;
-//     background: white;
-//     justify-content: center;
-//     align-items: center;
-//     display: flex;
-//     .column {
-//         float: left;
-//         width: 50%;
-//       }
-//     h1, h4{
-//         font-family: 'Lato', sans-serif;
-//     }
-//     .red{
-//     color: rgb(217,72,72) !important;
-//     display: block;
-//     padding-right: 3rem;
-//     margin-bottom: 2rem !important;
-//     }
-// }
-
-// #reservation {
-//     min-height: 100vh;
-//     width: 100%;
-
-//     .form-group {
-//         margin-right: 1em;
-//         .required-label {
-//             &:after {
-//                 content:" *";
-//                 color: black;
-//               }
-//         }
-//     }
-
-//     .container-fluid,
-//     .row {
-//         padding: 0;
-//         margin: 0;
-//     }
-
-//     #order-summary {
-//         color: white;
-
-//         .bg {
-//             position: absolute;
-//             top: 0;
-//             left: 0;
-//             width: 100%;
-//             height: 100%;
-//             background: url('https://as1.ftcdn.net/jpg/02/73/25/32/500_F_273253210_z589jBpoLnU8g0Xe7wL2UyGraHuaScCH.jpg') right / cover;
-//             filter: blur(2px);
-//         }
-
-//         img {
-//             max-width: 100%;
-//         }
-
-//         .item-price {
-//             font-size: 150%;
-//         }
-
-//         .total-price {
-//             font-size: 175%;
-//             font-weight: 700;
-//             color: $gold;
-//         }
-
-//         .final-price {
-//             font-size: 225%;
-//             font-weight: 700;
-//             color: $gold;
-//         }
-
-//         hr {
-//             background: white;
-//         }
-//     }
-
-//     .circle {
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         background: $raspberry-red;
-//         height: 50px;
-//         width: 50px;
-//         border-radius: 50%;
-
-//         p {
-//             display: inline;
-//             text-align: center;
-//             margin: 0 !important;
-//             color: white;
-//             font-weight: bold;
-//         }
-//     }
-
-//     .form-group {
-//         width: 30%;
-//         display: inline-block;
-//     }
-
-// }
