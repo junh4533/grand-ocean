@@ -306,5 +306,14 @@ p, a {
   background-color: #D3D3D3 !important;
   color: #222222 !important; }
 
+#confirmation {
+  width: 100%;
+  height: 100vh;
+  background: url("https://images5.alphacoders.com/909/thumb-1920-909997.jpg") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 /* Mobile devices */
 /* Tablets */
