@@ -12,14 +12,14 @@
             <!-- Modal content-->
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Cart</h5>
+                <h5 class="modal-title">我的购物车</h5>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
                 <?php echo do_shortcode("[woocommerce_cart]"); ?>
             </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Return to Products</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
             </div>
             </div>
             
@@ -37,7 +37,7 @@
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seafood-place.jpg" alt="Exterior of Grand Ocean Seafood Wholesale Shop" class="center">
         </div>
         <div class="column">
-            <h1>About Us</h1>
+            <h1>我们的故事</h1>
             <br>
             <p>We are an immigrant-owned seafood wholsale store located on College Point Blvd.</p>
             <!-- <div class=row>

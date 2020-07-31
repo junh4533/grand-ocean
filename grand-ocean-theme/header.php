@@ -13,7 +13,7 @@
 
 <body <?php body_class(); //displays class names for the body ?>>
 
-    <nav class="navbar navbar-expand-md navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="tint" style="z-index: -1;"></div>
         <!-- Brand -->
         <a class="navbar-brand" href="<?php echo get_site_url(); ?>">
@@ -28,27 +28,35 @@
 
         <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto d-flex align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo get_site_url(); ?>/#home">Home</a>
+                    <a class="nav-link" href="#home">主页</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo get_site_url(); ?>/#products">Products</a>
+                    <a class="nav-link" href="#products">今天的精选</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo get_site_url(); ?>/#contact">Contact</a>
+                    <a class="nav-link" href="#footer">联系</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="tel:347-532-0987"><i class="fas fa-phone"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"
-                        href="https://www.google.com/maps?q=35-20+College+Point+Blvd+Flushing,+NY+11354&rlz=1C1GCEA_enUS885US885&um=1&ie=UTF-8&sa=X&ved=2ahUKEwiPk6vaivPqAhXsmOAKHVwWBdYQ_AUoAXoECA0QAw"
-                        target="_blank"><i class="fas fa-map-marker-alt"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo get_site_url(); ?>/#footer"><i class="fab fa-weixin"></i></a>
-                </li>
+                <div class="nav-icon-row">
+                    <li class="nav-item">
+                        <a class="nav-link" href="tel:347-532-0987"><i class="fas fa-phone"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="https://www.google.com/maps?q=35-20+College+Point+Blvd+Flushing,+NY+11354&rlz=1C1GCEA_enUS885US885&um=1&ie=UTF-8&sa=X&ved=2ahUKEwiPk6vaivPqAhXsmOAKHVwWBdYQ_AUoAXoECA0QAw"
+                            target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo get_site_url(); ?>/#footer"><i
+                                class="fab fa-weixin"></i></a>
+                    </li>
+                </div>
+                <!-- <li class="nav-item">
+                    <a class="nav-link text-center" href="">中文 <img class="ml-2 ml-lg-0 mt-lg-2" id="flag-icon"
+                            src="<?php echo get_template_directory_uri(); ?>/assets/images/chinese-flag.jpg"
+                            alt="Chinese Flag"></a>
+                </li> -->
             </ul>
         </div>
     </nav>

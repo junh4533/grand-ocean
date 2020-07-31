@@ -51,6 +51,19 @@ p, a {
     border-radius: 0;
 }
 
+// translation icon 
+#trp-floater-ls {
+    background: $raspberry-red;
+    left: initial;
+    right: 2%;
+}
+
+#trp-floater-ls-language-list{
+    a:hover {
+        background: $beige-gold;
+    }   
+}
+
 @import 'navbar';
 @import 'footer';
 @import 'front-page';
