@@ -6,10 +6,6 @@
         font-size: 150%;
     }
 
-    #footer-logo {
-        width: 100%;
-    }
-
     .footer-heading {
         display: inline-block;
         color: $beige-gold;
@@ -28,6 +24,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-      
+        .footer-logo {
+            width: 80%;
+        }
+    }   
 }

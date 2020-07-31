@@ -7,6 +7,14 @@
                 <a href="<?php echo get_site_url(); ?>">Home</a>
                 <a href="<?php echo get_site_url(); ?>/#products">Products</a>
                 <a href="<?php echo get_site_url(); ?>/#products">Contact</a>
+                <!--<br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p>©2014-2020 All Rights Reserved 盛宴海鲜</p> -->
             </div>
 
             <div class="col-6 col-lg-3 order-lg-3">
@@ -20,22 +28,28 @@
                 <img class="my-3 img-fluid"
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT5btQn6gFp08LW8Vtqx728BKDWoDvI_OQ4Qg&usqp=CAU"
                     alt="WeChat QR Code"> <br>
-                <a class="d-inline"
+                <!--<a class="d-inline"
                     href="https://www.google.com/maps?q=35-20+College+Point+Blvd+Flushing,+NY+11354&rlz=1C1GCEA_enUS885US885&um=1&ie=UTF-8&sa=X&ved=2ahUKEwiPk6vaivPqAhXsmOAKHVwWBdYQ_AUoAXoECA0QAw"
-                    target="_blank"> <i class="fas fa-map-marker-alt my-3 mr-2"></i>Google Maps</a>
-                <br>
+                    target="_blank"> <i class="fas fa-map-marker-alt my-3 mr-2"></i>Google Maps</a> -->
+                <br> 
                 <i class="fab fa-weixin my-3 mr-2"></i>
                 <p class="d-inline">WeChat: Lisa307266</p>
                 <br>
                 <a class="d-inline" href="">English</a>
                 <p class="d-inline mx-1">•</p>
                 <a class="d-inline" href="">中文</a>
+                <br>
+                <p>©2014-2020 All Rights Reserved 盛宴海鲜</p> 
             </div>
             <div class="col-6 col-lg-3 order-lg-4" id="footer-logo-section">
-                <img id="footer-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-white.png"
-                    alt="Logo White">
+            <a href="https://www.google.com/maps?q=35-20+College+Point+Blvd+Flushing,+NY+11354&rlz=1C1GCEA_enUS885US885&um=1&ie=UTF-8&sa=X&ved=2ahUKEwiPk6vaivPqAhXsmOAKHVwWBdYQ_AUoAXoECA0QAw">
+                <img class="mb-3 img-fluid" 
+                src=" <?php echo get_template_directory_uri(); ?>/assets/images/ft-map.jpg" 
+                alt="Grand Ocean Seafood Wholesale Shop on Google Maps"> 
+            </a>
+                <img class="img-fluid" class="footer-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-white.png"
+                    alt="Logo White" style="width: 80%;">
                 <br>
-                <p>©2014-2020 All Rights Reserved 盛宴海鲜</p>
             </div>
 
         </div>
