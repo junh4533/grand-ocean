@@ -136,3 +136,11 @@ add_filter( 'woocommerce_product_add_to_cart_text', 'woocommerce_custom_product_
 function woocommerce_custom_product_add_to_cart_text() {
     return __( 'Add To Cart', 'woocommerce' );
 }
+
+// Change URL of checkout button
+add_filter( 'woocommerce_get_checkout_url', 'my_change_checkout_url', 30 );
+
+function my_change_checkout_url( $url ) {
+   $url = "your checkout url ";
+   return $url;
+}
