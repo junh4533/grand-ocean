@@ -109,11 +109,17 @@ p, a {
     width: 50%; }
   #contact-us h1, #contact-us h4 {
     font-family: 'Lato', sans-serif; }
+  #contact-us p {
+    font-family: 'Lato', sans-serif; }
   #contact-us .red {
     color: #d94848 !important;
     display: block;
     padding-right: 3rem;
     margin-bottom: 2rem !important; }
+  #contact-us #map {
+    text-align: left !important;
+    display: block;
+    width: 50%; }
 
 #reservation {
   min-height: 100vh;
