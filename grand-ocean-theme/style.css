@@ -58,6 +58,8 @@ p, a {
     color: #CBAF8A !important;
     text-transform: uppercase;
     font-weight: 700; }
+  .navbar #hamburger-menu {
+    color: #D8C777; }
 
 #footer {
   background: #222222;
