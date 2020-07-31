@@ -64,8 +64,6 @@ p, a {
   color: #C9C1B6; }
   #footer i {
     font-size: 150%; }
-  #footer #footer-logo {
-    width: 100%; }
   #footer .footer-heading {
     display: inline-block;
     color: #CBAF8A;
@@ -79,6 +77,8 @@ p, a {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+    #footer #footer-logo-section .footer-logo {
+      width: 80%; }
 
 #home {
   width: 100%;
@@ -116,10 +116,6 @@ p, a {
     display: block;
     padding-right: 3rem;
     margin-bottom: 2rem !important; }
-  #contact-us #map {
-    text-align: left !important;
-    display: block;
-    width: 50%; }
 
 #reservation {
   min-height: 100vh;
@@ -309,6 +305,15 @@ p, a {
 .product-disabled {
   background-color: #D3D3D3 !important;
   color: #222222 !important; }
+
+#confirmation {
+  width: 100%;
+  height: 100vh;
+  background: url("https://images5.alphacoders.com/909/thumb-1920-909997.jpg") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 /* Mobile devices */
 /* Tablets */
