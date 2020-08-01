@@ -137,10 +137,23 @@ function woocommerce_custom_product_add_to_cart_text() {
     return __( 'Add To Cart', 'woocommerce' );
 }
 
-// Change URL of checkout button
-add_filter( 'woocommerce_get_checkout_url', 'my_change_checkout_url', 30 );
+// Place Order on Checkout button text
+add_filter( 'woocommerce_order_button_text', 'misha_custom_button_text' );
+ 
+function misha_custom_button_text( $button_text ) {
+   return 'Reserve'; 
+}
 
-function my_change_checkout_url( $url ) {
-   $url = "your checkout url ";
-   return $url;
+/**
+ * Change the default state and country on the checkout page
+ */
+add_filter( 'default_checkout_billing_country', 'change_default_checkout_country' );
+add_filter( 'default_checkout_billing_state', 'change_default_checkout_state' );
+
+function change_default_checkout_country() {
+  return 'US'; // country code
+}
+
+function change_default_checkout_state() {
+  return 'NY'; // state code
 }
