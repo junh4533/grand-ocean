@@ -4,6 +4,10 @@
 <?php get_header();?>
 
 <section id="reservation">
+    <?php echo do_shortcode("[woocommerce_checkout]") ?>
+</div>
+
+<!-- <section id="reservation">
     <div class="container-fluid h-100 w-100">
         <form class="h-100 w-100" action="">
             <div class="row h-100 w-100">
@@ -47,8 +51,6 @@
                             <input type="text" class="form-control" id="city" required>
                         </div>
                         <div class="form-group w-25">
-                            <!-- <label for="state">State</label> -->
-                            <!-- <input type="text" class="form-control" id="state" required> -->
                             <label for="state" class="required-label">State</label>
                             <select class="form-control" id="state" name="state">
                                 <option value="" selected>Please Select</option>
@@ -179,6 +181,6 @@
             </div>
         </form>
     </div>
-</section>
+</section> -->
 
 <?php get_footer();?>
