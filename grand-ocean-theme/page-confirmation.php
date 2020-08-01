@@ -25,6 +25,11 @@
                     <p><h5>Total</h5> &nbsp;&nbsp;&nbsp; <h4 id='number'>$599.94</h4></p>
                 </div>
             </div>
+            <div class="col">
+                <strong>You MUST call/WeChat message to CONFIRM the reservation</strong>
+                <br>
+                <strong>Otherwise your reservation will NOT be placed</strong>
+                <br>
 
             <div class='col-2'>
 

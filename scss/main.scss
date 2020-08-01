@@ -31,7 +31,8 @@ h6 {
     display: inline;
 }
 
-p, a {
+p,
+a {
     margin-bottom: 1rem;
     display: block;
 }
@@ -51,6 +52,19 @@ p, a {
     border-radius: 0;
 }
 
+// translation icon 
+#trp-floater-ls {
+    background: $raspberry-red;
+    left: initial;
+    right: 2%;
+}
+
+#trp-floater-ls-language-list {
+    a:hover {
+        background: $beige-gold;
+    }
+}
+
 @import 'navbar';
 @import 'footer';
 @import 'front-page';
@@ -59,15 +73,9 @@ p, a {
 @import 'confirmation';
 
 /* Mobile devices */
-@media only screen and (min-width: 480px) {
-
-}
+@media only screen and (min-width: 480px) {}
 
 /* Tablets */
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 767px) {}
 
-}
-
-@media only screen and (min-width: 991px) {
-
-}
+@media only screen and (min-width: 991px) {}

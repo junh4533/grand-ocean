@@ -1,8 +1,8 @@
-
-
 .navbar {
-    height:10vh;
-    padding: 0 1rem;
+    .tint {
+        background: rgba(0, 0, 0, 0.9);
+    }
+
     #navbar-logo {
         width: 175px;
     }
@@ -10,13 +10,55 @@
     .navbar-brand {
         margin: 0;
     }
+
     .nav-link {
+        margin: 0;
         color: $beige-gold !important;
         text-transform: uppercase;
         font-weight: 700;
+        width: 8rem;
+        text-align: center;
+    }
+
+    .nav-icon-row {
+        .nav-link {
+            width: 3rem;
+        }
     }
 
     #hamburger-menu {
-        color: $gold;
+        color: $beige-gold;
+    }
+
+    i {
+        font-size: 150%;
+    }
+
+    #flag-icon {
+        max-height: 3vh;
+    }
+
+    .nav-item {
+        margin: 1em 0 1em 0;
+        font-size: 200%;
+    }
+
+    .nav-icon-row {
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .navbar {
+        .nav-item {
+            margin: 0;
+            font-size: 100%;
+        }
+        .tint {
+            background: rgba(0, 0, 0, 0.5);
+        }
     }
 }
