@@ -10,9 +10,9 @@
             </div>
             <div class="col">
                 <strong>You MUST call/WeChat message to CONFIRM the reservation</strong>
-                </br>
+                <br>
                 <strong>Otherwise your reservation will NOT be placed</strong>
-                </br>
+                <br>
 
                 <div class="row">
                     <div class="col-1">
