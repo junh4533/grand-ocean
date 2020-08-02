@@ -1,64 +1,77 @@
 .navbar {
-    .tint {
-        background: rgba(0, 0, 0, 0.9);
-    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    max-height: 100vh;
 
-    #navbar-logo {
-        width: 175px;
+    .tint {
+        z-index: -1;
+        background: rgba(0, 0, 0, 0.9);
     }
 
     .navbar-brand {
         margin: 0;
+
+        #navbar-logo {
+            width: 175px;
+        }
     }
 
-    .nav-link {
-        margin: 0;
-        color: $beige-gold !important;
-        text-transform: uppercase;
-        font-weight: 700;
-        width: 8rem;
-        text-align: center;
-    }
+    // fullscreen dropdown 
+    .navbar-nav {
+        height: 100vh;
 
-    .nav-icon-row {
-        .nav-link {
-            width: 3rem;
+        .nav-item {
+            margin: 0;
+            width: 100%;
+            font-size: 200%;
+
+            .nav-link {
+                margin: .5rem auto;
+                color: $beige-gold !important;
+                text-transform: uppercase;
+                font-weight: 700;
+                text-align: center;
+            }
+        }
+
+        .nav-icon-row {
+            width: 40%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between
         }
     }
 
     #hamburger-menu {
         color: $beige-gold;
     }
-
-    i {
-        font-size: 150%;
-    }
-
-    #flag-icon {
-        max-height: 3vh;
-    }
-
-    .nav-item {
-        margin: 1em 0 1em 0;
-        font-size: 200%;
-    }
-
-    .nav-icon-row {
-        width: 40%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between
-    }
 }
 
 @media only screen and (min-width: 992px) {
     .navbar {
-        .nav-item {
-            margin: 0;
-            font-size: 100%;
-        }
+
         .tint {
             background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .navbar-nav {
+            height: initial;
+
+            .nav-item {
+                margin: 0;
+                font-size: 100%;
+                width: 140px;
+            }
+    
+            .nav-icon-row {
+                width: 20%;
+                .nav-item {
+                    width: 2rem !important;
+                }
+            }
         }
     }
 }

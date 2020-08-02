@@ -33,7 +33,7 @@
     </div>
 </section>
 
-<section id="contact-us" style="background: #E6E6E6">
+<section id="about-us">
     <div class="container">
         <div class="row">
             <div class="column">
@@ -43,7 +43,7 @@
             </div>
             <div class="column">
                 <div class="m-5">
-                    <img class="about-image"
+                    <img class="about-image img-fluid"
                         src="<?php echo get_template_directory_uri(); ?>/assets/images/seafood-place.jpg"
                         alt="Exterior of Grand Ocean Seafood Wholesale Shop" class="center">
                 </div>

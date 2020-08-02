@@ -13,8 +13,8 @@
 
 <body <?php body_class(); //displays class names for the body ?>>
 
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="tint" style="z-index: -1;"></div>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="tint"></div>
         <!-- Brand -->
         <a class="navbar-brand" href="<?php echo get_site_url(); ?>">
             <img id="navbar-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-glow.png"
@@ -36,7 +36,10 @@
                     <a class="nav-link" href="#products">今天的精选</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#footer">联系</a>
+                    <a class="nav-link" href="#about-us">我们的故事</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#footer">联系我们</a>
                 </li>
                 <div class="nav-icon-row">
                     <li class="nav-item">
@@ -52,11 +55,6 @@
                                 class="fab fa-weixin"></i></a>
                     </li>
                 </div>
-                <!-- <li class="nav-item">
-                    <a class="nav-link text-center" href="">中文 <img class="ml-2 ml-lg-0 mt-lg-2" id="flag-icon"
-                            src="<?php echo get_template_directory_uri(); ?>/assets/images/chinese-flag.jpg"
-                            alt="Chinese Flag"></a>
-                </li> -->
             </ul>
         </div>
     </nav>

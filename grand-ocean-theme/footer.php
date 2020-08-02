@@ -3,14 +3,14 @@
     <div class="container-fluid py-5 px-5">
         <div class="row">
             <div class="col-6 col-lg-2 order-lg-2">
-                <p class="footer-heading">Site Links</p>
+                <p class="footer-heading">网页网址</p>
                 <a href="<?php echo get_site_url(); ?>">主页</a>
                 <a href="<?php echo get_site_url(); ?>/#products">今天的精选</a>
-                <a href="<?php echo get_site_url(); ?>/#products">联系</a>
+                <a href="<?php echo get_site_url(); ?>/#products">联系我们</a>
             </div>
 
             <div class="col-6 col-lg-3 order-lg-3">
-                <p class="footer-heading">联系</p>
+                <p class="footer-heading">联系方式</p>
                 <p>盛宴海鲜</p>
                 <p>35-20 College Point Blvd <br> Flushing, NY <br> 11354</p>
                 <p>Lisa Qiu</p>
@@ -20,9 +20,6 @@
                 <img class="my-3 img-fluid"
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT5btQn6gFp08LW8Vtqx728BKDWoDvI_OQ4Qg&usqp=CAU"
                     alt="WeChat QR Code"> <br>
-                <!--<a class="d-inline"
-                    href="https://www.google.com/maps?q=35-20+College+Point+Blvd+Flushing,+NY+11354&rlz=1C1GCEA_enUS885US885&um=1&ie=UTF-8&sa=X&ved=2ahUKEwiPk6vaivPqAhXsmOAKHVwWBdYQ_AUoAXoECA0QAw"
-                    target="_blank"> <i class="fas fa-map-marker-alt my-3 mr-2"></i>Google Maps</a> -->
                 <br> 
                 <i class="fab fa-weixin my-3 mr-2"></i>
                 <p class="d-inline">微信: &nbsp; Lisa307266</p>
