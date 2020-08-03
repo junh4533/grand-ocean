@@ -39,7 +39,7 @@
             <div class="column">
                 <h1>我们的故事</h1>
                 <br>
-                <p>We are an immigrant-owned seafood wholsale store located on College Point Blvd.</p>
+                <p>Grand Ocean Seafood Wholesale is a seafood wholesale store based in NYC. We have been working diligently since [INSERT FOUNDING YEAR] to bring you the freshest seafood for the lowest price. Our wide selection of seafood is perfect for restaurants, family gatherings, or any other big occasion. As soon as we get your order, we will start preparing your seafood right away and will deliver your order in the most timely manner to ensure maximum freshness. We look forward to working with you!</p>
             </div>
             <div class="column">
                 <div class="m-5">
