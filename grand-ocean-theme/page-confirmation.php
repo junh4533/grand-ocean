@@ -30,7 +30,7 @@
             <div class="col-2"></div>
             <div class="col-6">
                 <div class="confirmation-message mb-3">
-                    <h3>You MUST call/WeChat message </br> to CONFIRM the reservation.</h3>
+                    <h4>You MUST call/WeChat message </br> to CONFIRM the reservation.</h4>
                     <br>
                     <br>
                     <h4>Otherwise your reservation will </br> NOT be placed</h4>
@@ -41,6 +41,9 @@
                         <i class="fab fa-weixin" id='icon'></i>
                         <h5>&nbsp;&nbsp;&nbsp;Lisa307266</h5>
                     </a>
+
+                    <br>
+                    
                     <a class="nav-link" href="tel:347-532-0987">
                         <i class="fas fa-phone" id='icon'></i>
                         <h5>&nbsp;&nbsp;&nbsp;(347)

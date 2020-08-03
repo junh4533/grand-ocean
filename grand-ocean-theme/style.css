@@ -416,12 +416,11 @@ a {
   display: flex;
   justify-content: center;
   align-items: center; }
-  #confirmation a, #confirmation #white {
-    color: white; }
   #confirmation a {
     text-align: center;
-    padding-left: 0;
-    padding-right: 0; }
+    padding: 0;
+    color: white;
+    margin-bottom: 0; }
   #confirmation #receipt {
     text-align: center;
     background-color: white;
@@ -445,20 +444,13 @@ a {
   #confirmation h2 {
     padding-top: 30px;
     padding-bottom: 30px; }
-<<<<<<< HEAD
-  #confirmation .col-12, #confirmation #white {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    padding: 0; }
-=======
   #confirmation .confirmation-message {
     background: rgba(0, 0, 0, 0.65);
-    color: white; }
->>>>>>> b8d11d2e6fd9884b8b66fc250fb98d41d98be66e
-  #confirmation #white {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding: 15px;
-    justify-content: center; }
+    color: white;
+    margin-top: 50px;
+    padding: 25px;
+    justify-content: center;
+    text-align: center; }
 
 /* Mobile devices */
 /* Tablets */
