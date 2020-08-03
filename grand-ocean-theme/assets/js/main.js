@@ -16,30 +16,44 @@ jQuery(document).ready(function () {
     });
     jQuery('.modal-body .woocommerce-cart-form').attr("action", "#products");
     jQuery('.woocommerce-billing-fields__field-wrapper').before('<hr />');
-});
+    jQuery(function($){
+        // Update data-quantity
+        $(document.body).on('click input', 'input.qty', function() {
+            $(this).parent().parent().find('a.ajax_add_to_cart').attr('data-quantity', $(this).val());
 
-function update_cart() {
-    jQuery.ajax({
-        type: 'POST',
-        dataType: "json",
-        url: "/wp-admin/admin-ajax.php",
-        data: { 
-            action: "update_shortcode_content",
-            shortcode: "woocommerce_cart"
-        },success: function(data){
-            jQuery('.modal-body').html(data.content);
-            jQuery('.modal-body .woocommerce-cart-form').attr("action", "#products");
-        }
+            // (optional) Removing other previous "view cart" buttons
+            $(".added_to_cart").remove();
+        });
+
+        $(document.body).on('added_to_cart', function() {
+            jQuery.ajax({
+                type: 'POST',
+                dataType: 'json',
+                url: "/wp-admin/admin-ajax.php",
+                data: { action: "update_shortcode_content", 
+                        shortcode: "woocommerce_cart"
+                },success: function(data){
+                    jQuery('.modal-body').html(data.content);
+                    jQuery('span.cart-contents-count').html(data.count);
+                    jQuery('.modal-body .woocommerce-cart-form').attr("action", "#products");
+                }
+            });
+        });
     });
-    // jQuery.ajax({
-    //     url: '/?shortcode=woocommerce_cart',
-    //     success: (data) => {
-    //         
-    //         // after update from cart, we want to scroll back to products
-    //         jQuery('.modal-body .woocommerce-cart-form').attr("action", "#products");
-    //     },
-    //     error: (xhr, status, error) => {
-    //         console.log(error);
-    //     }
-    // });
-}
+    jQuery(document.body).on('click', 'a.remove', function(e){
+        e.preventDefault();
+        var product_id = jQuery(this).attr("data-product_id");
+        jQuery.ajax({
+            type: 'POST',
+            dataType: 'json',
+            url: "/wp-admin/admin-ajax.php",
+            data: { action: "product_remove", 
+                    product_id: product_id
+            },success: function(data){
+                jQuery('.modal-body').html(data.content);
+                jQuery('span.cart-contents-count').html(data.count);
+                jQuery('.modal-body .woocommerce-cart-form').attr("action", "#products");
+            }
+        });
+    });
+});
