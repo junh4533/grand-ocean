@@ -150,9 +150,10 @@ a {
   #about-us .column {
     float: left;
     width: 50%; }
-    #about-us .column h1 {
-      color: #ED1D25;
-      font-family: 'Lato', sans-serif; }
+    #about-us .column h1, #about-us .column h3 {
+      color: #C8102E;
+      font-family: 'Lato', sans-serif;
+      text-decoration: underline white; }
     #about-us .column p {
       font-family: 'Lato', sans-serif; }
     #about-us .column .about-image {
@@ -163,6 +164,22 @@ a {
       overflow: hidden;
       border-radius: 50% !important;
       border: 10px solid #f1f1f1; }
+    #about-us .column .button1 {
+      background-color: #E6E6E6;
+      border: 6px solid black;
+      border-color: white;
+      color: #C8102E;
+      padding: 15px 32px;
+      display: flex;
+      position: relative;
+      left: 0%;
+      align-items: right;
+      text-decoration: none;
+      font-size: 20px; }
+    #about-us .column .button1:hover {
+      background-color: #C8102E;
+      color: white;
+      border: #C8102E; }
 
 #about-us {
   background: #E6E6E6; }
