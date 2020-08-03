@@ -28,7 +28,10 @@
         </div>
     </div>
     <div id="main">
-        <?php echo do_shortcode("[woo_cart_but]"); ?>
+        <div class="products-header">
+            <h3 class="products-title">TODAY'S SELECTION</h3>
+            <?php echo do_shortcode("[woo_cart_but]"); ?>
+        </div>
         <?php echo do_shortcode("[products columns='4' class='products']"); ?>
     </div>
 </section>
