@@ -10,21 +10,20 @@
     a, #white{
         color: white; 
     } 
-    
-    #icon{
-        color: red;
-    }
 
     a{
         text-align: center;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     #receipt{
         text-align: center;
         background-color: white;
+        box-shadow: 10px 13px goldenrod;
     }
 
-    #number{
+    #number, #icon{
         color: goldenrod;
     }
 
@@ -56,7 +55,8 @@
     }
 
     .col-12, #white{
-        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) )
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+        padding: 0;
     }
 
     #white{
