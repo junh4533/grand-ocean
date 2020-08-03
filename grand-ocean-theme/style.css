@@ -395,6 +395,9 @@ a {
   width: 100%;
   padding: 0px 50px; }
 
+.added_to_cart.wc-forward {
+  display: none !important; }
+
 #confirmation {
   width: 100%;
   height: 100vh;

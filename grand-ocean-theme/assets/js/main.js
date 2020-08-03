@@ -14,5 +14,33 @@ jQuery(document).ready(function () {
     jQuery('.checkout-header').each(function(index) {
         jQuery(this).before('<span class="checkout-badge-wrapper"><span class="checkout-badge">' + (index + 1) + '</span></span>');
     });
+    jQuery('.modal-body .woocommerce-cart-form').attr("action", "#products");
     jQuery('.woocommerce-billing-fields__field-wrapper').before('<hr />');
+    jQuery(document.body).on("added_to_cart", update_cart);
 });
+
+function update_cart() {
+    jQuery.ajax({
+        type: 'POST',
+        dataType: "json",
+        url: "/wp-admin/admin-ajax.php",
+        data: { 
+            action: "update_shortcode_content",
+            shortcode: "woocommerce_cart"
+        },success: function(data){
+            jQuery('.modal-body').html(data.content);
+            jQuery('.modal-body .woocommerce-cart-form').attr("action", "#products");
+        }
+    });
+    // jQuery.ajax({
+    //     url: '/?shortcode=woocommerce_cart',
+    //     success: (data) => {
+    //         
+    //         // after update from cart, we want to scroll back to products
+    //         jQuery('.modal-body .woocommerce-cart-form').attr("action", "#products");
+    //     },
+    //     error: (xhr, status, error) => {
+    //         console.log(error);
+    //     }
+    // });
+}
