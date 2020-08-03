@@ -36,6 +36,18 @@ add_action( 'after_setup_theme', 'customtheme_add_woocommerce_support' );
 add_action('wp_enqueue_scripts', 'load_stylesheets');
 add_action('wp_enqueue_scripts', 'load_scripts');
 
+//Minimum Quantity
+
+/*
+* Changing the minimum quantity to 1 for all the WooCommerce products
+*/
+
+function woocommerce_quantity_input_min_callback( $min, $product ) {
+	$min = 1;  
+	return $min;
+}
+add_filter( 'woocommerce_quantity_input_min', 'woocommerce_quantity_input_min_callback', 10, 2 );
+
 // QUANTITY
 add_filter( 'woocommerce_loop_add_to_cart_link', 'quantity_inputs_for_loop_ajax_add_to_cart', 10, 2 );
 function quantity_inputs_for_loop_ajax_add_to_cart( $html, $product ) {
@@ -58,52 +70,38 @@ function quantity_inputs_for_loop_ajax_add_to_cart( $html, $product ) {
             esc_attr( isset( $class ) ? $class : 'button' ),
             esc_html( $product->add_to_cart_text() )
         );
-    } else if ($product && $product->is_type( 'simple' ) && $product->is_purchasable() && !$product->is_in_stock() && ! $product->is_sold_individually()) {
-        $html = '<div class="out-of-stock">OUT OF STOCK</div>';
+    } else if ($product && $product->is_type( 'simple' ) && $product->is_purchasable() && !$product->is_in_stock() && ! $product->is_sold_individually() ) {
+        $html = "<div class='out-of-stock'>OUT OF STOCK</div>";
     }
     return $html;
 }
 
-//Minimum Quantity
-
-/*
-* Changing the minimum quantity to 1 for all the WooCommerce products
-*/
-
-function woocommerce_quantity_input_min_callback( $min, $product ) {
-	$min = 1;  
-	return $min;
+add_action( 'wp_head' , 'hide_ajax_view_cart_button' );
+function hide_ajax_view_cart_button(){
+    if( is_shop() || is_product_category() || is_product_tag() ): ?>
+    <style>
+        a.added_to_cart.wc-forward {
+            display:none;
+        }
+    </style>
+    <?php endif;
 }
-add_filter( 'woocommerce_quantity_input_min', 'woocommerce_quantity_input_min_callback', 10, 2 );
 
-add_action( 'wp_footer' , 'archives_quantity_fields_script' );
-function archives_quantity_fields_script(){
-    ?>
-    <script type='text/javascript'>
-        jQuery(function($){
-            // Update data-quantity
-            $(document.body).on('click input', 'input.qty', function() {
-                $(this).parent().parent().find('a.ajax_add_to_cart').attr('data-quantity', $(this).val());
-                // (optional) Removing other previous "view cart" buttons
-                $(".added_to_cart").remove();
-            });
-        });
-        jQuery(document.body).on('click', 'a.remove', function(){
-            var product_id = jQuery(this).attr("data-product_id");
-            jQuery.ajax({
-                type: 'POST',
-                dataType: 'json',
-                url: "/wp-admin/admin-ajax.php",
-                data: { action: "product_remove",
-                    product_id: product_id
-                },success: function(data){
-                    update_cart();
-                }
-            });
-            return false;
-        });
-    </script>
-    <?php
+add_action( 'wp_ajax_product_remove', 'product_remove' );
+add_action( 'wp_ajax_nopriv_product_remove', 'product_remove' );
+function product_remove() {
+    $cart = WC()->instance()->cart;
+    $id = $_POST['product_id'];
+    $cart_id = $cart->generate_cart_id($id);
+    $cart_item_id = $cart->find_product_in_cart($cart_id);
+
+    if($cart_item_id){
+        $cart->set_quantity($cart_item_id,0);
+    }
+    
+    $updated_content = do_shortcode('[woocommerce_cart]');
+    $cart_count = WC()->cart->cart_contents_count;
+    wp_send_json(array("content" => $updated_content, "count" => $cart_count));
 }
 
 // UPDATE SHORTCODE CONTENT
@@ -117,23 +115,7 @@ function update_shortcode_content(){
     }
 }
 
-// AJAX REMOVE PRODUCT
-add_action( 'wp_ajax_product_remove', 'product_remove' );
-add_action( 'wp_ajax_nopriv_product_remove', 'product_remove' );
-function product_remove() {
-    $cart = WC()->instance()->cart;
-    $id = $_POST['product_id'];
-    $cart_id = $cart->generate_cart_id($id);
-    $cart_item_id = $cart->find_product_in_cart($cart_id);
-
-    if($cart_item_id){
-       $cart->set_quantity($cart_item_id, 0);
-       return true;
-    } 
-    return false;
-}
-
-// CART ICON CUSTOM SHORTCODE
+// ICON SHORTCODE
 add_shortcode ('woo_cart_but', 'woo_cart_but' );
 /**
  * Create Shortcode for WooCommerce Cart Menu Item
@@ -145,7 +127,7 @@ function woo_cart_but() {
         $cart_url = wc_get_cart_url();  // Set Cart URL
   
         ?>
-        <div class="cart-icon"><a class="menu-item cart-contents" href="" data-toggle="modal" data-target="#myModal" title="My Basket">
+        <div class="cart-icon"><span class="cart-contents" data-toggle="modal" data-target="#myModal" title="My Basket">
 	    <?php
         if ( $cart_count > 0 ) {
        ?>
@@ -153,83 +135,45 @@ function woo_cart_but() {
         <?php
         }
         ?>
-        </a></div>
+        </span></div>
         <?php
 	        
     return ob_get_clean();
  
 }
 
-// // AJAX UPDATE CART AFTER ADDING
-// function shortcode_test() {
-//     if ( !empty($_REQUEST['shortcode']) ) {
-//       // Try and sanitize your shortcode to prevent possible exploits. Users typically can't call shortcodes directly.
-//       $shortcode_name = esc_attr($_REQUEST['shortcode']);
-  
-//       // Wrap the shortcode in tags. You might also want to add arguments here.
-//       $full_shortcode = sprintf('[%s]', $shortcode_name);
-  
-//       // Perform the shortcode
-//       echo do_shortcode( $full_shortcode );
-  
-//       // Stop the script before WordPress tries to display a template file.
-//       exit;
-//     }
-//   }
-// add_action('init', 'shortcode_test');
-
-// AJAX REMOVE PRODUCT FROM CART
-function remove_item_from_cart() {
-    $cart = WC()->instance()->cart;
-    $id = $_POST['product_id'];
-    $cart_id = $cart->generate_cart_id($id);
-    $cart_item_id = $cart->find_product_in_cart($cart_id);
-
-    if($cart_item_id){
-       $cart->set_quantity($cart_item_id, 0);
-       return true;
-    } 
-    return false;
-}
-
-add_action('wp_ajax_remove_item_from_cart', 'remove_item_from_cart');
-add_action('wp_ajax_nopriv_remove_item_from_cart', 'remove_item_from_cart');
-
-// ADD DESCRIPTIONS TO PRODUCTS
 add_filter( 'woocommerce_add_to_cart_fragments', 'woo_cart_but_count' );
 /**
  * Add AJAX Shortcode when cart contents update
  */
 function woo_cart_but_count( $fragments ) {
+ 
     ob_start();
-
     
     $cart_count = WC()->cart->cart_contents_count;
     $cart_url = wc_get_cart_url();
     
     ?>
-    <a class="cart-contents menu-item test" href="" data-toggle="modal" data-target="#myModal"  title="<?php _e( 'View your shopping cart' ); ?>">
+    <span class="cart-contents menu-item" data-toggle="modal" data-target="#myModal" title="<?php _e( 'View your shopping cart' ); ?>">
 	<?php
     if ( $cart_count > 0 ) {
         ?>
         <span class="cart-contents-count"><?php echo $cart_count; ?></span>
         <?php            
     }
-        ?></a>
+        ?></span>
     <?php
  
-    $fragments['a.cart-contents'] = ob_get_clean();
+    $fragments['span.cart-contents'] = ob_get_clean();
      
     return $fragments;
 }
 
+// ADD DESCRIPTIONS TO PRODUCTS
 function cloudways_short_des_product() {
     echo the_excerpt();
 }
 add_action( 'woocommerce_after_shop_loop_item_title', 'cloudways_short_des_product', 40 );
-
-// AJAX FOR REMOVE CART ITEM
-
 
 // PREVENTS ACCESS TO PRODUCT PAGE VIA URL
 function prevent_access_to_product_page(){

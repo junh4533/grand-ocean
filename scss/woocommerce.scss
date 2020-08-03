@@ -308,6 +308,19 @@
     display: none !important; 
 }
 
+.cart-contents {
+    cursor: pointer;
+}
+
+.woocommerce-cart-form input.qty {
+    pointer-events: none !important;
+    border: none;
+}
+
+[name=update_cart] {
+    display: none !important;
+}
+
 // #reservation {
 //     min-height: 100vh;
 //     width: 100%;
