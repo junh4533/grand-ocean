@@ -217,3 +217,12 @@ function change_default_checkout_country() {
 function change_default_checkout_state() {
   return 'NY'; // state code
 }
+
+function pwcc_live_reload_js() {
+	?>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<?php
+}
+add_action('wp_footer', 'pwcc_live_reload_js')
+
+?>

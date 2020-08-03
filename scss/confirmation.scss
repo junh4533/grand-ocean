@@ -7,24 +7,20 @@
     justify-content: center;
     align-items: center;
     
-    a, #white{
-        color: white; 
-    } 
-    
-    #icon{
-        color: red;
-    }
-
     a{
         text-align: center;
+        padding: 0;
+        color: white;
+        margin-bottom: 0;
     }
 
     #receipt{
         text-align: center;
         background-color: white;
+        box-shadow: 10px 13px goldenrod;
     }
 
-    #number{
+    #number, #icon{
         color: goldenrod;
     }
 
@@ -55,15 +51,13 @@
         padding-bottom: 30px;
     }
 
-    .col-12, #white{
-        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) )
-    }
-
-    #white{
-        margin-top: 30px;
-        margin-bottom: 30px;
-        padding: 15px;
+    .confirmation-message{
+        background: rgba(0, 0, 0, 0.65);
+        color: white;
+        margin-top: 50px;
+        // margin-bottom: 30px;
+        padding: 25px;
         justify-content: center;
+        text-align: center;
     }
 }
-

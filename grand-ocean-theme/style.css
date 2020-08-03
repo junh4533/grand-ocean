@@ -129,7 +129,7 @@ a {
 #home {
   width: 100%;
   height: 100vh;
-  background: url("https://images5.alphacoders.com/909/thumb-1920-909997.jpg") center/cover no-repeat;
+  background: url("assets/images/bg.jpg") center/cover no-repeat;
   position: relative;
   display: flex;
   justify-content: center;
@@ -440,16 +440,16 @@ a {
   display: flex;
   justify-content: center;
   align-items: center; }
-  #confirmation a, #confirmation #white {
-    color: white; }
-  #confirmation #icon {
-    color: red; }
   #confirmation a {
-    text-align: center; }
+    text-align: center;
+    padding: 0;
+    color: white;
+    margin-bottom: 0; }
   #confirmation #receipt {
     text-align: center;
-    background-color: white; }
-  #confirmation #number {
+    background-color: white;
+    box-shadow: 10px 13px goldenrod; }
+  #confirmation #number, #confirmation #icon {
     color: goldenrod; }
   #confirmation p {
     margin-bottom: 0;
@@ -468,13 +468,13 @@ a {
   #confirmation h2 {
     padding-top: 30px;
     padding-bottom: 30px; }
-  #confirmation .col-12, #confirmation #white {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); }
-  #confirmation #white {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding: 15px;
-    justify-content: center; }
+  #confirmation .confirmation-message {
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    margin-top: 50px;
+    padding: 25px;
+    justify-content: center;
+    text-align: center; }
 
 /* Mobile devices */
 /* Tablets */
