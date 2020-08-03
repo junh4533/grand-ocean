@@ -43,7 +43,6 @@
 
 .cart-icon {
     width: fit-content;
-    float: right;
 }
 
 .cart-contents {
@@ -232,8 +231,8 @@
 }
 
 .checkout-badge {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     background-color: $raspberry-red;
     color: white;
     margin-right: 40px;
@@ -306,6 +305,45 @@
 
 .added_to_cart.wc-forward {
     display: none !important; 
+}
+
+.cart-contents {
+    cursor: pointer;
+}
+
+.woocommerce-cart-form input.qty {
+    pointer-events: none !important;
+    border: none;
+}
+
+[name=update_cart] {
+    display: none !important;
+}
+
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.products-title {
+    color: $raspberry-red;
+    border-bottom: 2px solid $raspberry-red;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 10%;
+        width: 80%;
+        height: 1px;
+        background-color: $raspberry-red;
+    }
+}
+
+.shop_table {
+    border-radius: 0 !important;
 }
 
 // #reservation {

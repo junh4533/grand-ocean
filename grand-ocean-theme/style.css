@@ -81,7 +81,10 @@ a {
         color: #CBAF8A !important;
         text-transform: uppercase;
         font-weight: 700;
-        text-align: center; }
+        text-align: center;
+        transition: all 0.25s ease-out; }
+        .navbar .navbar-nav .nav-item .nav-link:hover {
+          filter: brightness(1.4); }
     .navbar .navbar-nav .nav-icon-row {
       width: 40%;
       display: flex;
@@ -126,7 +129,7 @@ a {
 #home {
   width: 100%;
   height: 100vh;
-  background: url("https://images5.alphacoders.com/909/thumb-1920-909997.jpg") center/cover no-repeat;
+  background: url("assets/images/bg.jpg") center/cover no-repeat;
   position: relative;
   display: flex;
   justify-content: center;
@@ -209,8 +212,7 @@ a {
     background: #C8102E; }
 
 .cart-icon {
-  width: fit-content;
-  float: right; }
+  width: fit-content; }
 
 .cart-contents {
   position: relative;
@@ -355,8 +357,8 @@ a {
   margin-top: 20px; }
 
 .checkout-badge {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   background-color: #C8102E;
   color: white;
   margin-right: 40px;
@@ -415,6 +417,38 @@ a {
 .added_to_cart.wc-forward {
   display: none !important; }
 
+.cart-contents {
+  cursor: pointer; }
+
+.woocommerce-cart-form input.qty {
+  pointer-events: none !important;
+  border: none; }
+
+[name=update_cart] {
+  display: none !important; }
+
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; }
+
+.products-title {
+  color: #C8102E;
+  border-bottom: 2px solid #C8102E;
+  position: relative; }
+  .products-title::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background-color: #C8102E; }
+
+.shop_table {
+  border-radius: 0 !important; }
+
 #confirmation {
   width: 100%;
   height: 100vh;
@@ -423,16 +457,16 @@ a {
   display: flex;
   justify-content: center;
   align-items: center; }
-  #confirmation a, #confirmation #white {
-    color: white; }
-  #confirmation #icon {
-    color: red; }
   #confirmation a {
-    text-align: center; }
+    text-align: center;
+    padding: 0;
+    color: white;
+    margin-bottom: 0; }
   #confirmation #receipt {
     text-align: center;
-    background-color: white; }
-  #confirmation #number {
+    background-color: white;
+    box-shadow: 10px 13px goldenrod; }
+  #confirmation #number, #confirmation #icon {
     color: goldenrod; }
   #confirmation p {
     margin-bottom: 0;
@@ -451,13 +485,13 @@ a {
   #confirmation h2 {
     padding-top: 30px;
     padding-bottom: 30px; }
-  #confirmation .col-12, #confirmation #white {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); }
-  #confirmation #white {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding: 15px;
-    justify-content: center; }
+  #confirmation .confirmation-message {
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    margin-top: 50px;
+    padding: 25px;
+    justify-content: center;
+    text-align: center; }
 
 /* Mobile devices */
 /* Tablets */
