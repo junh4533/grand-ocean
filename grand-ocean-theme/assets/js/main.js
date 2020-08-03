@@ -16,7 +16,6 @@ jQuery(document).ready(function () {
     });
     jQuery('.modal-body .woocommerce-cart-form').attr("action", "#products");
     jQuery('.woocommerce-billing-fields__field-wrapper').before('<hr />');
-    jQuery(document.body).on("added_to_cart", update_cart);
 });
 
 function update_cart() {

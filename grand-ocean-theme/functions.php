@@ -49,7 +49,7 @@ function quantity_inputs_for_loop_ajax_add_to_cart( $html, $product ) {
         ) ) );
 
         // Embedding the quantity field to Ajax add to cart button
-        $html = sprintf( '%s<a rel="nofollow" href="%s" data-quantity="%s" data-product_id="%s" data-product_sku="%s" class="%s">%s</a>',
+        $html = sprintf( '%s<a rel="nofollow" href="%s" data-quantity="%s" data-product_id="%s" data-product_sku="%s" class="custom_add %s">%s</a>',
             woocommerce_quantity_input( array(), $product, false ),
             esc_url( $product->add_to_cart_url() ),
             esc_attr( isset( $quantity ) ? $quantity : 1 ),
@@ -82,10 +82,8 @@ function archives_quantity_fields_script(){
     <script type='text/javascript'>
         jQuery(function($){
             // Update data-quantity
-            $(document.body).on('click input', 'input.qty', function() {
+            $(document.body).on('click input', '.product input.qty', function() {
                 $(this).parent().parent().find('a.ajax_add_to_cart').attr('data-quantity', $(this).val());
-                // (optional) Removing other previous "view cart" buttons
-                $(".added_to_cart").remove();
             });
         });
         jQuery(document.body).on('click', 'a.remove', function(){
