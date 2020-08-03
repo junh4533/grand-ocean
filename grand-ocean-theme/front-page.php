@@ -52,12 +52,10 @@
                 </a>
             
             </div>
-            <div class="column">
-                <div class="m-5">
-                    <img class="about-image img-fluid"
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/seafood-place.jpg"
-                        alt="Exterior of Grand Ocean Seafood Wholesale Shop" class="center">
-                </div>
+            <div class="column p-5 d-flex align-items-center">
+                <img class="about-image img-fluid"
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/seafood-place.jpg"
+                    alt="Exterior of Grand Ocean Seafood Wholesale Shop" class="center">
             </div>
         </div>
     </div>
