@@ -29,23 +29,24 @@
             </div>
             <div class="col-2"></div>
             <div class="col-6">
-                <div id='white'>
-                    <h4>You MUST call/WeChat message </br> to CONFIRM the reservation.</h4>
+                <div class="confirmation-message mb-3">
+                    <h3>You MUST call/WeChat message </br> to CONFIRM the reservation.</h3>
                     <br>
                     <br>
                     <h4>Otherwise your reservation will </br> NOT be placed</h4>
                 </div>
 
-                <a class="nav-link" href="<?php echo get_site_url(); ?>/#footer">
-                    <i class="fab fa-weixin" id='icon'></i>
-                    <h5>&nbsp;&nbsp;&nbsp;Lisa307266</h5>
-                </a>
-                
-                <a class="nav-link" href="tel:347-532-0987">
-                    <i class="fas fa-phone" id='icon'></i>
-                    <h5>&nbsp;&nbsp;&nbsp;(347)
-                        532-0987</h5>
-                </a>
+                <div class="confirmation-message">
+                    <a class="nav-link" href="<?php echo get_site_url(); ?>/#footer">
+                        <i class="fab fa-weixin" id='icon'></i>
+                        <h5>&nbsp;&nbsp;&nbsp;Lisa307266</h5>
+                    </a>
+                    <a class="nav-link" href="tel:347-532-0987">
+                        <i class="fas fa-phone" id='icon'></i>
+                        <h5>&nbsp;&nbsp;&nbsp;(347)
+                            532-0987</h5>
+                    </a>
+                </div>
             </div>
         </div>
 </section>

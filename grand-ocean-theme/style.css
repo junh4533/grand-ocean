@@ -126,7 +126,7 @@ a {
 #home {
   width: 100%;
   height: 100vh;
-  background: url("https://images5.alphacoders.com/909/thumb-1920-909997.jpg") center/cover no-repeat;
+  background: url("assets/images/bg.jpg") center/cover no-repeat;
   position: relative;
   display: flex;
   justify-content: center;
@@ -398,6 +398,16 @@ a {
 .added_to_cart.wc-forward {
   display: none !important; }
 
+.cart-contents {
+  cursor: pointer; }
+
+.woocommerce-cart-form input.qty {
+  pointer-events: none !important;
+  border: none; }
+
+[name=update_cart] {
+  display: none !important; }
+
 #confirmation {
   width: 100%;
   height: 100vh;
@@ -435,9 +445,15 @@ a {
   #confirmation h2 {
     padding-top: 30px;
     padding-bottom: 30px; }
+<<<<<<< HEAD
   #confirmation .col-12, #confirmation #white {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     padding: 0; }
+=======
+  #confirmation .confirmation-message {
+    background: rgba(0, 0, 0, 0.65);
+    color: white; }
+>>>>>>> b8d11d2e6fd9884b8b66fc250fb98d41d98be66e
   #confirmation #white {
     margin-top: 30px;
     margin-bottom: 30px;
