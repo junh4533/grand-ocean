@@ -71,7 +71,7 @@ function quantity_inputs_for_loop_ajax_add_to_cart( $html, $product ) {
             esc_html( $product->add_to_cart_text() )
         );
     } else if ($product && $product->is_type( 'simple' ) && $product->is_purchasable() && !$product->is_in_stock() && ! $product->is_sold_individually() ) {
-        $html = "<div class='out-of-stock'>OUT OF STOCK</div>";
+        $html = "<div class='out-of-stock'>缺货</div>";
     }
     return $html;
 }
@@ -194,14 +194,14 @@ remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_pr
 // To change add to cart text on product archives(Collection) page
 add_filter( 'woocommerce_product_add_to_cart_text', 'woocommerce_custom_product_add_to_cart_text' );  
 function woocommerce_custom_product_add_to_cart_text() {
-    return __( 'Add To Cart', 'woocommerce' );
+    return __( '添加', 'woocommerce' );
 }
 
 // Place Order on Checkout button text
 add_filter( 'woocommerce_order_button_text', 'misha_custom_button_text' );
  
 function misha_custom_button_text( $button_text ) {
-   return 'Reserve'; 
+   return '确认订单'; 
 }
 
 /**

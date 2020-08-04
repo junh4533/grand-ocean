@@ -22,6 +22,7 @@ body {
   font-family: 'Lato', sans-serif;
   margin: 0 !important; }
 
+h1,
 h2,
 h3,
 h4,
@@ -47,6 +48,20 @@ a {
   background: #CBAF8A;
   border-radius: 0; }
 
+.text-heading {
+  color: #C8102E;
+  border-bottom: 2px solid #C8102E;
+  position: relative;
+  display: inline; }
+  .text-heading::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background-color: #C8102E; }
+
 #trp-floater-ls {
   background: #C8102E;
   left: initial;
@@ -54,6 +69,9 @@ a {
 
 #trp-floater-ls-language-list a:hover {
   background: #CBAF8A; }
+
+#products, #about-us {
+  padding: 10% 0; }
 
 .navbar {
   position: absolute;
@@ -68,6 +86,8 @@ a {
     margin: 0; }
     .navbar .navbar-brand #navbar-logo {
       width: 175px; }
+  .navbar .navbar-toggler {
+    border-color: transparent !important; }
   .navbar .navbar-nav {
     height: 100vh; }
     .navbar .navbar-nav .nav-item {
@@ -121,6 +141,10 @@ a {
     flex-direction: column; }
     #footer #footer-logo-section #footer-logo {
       width: 80%; }
+  #footer #footer-logo {
+    max-height: 15vh; }
+  #footer img {
+    max-height: 25vh; }
 
 #home {
   width: 100%;
@@ -143,7 +167,7 @@ a {
 
 #about-us {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: #E6E6E6;
   justify-content: center;
   align-items: center;
@@ -151,46 +175,31 @@ a {
   #about-us .column {
     float: left;
     width: 50%; }
-    #about-us .column h1 {
-      color: #C8102E;
-      font-family: 'Lato', sans-serif;
-      text-decoration: underline white;
-      font-size: 1.3em; }
-    #about-us .column h3 {
-      color: #C8102E;
-      font-family: 'Lato', sans-serif;
-      text-decoration: underline white;
-      font-size: 0.7605em; }
     #about-us .column p {
       font-family: 'Lato', sans-serif;
       font-size: 12px; }
     #about-us .column .about-image {
-      width: 82.5px;
-      height: 82.5px;
+      width: 275px;
+      height: 275px;
       object-fit: cover;
       position: relative;
       overflow: hidden;
       border-radius: 50% !important;
-      border: 2px solid #f1f1f1; }
-    #about-us .column .button1 {
-      background-color: #E6E6E6;
-      border: 6px solid black;
-      border-color: white;
-      color: #C8102E;
-      padding: 15px;
-      position: relative;
-      align-items: center;
-      text-decoration: none;
-      font-size: 20px; }
-    #about-us .column .button1:hover {
-      background-color: #C8102E;
-      color: white;
-      border: #C8102E; }
+      border: 5px solid #f1f1f1; }
+  #about-us .button1 {
+    background: transparent;
+    border: 6px solid white;
+    color: #C8102E;
+    padding: 15px;
+    font-weight: 900; }
+    #about-us .button1:hover {
+      border: 6px solid white;
+      background: #C8102E;
+      color: white; }
 
 @media only screen and (min-width: 768px) {
   #about-us {
     width: 100%;
-    height: 100vh;
     background: #E6E6E6;
     justify-content: center;
     align-items: center;
@@ -198,41 +207,14 @@ a {
     #about-us .column {
       float: left;
       width: 50%; }
-      #about-us .column h1 {
-        color: #C8102E;
-        font-family: 'Lato', sans-serif;
-        text-decoration: underline white;
-        font-size: 2em; }
-      #about-us .column h3 {
-        color: #C8102E;
-        font-family: 'Lato', sans-serif;
-        text-decoration: underline white;
-        font-size: 1.17em; }
       #about-us .column p {
         font-family: 'Lato', sans-serif;
         font-size: 16px; }
       #about-us .column .about-image {
-        width: 252px;
-        height: 252px;
         object-fit: cover;
         position: relative;
         overflow: hidden;
-        border-radius: 50% !important;
-        border: 10px solid #f1f1f1; }
-      #about-us .column .button1 {
-        background-color: #E6E6E6;
-        border: 6px solid black;
-        border-color: white;
-        color: #C8102E;
-        padding: 15px;
-        position: relative;
-        align-items: center;
-        text-decoration: none;
-        font-size: 20px; }
-      #about-us .column .button1:hover {
-        background-color: #C8102E;
-        color: white;
-        border: #C8102E; } }
+        border-radius: 50% !important; } }
 
 @media only screen and (min-width: 992px) {
   #about-us {
@@ -245,16 +227,6 @@ a {
     #about-us .column {
       float: left;
       width: 50%; }
-      #about-us .column h1 {
-        color: #C8102E;
-        font-family: 'Lato', sans-serif;
-        text-decoration: underline white;
-        font-size: 2em; }
-      #about-us .column h3 {
-        color: #C8102E;
-        font-family: 'Lato', sans-serif;
-        text-decoration: underline white;
-        font-size: 1.17em; }
       #about-us .column p {
         font-family: 'Lato', sans-serif;
         font-size: 16px; }
@@ -265,21 +237,7 @@ a {
         position: relative;
         overflow: hidden;
         border-radius: 50% !important;
-        border: 10px solid #f1f1f1; }
-      #about-us .column .button1 {
-        background-color: #E6E6E6;
-        border: 6px solid black;
-        border-color: white;
-        color: #C8102E;
-        padding: 15px;
-        position: relative;
-        align-items: center;
-        text-decoration: none;
-        font-size: 20px; }
-      #about-us .column .button1:hover {
-        background-color: #C8102E;
-        color: white;
-        border: #C8102E; } }
+        border: 10px solid #f1f1f1; } }
 
 #about-us {
   background: #E6E6E6; }
@@ -433,7 +391,7 @@ a {
 
 #customer_details {
   flex: 3;
-  padding: 0px 80px; }
+  padding: 0px 5%; }
   #customer_details div {
     display: block;
     float: none;
@@ -451,7 +409,7 @@ a {
 .checkout-badge-wrapper {
   display: inline-block;
   margin-right: 25px;
-  margin-top: 20px; }
+  margin-top: 50px; }
 
 .checkout-badge {
   width: 60px;
@@ -469,28 +427,28 @@ a {
   width: 100%; }
 
 .checkout-street span {
-  width: 50%; }
+  width: 75%; }
 
 .checkout-city {
-  width: 20%;
+  width: 35%;
   display: inline-block; }
 
 .checkout-state {
-  width: 20%;
+  width: 35%;
   display: inline-block; }
 
 .checkout-country {
   width: 50%; }
 
 .checkout-zipcode {
-  width: 20%;
+  width: 25%;
   display: inline-block; }
 
 .select2-container .select2-selection--single {
   margin: -3px 0 0 0 !important; }
 
 .woocommerce-input-wrapper {
-  width: 70%; }
+  width: 100%; }
   .woocommerce-input-wrapper textarea {
     padding: 8px 15px; }
 
@@ -545,6 +503,24 @@ a {
 
 .shop_table {
   border-radius: 0 !important; }
+
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  outline: 0;
+  line-height: normal;
+  height: 2em; }
+
+.select2-selection--single {
+  border-width: 2px;
+  border-style: inset;
+  border-color: -internal-light-dark(#767676, #c3c3c3);
+  border-radius: 0; }
+
+@media only screen and (min-width: 400px) {
+  .checkout-zipcode {
+    width: 15%; } }
 
 #confirmation {
   width: 100%;
