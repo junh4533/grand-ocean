@@ -28,7 +28,10 @@
         </div>
     </div>
     <div id="main">
-        <?php echo do_shortcode("[woo_cart_but]"); ?>
+        <div class="products-header">
+            <h3 class="products-title">TODAY'S SELECTION</h3>
+            <?php echo do_shortcode("[woo_cart_but]"); ?>
+        </div>
         <?php echo do_shortcode("[products columns='4' class='products']"); ?>
     </div>
 </section>
@@ -36,17 +39,25 @@
 <section id="about-us">
     <div class="container">
         <div class="row">
-            <div class="column">
+            <div class="column col-12 col-sm-12 col-md-6 col-lg-6">
                 <h1>我们的故事</h1>
                 <br>
-                <p>Grand Ocean Seafood Wholesale is a seafood wholesale store based in NYC. We have been working diligently since [INSERT FOUNDING YEAR] to bring you the freshest seafood for the lowest price. Our wide selection of seafood is perfect for restaurants, family gatherings, or any other big occasion. As soon as we get your order, we will start preparing your seafood right away and will deliver your order in the most timely manner to ensure maximum freshness. We look forward to working with you!</p>
+                <p>Grand Ocean is a seafood wholesale store based in College Point, NYC. We have been working diligently since 2015 to bring you the freshest seafood for the lowest price. Our wide selection of seafood is perfect for restaurants, seafood markets, small family gatherings, and catering large scale events. We will deliver your order in the most timely manner to ensure maximum freshness. Place your order now for fresh seafood!</p>
+                <br>
+                <h3>Hours of Operation</h3>
+                <br>
+                <br>
+                <p>We are open 10am-5pm every day of the week, including weekends! Operating hours may vary on holidays!</p>
+                <br>
+                <br>
+                <a class="nav-link" style="padding: 0;" href="#products">
+                <button type="button" class="button1">Take me to the products!</button>
+                </a>
             </div>
-            <div class="column">
-                <div class="m-5">
-                    <img class="about-image img-fluid"
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/seafood-place.jpg"
-                        alt="Exterior of Grand Ocean Seafood Wholesale Shop" class="center">
-                </div>
+            <div class="column p-5 d-flex align-items-center col-12 col-sm-12 col-md-6 col-lg-6">
+                <img class="about-image img-fluid"
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/seafood-place.jpg"
+                    alt="Exterior of Grand Ocean Seafood Wholesale Shop" class="center">
             </div>
         </div>
     </div>

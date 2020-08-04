@@ -9,8 +9,9 @@
     
     a{
         text-align: center;
-        padding-left: 0;
-        padding-right: 0;
+        padding: 0;
+        color: white;
+        margin-bottom: 0;
     }
 
     #receipt{
@@ -48,12 +49,10 @@
     .confirmation-message{
         background: rgba(0, 0, 0, 0.65);
         color: white;
-    }
-
-    #white{
-        margin-top: 30px;
-        margin-bottom: 30px;
-        padding: 15px;
+        margin-top: 50px;
+        // margin-bottom: 30px;
+        padding: 25px;
         justify-content: center;
+        text-align: center;
     }
 }

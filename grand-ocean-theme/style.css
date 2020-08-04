@@ -81,7 +81,10 @@ a {
         color: #CBAF8A !important;
         text-transform: uppercase;
         font-weight: 700;
-        text-align: center; }
+        text-align: center;
+        transition: all 0.25s ease-out; }
+        .navbar .navbar-nav .nav-item .nav-link:hover {
+          filter: brightness(1.4); }
     .navbar .navbar-nav .nav-icon-row {
       width: 40%;
       display: flex;
@@ -151,18 +154,134 @@ a {
     float: left;
     width: 50%; }
     #about-us .column h1 {
-      color: #ED1D25;
-      font-family: 'Lato', sans-serif; }
+      color: #C8102E;
+      font-family: 'Lato', sans-serif;
+      text-decoration: underline white;
+      font-size: 1.3em; }
+    #about-us .column h3 {
+      color: #C8102E;
+      font-family: 'Lato', sans-serif;
+      text-decoration: underline white;
+      font-size: 0.7605em; }
     #about-us .column p {
-      font-family: 'Lato', sans-serif; }
+      font-family: 'Lato', sans-serif;
+      font-size: 12px; }
     #about-us .column .about-image {
-      width: 400px;
-      height: 400px;
+      width: 82.5px;
+      height: 82.5px;
       object-fit: cover;
       position: relative;
       overflow: hidden;
       border-radius: 50% !important;
-      border: 10px solid #f1f1f1; }
+      border: 2px solid #f1f1f1; }
+    #about-us .column .button1 {
+      background-color: #E6E6E6;
+      border: 6px solid black;
+      border-color: white;
+      color: #C8102E;
+      padding: 15px;
+      position: relative;
+      align-items: center;
+      text-decoration: none;
+      font-size: 20px; }
+    #about-us .column .button1:hover {
+      background-color: #C8102E;
+      color: white;
+      border: #C8102E; }
+
+@media only screen and (min-width: 768px) {
+  #about-us {
+    width: 100%;
+    height: 100vh;
+    background: #E6E6E6;
+    justify-content: center;
+    align-items: center;
+    display: flex; }
+    #about-us .column {
+      float: left;
+      width: 50%; }
+      #about-us .column h1 {
+        color: #C8102E;
+        font-family: 'Lato', sans-serif;
+        text-decoration: underline white;
+        font-size: 2em; }
+      #about-us .column h3 {
+        color: #C8102E;
+        font-family: 'Lato', sans-serif;
+        text-decoration: underline white;
+        font-size: 1.17em; }
+      #about-us .column p {
+        font-family: 'Lato', sans-serif;
+        font-size: 16px; }
+      #about-us .column .about-image {
+        width: 252px;
+        height: 252px;
+        object-fit: cover;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50% !important;
+        border: 10px solid #f1f1f1; }
+      #about-us .column .button1 {
+        background-color: #E6E6E6;
+        border: 6px solid black;
+        border-color: white;
+        color: #C8102E;
+        padding: 15px;
+        position: relative;
+        align-items: center;
+        text-decoration: none;
+        font-size: 20px; }
+      #about-us .column .button1:hover {
+        background-color: #C8102E;
+        color: white;
+        border: #C8102E; } }
+
+@media only screen and (min-width: 992px) {
+  #about-us {
+    width: 100%;
+    height: 100vh;
+    background: #E6E6E6;
+    justify-content: center;
+    align-items: center;
+    display: flex; }
+    #about-us .column {
+      float: left;
+      width: 50%; }
+      #about-us .column h1 {
+        color: #C8102E;
+        font-family: 'Lato', sans-serif;
+        text-decoration: underline white;
+        font-size: 2em; }
+      #about-us .column h3 {
+        color: #C8102E;
+        font-family: 'Lato', sans-serif;
+        text-decoration: underline white;
+        font-size: 1.17em; }
+      #about-us .column p {
+        font-family: 'Lato', sans-serif;
+        font-size: 16px; }
+      #about-us .column .about-image {
+        width: 372px;
+        height: 372px;
+        object-fit: cover;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50% !important;
+        border: 10px solid #f1f1f1; }
+      #about-us .column .button1 {
+        background-color: #E6E6E6;
+        border: 6px solid black;
+        border-color: white;
+        color: #C8102E;
+        padding: 15px;
+        position: relative;
+        align-items: center;
+        text-decoration: none;
+        font-size: 20px; }
+      #about-us .column .button1:hover {
+        background-color: #C8102E;
+        color: white;
+        border: #C8102E; } }
 
 #about-us {
   background: #E6E6E6; }
@@ -192,8 +311,7 @@ a {
     background: #C8102E; }
 
 .cart-icon {
-  width: fit-content;
-  float: right; }
+  width: fit-content; }
 
 .cart-contents {
   position: relative;
@@ -338,8 +456,8 @@ a {
   margin-top: 20px; }
 
 .checkout-badge {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   background-color: #C8102E;
   color: white;
   margin-right: 40px;
@@ -408,6 +526,28 @@ a {
 [name=update_cart] {
   display: none !important; }
 
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; }
+
+.products-title {
+  color: #C8102E;
+  border-bottom: 2px solid #C8102E;
+  position: relative; }
+  .products-title::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background-color: #C8102E; }
+
+.shop_table {
+  border-radius: 0 !important; }
+
 #confirmation {
   width: 100%;
   height: 100vh;
@@ -418,8 +558,9 @@ a {
   align-items: center; }
   #confirmation a {
     text-align: center;
-    padding-left: 0;
-    padding-right: 0; }
+    padding: 0;
+    color: white;
+    margin-bottom: 0; }
   #confirmation #receipt {
     text-align: center;
     background-color: white;
@@ -442,12 +583,11 @@ a {
     padding-bottom: 30px; }
   #confirmation .confirmation-message {
     background: rgba(0, 0, 0, 0.65);
-    color: white; }
-  #confirmation #white {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding: 15px;
-    justify-content: center; }
+    color: white;
+    margin-top: 50px;
+    padding: 25px;
+    justify-content: center;
+    text-align: center; }
 
 /* Mobile devices */
 /* Tablets */
