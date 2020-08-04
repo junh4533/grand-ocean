@@ -220,7 +220,7 @@ a {
         position: relative;
         overflow: hidden;
         border-radius: 50% !important;
-        border: 2px solid #f1f1f1; }
+        border: 10px solid #f1f1f1; }
       #about-us .column .button1 {
         background-color: #E6E6E6;
         border: 6px solid black;
@@ -267,7 +267,7 @@ a {
         position: relative;
         overflow: hidden;
         border-radius: 50% !important;
-        border: 2px solid #f1f1f1; }
+        border: 10px solid #f1f1f1; }
       #about-us .column .button1 {
         background-color: #E6E6E6;
         border: 6px solid black;
