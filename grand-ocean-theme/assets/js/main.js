@@ -1,11 +1,11 @@
 jQuery(document).ready(function () {
     let first_header = jQuery('.woocommerce-billing-fields h3');
-    first_header.text('Customer');
+    first_header.text('顾客信息');
     first_header.addClass('checkout-header');
     let second_header = jQuery('.checkout-phone');
-    second_header.after('<h3 class="checkout-header">Delivery</h3><hr/>');
+    second_header.after('<h3 class="checkout-header">地址</h3><hr/>');
     let third_header = jQuery('.woocommerce-additional-fields h3');
-    third_header.text('Details');
+    third_header.text('细节');
     third_header.addClass('checkout-header');
     third_header.after('<hr />');
     jQuery('.woocommerce-checkout').addClass("row");

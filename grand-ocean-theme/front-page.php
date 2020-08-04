@@ -27,11 +27,10 @@
 
         </div>
     </div>
-    <div id="main">
-        <div class="products-header">
-            <h3 class="products-title">TODAY'S SELECTION</h3>
-            <?php echo do_shortcode("[woo_cart_but]"); ?>
-        </div>
+    <?php echo do_shortcode("[woo_cart_but]"); ?>
+    
+    <div id="main" class="container">
+        <h3 class="products-title">TODAY'S SELECTION</h3>
         <?php echo do_shortcode("[products columns='4' class='products']"); ?>
     </div>
 </section>
@@ -39,25 +38,22 @@
 <section id="about-us">
     <div class="container">
         <div class="row">
-            <div class="column col-12 col-sm-12 col-md-6 col-lg-6">
-                <h1>我们的故事</h1>
-                <br>
-                <p>Grand Ocean is a seafood wholesale store based in College Point, NYC. We have been working diligently since 2015 to bring you the freshest seafood for the lowest price. Our wide selection of seafood is perfect for restaurants, seafood markets, small family gatherings, and catering large scale events. We will deliver your order in the most timely manner to ensure maximum freshness. Place your order now for fresh seafood!</p>
-                <br>
-                <h3>Hours of Operation</h3>
-                <br>
-                <br>
-                <p>We are open 10am-5pm every day of the week, including weekends! Operating hours may vary on holidays!</p>
-                <br>
-                <br>
-                <a class="nav-link" style="padding: 0;" href="#products">
-                <button type="button" class="button1">Take me to the products!</button>
-                </a>
-            </div>
-            <div class="column p-5 d-flex align-items-center col-12 col-sm-12 col-md-6 col-lg-6">
+            <div
+                class="column d-flex align-items-center justify-content-center col-12 col-sm-12 col-md-6 col-lg-6 order-md-2 p-sm-5 mb-3">
                 <img class="about-image img-fluid"
                     src="<?php echo get_template_directory_uri(); ?>/assets/images/seafood-place.jpg"
                     alt="Exterior of Grand Ocean Seafood Wholesale Shop" class="center">
+            </div>
+            <div class="column col-12 col-sm-12 col-md-6 col-lg-6 order-md-1 mb-3">
+                <h1 class="text-heading">我们的故事</h1>
+                <p class="my-5">
+                    盛宴海鲜是一家位于纽约大学城的海鲜批发商店。自2015年以来，我们一直在努力工作，以最低的价格为您带来最新鲜的海鲜。我们种类繁多的海鲜非常适合餐厅，海鲜市场，小型家庭聚会和大型活动餐饮。我们每周7天为纽约市5区供应海鲜。立即订购新鲜海鲜！
+                </p>
+                <h3 class="text-heading">营业时间</h3>
+                <p class="my-5">我们每周（包括周末）每天上午10:00至下午5:00营业！假期的营业时间可能会更改。</p>
+                <a class="btn button1" href="<?php echo get_site_url(); ?>#products">
+                    今天的精选
+                </a>
             </div>
         </div>
     </div>
