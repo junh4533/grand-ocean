@@ -6,25 +6,19 @@
     <div class="container">
         <div class="row">
             <div class="col-4" id='receipt'>
-                <div id='row1'>
+                <div>
                     <p>盛宴海鲜</p>
                     <p>35-20 College Point Blvd</p>
                     <p>(347) 532-0987</p>
                 </div>
 
-                <div id="row2">
-                    <h3>谢谢你, </br> CUSTOMER</h3>
-                </div>
-
-                <div id="row3">
+                <div id="order-number-row">
                     <h3>订单号</br></h3>
-                    <h2 id='number'>5678</h2>
+                    <h2><?php echo preg_replace('/[^0-9]+/' , '' , do_shortcode('[xlwcty_order]')) ?></h2>
                 </div>
 
-                <div id="row4">
-                    <p>
-                        <h5>总额</h5> &nbsp;&nbsp;&nbsp; <h4 id='number'>$599.94</h4>
-                    </p>
+                <div>
+                    <h2><?php echo do_shortcode('[xlwcty_order_details]') ?></h2>
                 </div>
             </div>
             <div class="col-2"></div>
@@ -43,8 +37,7 @@
                     </a>
                     <a class="nav-link" href="tel:347-532-0987">
                         <i class="fas fa-phone" id='icon'></i>
-                        <h5>&nbsp;&nbsp;&nbsp;(347)
-                            532-0987</h5>
+                        <h5>&nbsp;&nbsp;&nbsp;(347) 532-0987</h5>
                     </a>
                 </div>
             </div>
