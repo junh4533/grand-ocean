@@ -30,16 +30,16 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav ml-auto d-flex align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link" href="#home">主页</a>
+                    <a class="nav-link" href="<?php echo get_site_url(); ?>">主页</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#products">今天的精选</a>
+                    <a class="nav-link" href="<?php echo get_site_url(); ?>#products">今天的精选</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#about-us">我们的故事</a>
+                    <a class="nav-link" href="<?php echo get_site_url(); ?>#about-us">我们的故事</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#footer">联系我们</a>
+                    <a class="nav-link" href="<?php echo get_site_url(); ?>#footer">联系我们</a>
                 </li>
                 <div class="nav-icon-row">
                     <li class="nav-item">
@@ -51,7 +51,7 @@
                             target="_blank"><i class="fas fa-map-marker-alt"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo get_site_url(); ?>/#footer"><i
+                        <a class="nav-link" href="<?php echo get_site_url(); ?>#footer"><i
                                 class="fab fa-weixin"></i></a>
                     </li>
                 </div>

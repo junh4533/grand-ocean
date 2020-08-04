@@ -35,9 +35,7 @@
                         <i class="fab fa-weixin" id='icon'></i>
                         <h5>&nbsp;&nbsp;&nbsp;Lisa307266</h5>
                     </a>
-
                     <br>
-                    
                     <a class="nav-link" href="tel:347-532-0987">
                         <i class="fas fa-phone" id='icon'></i>
                         <h5>&nbsp;&nbsp;&nbsp;(347) 532-0987</h5>
