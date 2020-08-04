@@ -39,7 +39,7 @@
 <section id="about-us">
     <div class="container">
         <div class="row">
-            <div class="column">
+            <div class="column col-12 col-sm-12 col-md-6 col-lg-6">
                 <h1>我们的故事</h1>
                 <br>
                 <p>Grand Ocean is a seafood wholesale store based in College Point, NYC. We have been working diligently since 2015 to bring you the freshest seafood for the lowest price. Our wide selection of seafood is perfect for restaurants, seafood markets, small family gatherings, and catering large scale events. We will deliver your order in the most timely manner to ensure maximum freshness. Place your order now for fresh seafood!</p>
@@ -50,12 +50,11 @@
                 <p>We are open 10am-5pm every day of the week, including weekends! Operating hours may vary on holidays!</p>
                 <br>
                 <br>
-                <a class="nav-link" href="#products">
+                <a class="nav-link" style="padding: 0;" href="#products">
                 <button type="button" class="button1">Take me to the products!</button>
                 </a>
-            
             </div>
-            <div class="column p-5 d-flex align-items-center">
+            <div class="column p-5 d-flex align-items-center col-12 col-sm-12 col-md-6 col-lg-6">
                 <img class="about-image img-fluid"
                     src="<?php echo get_template_directory_uri(); ?>/assets/images/seafood-place.jpg"
                     alt="Exterior of Grand Ocean Seafood Wholesale Shop" class="center">
