@@ -26,7 +26,7 @@
 
 #about-us {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: #E6E6E6;
     justify-content: center;
     align-items: center;
@@ -36,51 +36,33 @@
         float: left;
         width: 50%;
 
-        h1 {
-            color: #C8102E;
-            font-family: 'Lato', sans-serif;
-            text-decoration: underline white;
-            font-size: 1.3em;
-        }
-
-        h3 {
-            color: #C8102E;
-            font-family: 'Lato', sans-serif;
-            text-decoration: underline white;
-            font-size: 0.7605em;
-        }
-
         p {
             font-family: 'Lato', sans-serif;
             font-size: 12px;
         }
 
         .about-image {
-            width: 82.5px;
-            height: 82.5px;
+            width: 275px;
+            height: 275px;
             object-fit: cover;
             position: relative;
             overflow: hidden;
             border-radius: 50% !important;
-            border: 2px solid #f1f1f1;
+            border: 5px solid #f1f1f1;
         }
+    }
 
-        .button1 {
-            background-color: #E6E6E6;
-            border: 6px solid black;
-            border-color: white;
-            color: #C8102E;
-            padding: 15px;
-            position: relative;
-            align-items: center;
-            text-decoration: none;
-            font-size: 20px;
-        }
+    .button1 {
+        background: transparent;
+        border: 6px solid white;
+        color: $raspberry-red;
+        padding: 15px;
+        font-weight: 900;
 
-        .button1:hover {
-            background-color: #C8102E;
+        &:hover {
+            border: 6px solid white;
+            background: $raspberry-red;
             color: white;
-            border: #C8102E;
         }
     }
 
@@ -89,7 +71,7 @@
 @media only screen and (min-width: 768px) {
     #about-us {
         width: 100%;
-        height: 100vh;
+        
         background: #E6E6E6;
         justify-content: center;
         align-items: center;
@@ -99,51 +81,16 @@
             float: left;
             width: 50%;
 
-            h1 {
-                color: #C8102E;
-                font-family: 'Lato', sans-serif;
-                text-decoration: underline white;
-                font-size: 2em;
-            }
-
-            h3 {
-                color: #C8102E;
-                font-family: 'Lato', sans-serif;
-                text-decoration: underline white;
-                font-size: 1.17em;
-            }
-
             p {
                 font-family: 'Lato', sans-serif;
                 font-size: 16px;
             }
 
             .about-image {
-                width: 252px;
-                height: 252px;
                 object-fit: cover;
                 position: relative;
                 overflow: hidden;
                 border-radius: 50% !important;
-                border: 10px solid #f1f1f1;
-            }
-
-            .button1 {
-                background-color: #E6E6E6;
-                border: 6px solid black;
-                border-color: white;
-                color: #C8102E;
-                padding: 15px;
-                position: relative;
-                align-items: center;
-                text-decoration: none;
-                font-size: 20px;
-            }
-
-            .button1:hover {
-                background-color: #C8102E;
-                color: white;
-                border: #C8102E;
             }
         }
 
@@ -163,20 +110,6 @@
             float: left;
             width: 50%;
 
-            h1 {
-                color: #C8102E;
-                font-family: 'Lato', sans-serif;
-                text-decoration: underline white;
-                font-size: 2em;
-            }
-
-            h3 {
-                color: #C8102E;
-                font-family: 'Lato', sans-serif;
-                text-decoration: underline white;
-                font-size: 1.17em;
-            }
-
             p {
                 font-family: 'Lato', sans-serif;
                 font-size: 16px;
@@ -190,24 +123,6 @@
                 overflow: hidden;
                 border-radius: 50% !important;
                 border: 10px solid #f1f1f1;
-            }
-
-            .button1 {
-                background-color: #E6E6E6;
-                border: 6px solid black;
-                border-color: white;
-                color: #C8102E;
-                padding: 15px;
-                position: relative;
-                align-items: center;
-                text-decoration: none;
-                font-size: 20px;
-            }
-
-            .button1:hover {
-                background-color: #C8102E;
-                color: white;
-                border: #C8102E;
             }
         }
 

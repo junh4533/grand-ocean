@@ -22,6 +22,7 @@ body {
     margin: 0 !important;
 }
 
+h1,
 h2,
 h3,
 h4,
@@ -51,6 +52,23 @@ a {
     border-radius: 0;
 }
 
+.text-heading {
+    color: $raspberry-red;
+    border-bottom: 2px solid $raspberry-red;
+    position: relative;
+    display: inline;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 10%;
+        width: 80%;
+        height: 1px;
+        background-color: $raspberry-red;
+    }
+}
+
 // translation icon 
 #trp-floater-ls {
     background: $raspberry-red;
@@ -62,6 +80,10 @@ a {
     a:hover {
         background: $beige-gold;
     }
+}
+
+#products, #about-us {
+    padding: 10% 0;
 }
 
 @import 'navbar';
