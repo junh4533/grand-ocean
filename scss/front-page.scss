@@ -7,6 +7,10 @@
     justify-content: center;
     align-items: center;
 
+    .tint {
+        background: rgba(0, 0, 0, 0.75);
+    }
+
     #home-content {
         position: absolute;
         z-index: 999;

@@ -11,28 +11,30 @@ jQuery(document).ready(function () {
     jQuery('.woocommerce-checkout').addClass("row");
     jQuery('#customer_details').addClass('col-12', 'col-lg-7', 'py-5');
     jQuery('#order_review').addClass('col-12', 'col-lg-5', 'py-5');
-    jQuery('.checkout-header').each(function(index) {
+    jQuery('.checkout-header').each(function (index) {
         jQuery(this).before('<span class="checkout-badge-wrapper"><span class="checkout-badge">' + (index + 1) + '</span></span>');
     });
     jQuery('.modal-body .woocommerce-cart-form').attr("action", "#products");
     jQuery('.woocommerce-billing-fields__field-wrapper').before('<hr />');
-    jQuery(function($){
+    jQuery(function ($) {
         // Update data-quantity
-        $(document.body).on('click input', 'input.qty', function() {
+        $(document.body).on('click input', 'input.qty', function () {
             $(this).parent().parent().find('a.ajax_add_to_cart').attr('data-quantity', $(this).val());
 
             // (optional) Removing other previous "view cart" buttons
             $(".added_to_cart").remove();
         });
 
-        $(document.body).on('added_to_cart', function() {
+        $(document.body).on('added_to_cart', function () {
             jQuery.ajax({
                 type: 'POST',
                 dataType: 'json',
                 url: "/wp-admin/admin-ajax.php",
-                data: { action: "update_shortcode_content", 
-                        shortcode: "woocommerce_cart"
-                },success: function(data){
+                data: {
+                    action: "update_shortcode_content",
+                    shortcode: "woocommerce_cart"
+                },
+                success: function (data) {
                     jQuery('.modal-body').html(data.content);
                     jQuery('span.cart-contents-count').html(data.count);
                     jQuery('.modal-body .woocommerce-cart-form').attr("action", "#products");
@@ -40,16 +42,18 @@ jQuery(document).ready(function () {
             });
         });
     });
-    jQuery(document.body).on('click', 'a.remove', function(e){
+    jQuery(document.body).on('click', 'a.remove', function (e) {
         e.preventDefault();
         var product_id = jQuery(this).attr("data-product_id");
         jQuery.ajax({
             type: 'POST',
             dataType: 'json',
             url: "/wp-admin/admin-ajax.php",
-            data: { action: "product_remove", 
-                    product_id: product_id
-            },success: function(data){
+            data: {
+                action: "product_remove",
+                product_id: product_id
+            },
+            success: function (data) {
                 jQuery('.modal-body').html(data.content);
                 jQuery('span.cart-contents-count').html(data.count);
                 jQuery('.modal-body .woocommerce-cart-form').attr("action", "#products");

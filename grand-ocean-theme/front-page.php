@@ -4,8 +4,10 @@
 
 <section id="home">
     <div class="tint"></div>
-    <div id="home-content">
-        <h1>鲜</h1>
+    <div id="home-content" class="d-flex justify-content-center">
+        <!-- <h1>鲜</h1> -->
+        <img class="w-50" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-white.png"
+                alt="Logo">
     </div>
 </section>
 <section id="products">
@@ -51,7 +53,7 @@
                 <br>
                 <br>
                 <a class="nav-link" style="padding: 0;" href="#products">
-                <button type="button" class="button1">Take me to the products!</button>
+                <button type="button" class="button1">今天的精选</button>
                 </a>
             </div>
             <div class="column p-5 d-flex align-items-center col-12 col-sm-12 col-md-6 col-lg-6">

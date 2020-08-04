@@ -13,13 +13,13 @@
 
 <body <?php body_class(); //displays class names for the body ?>>
 
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="tint"></div>
+    <nav class="navbar navbar-expand-xl navbar-light mt-5">
+        <div class="tint" id="nav-tint"></div>
         <!-- Brand -->
-        <a class="navbar-brand" href="<?php echo get_site_url(); ?>">
+        <!-- <a class="navbar-brand" href="<?php echo get_site_url(); ?>">
             <img id="navbar-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-glow.png"
                 alt="Logo">
-        </a>
+        </a> -->
 
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -28,7 +28,7 @@
 
         <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav ml-auto d-flex align-items-center">
+            <ul class="navbar-nav mx-auto d-flex align-items-center">
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo get_site_url(); ?>">主页</a>
                 </li>
@@ -58,3 +58,21 @@
             </ul>
         </div>
     </nav>
+
+    <script>
+    
+    jQuery(document).ready(function () {
+        let hamburger_clicked = false;
+    jQuery('#hamburger-menu').click(function (e) {
+        e.preventDefault();
+        if (hamburger_clicked == false) {
+            jQuery('#nav-tint').css('background-color', 'rgba(0,0,0,1)');
+            hamburger_clicked = true;
+        } else {
+            jQuery('#nav-tint').css('background-color', 'rgba(0,0,0,0)');
+            hamburger_clicked = false;
+        }
+    });
+});
+   
+    </script>
