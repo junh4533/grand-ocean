@@ -61,14 +61,14 @@ function quantity_inputs_for_loop_ajax_add_to_cart( $html, $product ) {
         ) ) );
 
         // Embedding the quantity field to Ajax add to cart button
-        $html = sprintf( '%s<a rel="nofollow" href="%s" data-quantity="%s" data-product_id="%s" data-product_sku="%s" class="%s">%s</a>',
-            woocommerce_quantity_input( array(), $product, false ),
+        $html = sprintf( '<a rel="nofollow" href="%s" data-quantity="%s" data-product_id="%s" data-product_sku="%s" class="%s">%s</a>%s',
             esc_url( $product->add_to_cart_url() ),
             esc_attr( isset( $quantity ) ? $quantity : 1 ),
             esc_attr( $product->get_id() ),
             esc_attr( $product->get_sku() ),
             esc_attr( isset( $class ) ? $class : 'button' ),
-            esc_html( $product->add_to_cart_text() )
+            esc_html( $product->add_to_cart_text() ),
+            woocommerce_quantity_input( array(), $product, false )
         );
     } else if ($product && $product->is_type( 'simple' ) && $product->is_purchasable() && !$product->is_in_stock() && ! $product->is_sold_individually() ) {
         $html = "<div class='out-of-stock'>OUT OF STOCK</div>";
