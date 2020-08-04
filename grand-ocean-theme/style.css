@@ -598,6 +598,9 @@ a {
     font-size: smaller; }
   #confirmation i {
     font-size: larger; }
+  #confirmation #step-0 {
+    text-align: center;
+    justify-content: center; }
 
 /* Mobile devices */
 /* Tablets */

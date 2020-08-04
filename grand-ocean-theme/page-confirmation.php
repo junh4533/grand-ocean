@@ -2,9 +2,6 @@
 <?php /* Template Name: Confirmation */ ?>
 <?php get_header();?>
 
-<div id="alert">
-</div> 
-
 <section id="confirmation">
     <div class="container">
         <div class="row">
@@ -28,8 +25,11 @@
             <div class="col-6">
                 <div class="confirmation-message">
                     <div id = step-0>
-                        <img src="/assets/images/alert.png" alt="alert icon"/>
-                        <h4>Reservation not yet completed!</h4>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/alert.png" 
+                            alt="alert icon" 
+                            width="50px" 
+                            height="50px"/>
+                        <h3>Reservation not yet completed!</h3>
                     </div>
                 
                     <div id='step-1'>
