@@ -6,9 +6,8 @@ function load_stylesheets()
     wp_register_style('bootstrap4', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css', array(), false, 'all');
     // Custom CSS
     wp_register_style('custom-stylesheet', get_template_directory_uri() . '/style.css', array(), false, 'all');
-
-    wp_enqueue_style('bootstrap4');
     wp_enqueue_style('custom-stylesheet');
+    wp_enqueue_style('bootstrap4');
 }
 
 function load_scripts()
@@ -217,13 +216,6 @@ function change_default_checkout_country() {
 function change_default_checkout_state() {
   return 'NY'; // state code
 }
-
-function pwcc_live_reload_js() {
-	?>
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-	<?php
-}
-add_action('wp_footer', 'pwcc_live_reload_js');
 
 // add_filter( 'the_title', 'woo_title_order_received', 10, 2 );
 

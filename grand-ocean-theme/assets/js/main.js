@@ -56,14 +56,4 @@ jQuery(document).ready(function () {
             }
         });
     });
-
-    jQuery('#collapsibleNavbar').on('show.bs.collapse', function () {
-        jQuery('.navbar .tint').css({'background':'black', 'opacity': 1});
-    })
-
-    jQuery('#collapsibleNavbar').on('hide.bs.collapse', function () {
-        jQuery('.navbar .tint').animate({
-            opacity: "0"
-        });
-    })
 });

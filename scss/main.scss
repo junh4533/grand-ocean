@@ -88,8 +88,12 @@ a {
     }
 }
 
-#products, #about-us {
+#about-us {
     padding: 10% 0;
+}
+
+#products {
+    padding: 5% 0;
 }
 
 @import 'navbar';
