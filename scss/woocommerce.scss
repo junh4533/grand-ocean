@@ -334,10 +334,14 @@
 
 .woocommerce-input-wrapper {
     width: 100%;
-
     textarea {
         padding: 8px 15px;
     }
+}
+
+
+#order_comments {
+    height: 150px;
 }
 
 #billing_wechat {
