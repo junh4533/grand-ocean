@@ -72,8 +72,11 @@ a {
 #trp-floater-ls-language-list a:hover {
   background: #CBAF8A; }
 
-#products, #about-us {
+#about-us {
   padding: 10% 0; }
+
+#products {
+  padding: 5% 0; }
 
 .navbar {
   position: absolute;
@@ -81,7 +84,8 @@ a {
   left: 0;
   z-index: 9999;
   width: 100%;
-  max-height: 100vh; }
+  max-height: 100vh;
+  background-color: black; }
   .navbar .tint {
     z-index: -1; }
   .navbar .navbar-brand {
@@ -90,6 +94,10 @@ a {
       width: 175px; }
   .navbar .navbar-toggler {
     border-color: transparent !important; }
+    .navbar .navbar-toggler:focus {
+      outline: none; }
+    .navbar .navbar-toggler:hover {
+      filter: brightness(1.25); }
   .navbar .navbar-nav {
     height: 100vh; }
     .navbar .navbar-nav .nav-item {
@@ -104,7 +112,7 @@ a {
         text-align: center;
         transition: all 0.25s ease-out; }
         .navbar .navbar-nav .nav-item .nav-link:hover {
-          filter: brightness(1.4); }
+          filter: brightness(1.25); }
     .navbar .navbar-nav .nav-icon-row {
       width: 40%;
       display: flex;
@@ -114,16 +122,18 @@ a {
     color: #CBAF8A; }
 
 @media only screen and (min-width: 992px) {
-  .navbar .navbar-nav {
-    height: initial; }
-    .navbar .navbar-nav .nav-item {
-      margin: 0;
-      font-size: 100%;
-      width: 140px; }
-    .navbar .navbar-nav .nav-icon-row {
-      width: 20%; }
-      .navbar .navbar-nav .nav-icon-row .nav-item {
-        width: 2rem !important; } }
+  .navbar {
+    background-color: transparent; }
+    .navbar .navbar-nav {
+      height: initial; }
+      .navbar .navbar-nav .nav-item {
+        margin: 0;
+        font-size: 100%;
+        width: 140px; }
+      .navbar .navbar-nav .nav-icon-row {
+        width: 20%; }
+        .navbar .navbar-nav .nav-icon-row .nav-item {
+          width: 2rem !important; } }
 
 #footer {
   background: #222222;
@@ -349,8 +359,8 @@ a {
   display: block; }
 
 .modal-dialog {
-  width: 80%;
-  max-width: 900px; }
+  width: 80% !important;
+  max-width: 900px !important; }
 
 .modal-content {
   border-radius: 0; }
@@ -546,8 +556,7 @@ a {
   width: 100%;
   margin: 0;
   outline: 0;
-  line-height: normal;
-  height: 2em; }
+  line-height: normal; }
 
 .select2-selection--single {
   border-width: 2px;
@@ -558,6 +567,12 @@ a {
 @media only screen and (min-width: 400px) {
   .checkout-zipcode {
     width: 15%; } }
+
+#place_order {
+  transition: all 0.25s ease-out; }
+  #place_order:hover {
+    filter: brightness(1.25);
+    color: black; }
 
 #confirmation {
   width: 100%;

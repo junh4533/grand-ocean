@@ -6,9 +6,8 @@ function load_stylesheets()
     wp_register_style('bootstrap4', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css', array(), false, 'all');
     // Custom CSS
     wp_register_style('custom-stylesheet', get_template_directory_uri() . '/style.css', array(), false, 'all');
-
-    wp_enqueue_style('bootstrap4');
     wp_enqueue_style('custom-stylesheet');
+    wp_enqueue_style('bootstrap4');
 }
 
 function load_scripts()
