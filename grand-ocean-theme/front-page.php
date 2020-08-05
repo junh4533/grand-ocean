@@ -39,7 +39,7 @@
         <div class="row">
             <div
                 class="column hv-center col-12 col-sm-12 col-md-6 col-lg-6 order-md-2 p-sm-5 mb-3">
-                <img class="about-image img-fluid"
+                <img class="about-image"
                     src="<?php echo get_template_directory_uri(); ?>/assets/images/seafood-place.jpg"
                     alt="Exterior of Grand Ocean Seafood Wholesale Shop" class="center">
             </div>
