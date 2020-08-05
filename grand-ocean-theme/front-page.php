@@ -24,7 +24,6 @@
                     <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
                 </div>
             </div>
-
         </div>
     </div>
     <?php echo do_shortcode("[woo_cart_but]"); ?>

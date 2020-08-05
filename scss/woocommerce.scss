@@ -5,13 +5,9 @@
     text-align: center;
 }
 
-#products {
-
-}
-
 // PRODUCTS
 .products {
-    margin-top: 2rem;
+    margin-top: 5rem;
 }
 
 .products li {
@@ -20,22 +16,26 @@
     border-radius: 0.3rem;
     box-sizing: border-box;
     padding: 10px 5px !important;
+
     p {
         padding: 0px 10px;
         margin-bottom: 0.5rem;
         min-height: 3rem;
         text-overflow: ellipsis;
     }
+
     .quantity {
         text-align: left;
         margin-top: 10px;
         display: inline-block;
     }
+
     .add_to_cart_button {
         text-align: left;
         display: inline-block;
         margin-top: 0 !important;
     }
+
     img {
         max-width: 60%;
         margin: 0 auto;
@@ -54,25 +54,33 @@
 }
 
 // PRODUCT ADD CART BUTTON
-.woocommerce ul.products li.product .button {
-    border-radius: 0;
-    background: $light-gray;
-    color: $dark-gray;
-    transition: all 0.5s ease-out;
+.woocommerce ul.products {
+    display: flex;
+    justify-content: center;
 
-    &:hover {
-        color: white;
-        background: $raspberry-red;
+    li.product .button {
+        border-radius: 0;
+        background: $light-gray;
+        color: $dark-gray;
+        transition: all 0.5s ease-out;
+
+        &:hover {
+            color: white;
+            background: $raspberry-red;
+        }
     }
+}
+
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+    margin: 0 10%;
 }
 
 // QUANTITY
 .woocommerce .quantity {
 
     // TEXT
-    .qty {
-
-    }
+    .qty {}
 }
 
 .cart-icon {
@@ -93,7 +101,7 @@
 
 .cart-contents:before {
     font-family: 'Font Awesome 5 Free';
-    font-weight: 900;	
+    font-weight: 900;
     content: "\f07a";
     font-size: 2rem;
     color: $raspberry-red;
@@ -112,8 +120,8 @@
     right: -10%;
     width: 1rem;
     height: 1rem;
-	font-size: 0.75rem;
-	color: $light-gray;
+    font-size: 0.75rem;
+    color: $light-gray;
     background: $dark-gray;
     border-radius: 50%;
     padding: 3px;
@@ -149,9 +157,11 @@
     button {
         background-color: $light-gray;
         border-radius: 4;
+
         &:focus {
             box-shadow: none;
         }
+
         &:hover {
             color: $dark-gray;
         }
@@ -162,9 +172,11 @@
 .woocommerce table.cart img {
     max-width: 100px;
 }
- // PRODUCT NAME FIELD
-.woocommerce table.shop_table td { 
+
+// PRODUCT NAME FIELD
+.woocommerce table.shop_table td {
     padding: 5px 10px;
+
     a {
         color: $raspberry-red;
         margin-bottom: 0 !important;
@@ -179,6 +191,7 @@
     justify-content: center;
     align-items: center;
     transition: all 0.25s ease-out;
+
     &:hover {
         background: $raspberry-red;
         color: $light-gray;
@@ -188,6 +201,7 @@
 // CART TOTAL SECTION
 .woocommerce .cart-collaterals .cart_totals {
     float: none;
+
     h2 {
         font-size: 1.5rem;
         font-weight: bold;
@@ -200,6 +214,7 @@
     color: $dark-gray;
     border-radius: 0;
     transition: all 0.5s ease-out;
+
     &:hover {
         background-color: $raspberry-red;
         color: $light-gray;
@@ -235,9 +250,11 @@
     .woocommerce-checkout {
         display: block;
     }
+
     #customer_details {
         display: block
     }
+
     #order_review {
         display: block;
     }
@@ -246,6 +263,7 @@
 #customer_details {
     flex: 3;
     padding: 0px 5%;
+
     div {
         display: block;
         float: none;
@@ -287,7 +305,7 @@
     width: 100%;
 }
 
-.checkout-street span{
+.checkout-street span {
     width: 75%;
 }
 
@@ -316,6 +334,7 @@
 
 .woocommerce-input-wrapper {
     width: 100%;
+
     textarea {
         padding: 8px 15px;
     }
@@ -344,7 +363,7 @@
 }
 
 .added_to_cart.wc-forward {
-    display: none !important; 
+    display: none !important;
 }
 
 .cart-contents {
@@ -365,6 +384,7 @@
     color: $raspberry-red;
     border-bottom: 2px solid $raspberry-red;
     position: relative;
+
     &::after {
         content: "";
         position: absolute;
@@ -380,7 +400,8 @@
     border-radius: 0 !important;
 }
 
-.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
     box-sizing: border-box;
     width: 100%;
     margin: 0;

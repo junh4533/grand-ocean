@@ -9,9 +9,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 @import url("https://fonts.googleapis.com/css2?family=Long+Cang&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-#someText {
-  font-family: 'Long Cang', cursive; }
-
 html,
 body {
   width: 100%;
@@ -35,6 +32,11 @@ p,
 a {
   margin-bottom: 1rem;
   display: block; }
+
+.hv-center {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .tint {
   position: absolute;
@@ -253,7 +255,7 @@ a {
   text-align: center; }
 
 .products {
-  margin-top: 2rem; }
+  margin-top: 5rem; }
 
 .products li {
   font-size: 0.9rem;
@@ -285,14 +287,21 @@ a {
 .woocommerce-Price-amount {
   color: #222222; }
 
-.woocommerce ul.products li.product .button {
-  border-radius: 0;
-  background: #D3D3D3;
-  color: #222222;
-  transition: all 0.5s ease-out; }
-  .woocommerce ul.products li.product .button:hover {
-    color: white;
-    background: #C8102E; }
+.woocommerce ul.products {
+  display: flex;
+  justify-content: center; }
+  .woocommerce ul.products li.product .button {
+    border-radius: 0;
+    background: #E6E6E6;
+    color: #222222;
+    transition: all 0.5s ease-out; }
+    .woocommerce ul.products li.product .button:hover {
+      color: white;
+      background: #C8102E; }
+
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+  margin: 0 10%; }
 
 .cart-icon {
   padding: 10px 20px;
@@ -328,7 +337,7 @@ a {
   width: 1rem;
   height: 1rem;
   font-size: 0.75rem;
-  color: #D3D3D3;
+  color: #E6E6E6;
   background: #222222;
   border-radius: 50%;
   padding: 3px;
@@ -354,7 +363,7 @@ a {
 .modal-footer {
   border: none; }
   .modal-footer button {
-    background-color: #D3D3D3;
+    background-color: #E6E6E6;
     border-radius: 4; }
     .modal-footer button:focus {
       box-shadow: none; }
@@ -379,7 +388,7 @@ a {
   transition: all 0.25s ease-out; }
   .woocommerce a.remove:hover {
     background: #C8102E;
-    color: #D3D3D3; }
+    color: #E6E6E6; }
 
 .woocommerce .cart-collaterals .cart_totals {
   float: none; }
@@ -388,13 +397,13 @@ a {
     font-weight: bold; }
 
 .woocommerce a.button.alt {
-  background-color: #D3D3D3;
+  background-color: #E6E6E6;
   color: #222222;
   border-radius: 0;
   transition: all 0.5s ease-out; }
   .woocommerce a.button.alt:hover {
     background-color: #C8102E;
-    color: #D3D3D3; }
+    color: #E6E6E6; }
 
 .out-of-stock {
   color: #C8102E;
@@ -403,7 +412,7 @@ a {
   text-transform: uppercase; }
 
 .product-disabled {
-  background-color: #D3D3D3 !important;
+  background-color: #E6E6E6 !important;
   color: #222222 !important; }
 
 #reservation {
@@ -533,7 +542,8 @@ a {
 .shop_table {
   border-radius: 0 !important; }
 
-.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
   box-sizing: border-box;
   width: 100%;
   margin: 0;

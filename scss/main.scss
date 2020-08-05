@@ -38,6 +38,12 @@ a {
     display: block;
 }
 
+.hv-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .tint {
     position: absolute;
     top: 0;
@@ -88,7 +94,7 @@ a {
 
 @import 'navbar';
 @import 'footer';
-@import 'front-page';
+@import 'home';
 @import 'about-us';
 @import 'woocommerce';
 @import 'confirmation';
