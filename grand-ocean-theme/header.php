@@ -6,7 +6,7 @@
     <title>Grand Ocean Seafood</title>
     <!-- Description, Keywords and Author -->
     <meta name="description" content="Grand Ocean is a NYC-based seafood wholesaler that delivers locally sourced and imported frozen seafood.">
-    <meta name="keywords" content="Seafood, wholesaler, store, fresh, locally sourced, delivery, Grand, Ocean, wholesale, fish, lobster, crab, packages, abalone, bulk, College Point, Flushing, NYC, catering, market">
+    <meta name="keywords" content="Seafood, wholesaler, store, fresh, locally sourced, delivery, Grand, Ocean, wholesale, fish, lobster, crab, packaged, abalone, bulk, College Point, Flushing, NYC, catering, market">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); //includes scripts and stylesheets ?>
 </head>
