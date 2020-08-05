@@ -3,11 +3,9 @@
     height: 100vh;
     background: url('assets/images/bg.jpg') center / cover no-repeat;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     #home-content {
+        display: flex;
         position: absolute;
         z-index: 999;
         color: white;
@@ -101,7 +99,7 @@
     #about-us {
         width: 100%;
         height: 100vh;
-        background: #E6E6E6;
+        background: $light-gray;
         justify-content: center;
         align-items: center;
         display: flex;

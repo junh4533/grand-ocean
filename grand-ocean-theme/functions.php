@@ -81,7 +81,7 @@ function hide_ajax_view_cart_button(){
     if( is_shop() || is_product_category() || is_product_tag() ): ?>
     <style>
         a.added_to_cart.wc-forward {
-            display:none;
+            display: none;
         }
     </style>
     <?php endif;
@@ -218,13 +218,6 @@ function change_default_checkout_state() {
   return 'NY'; // state code
 }
 
-function pwcc_live_reload_js() {
-	?>
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-	<?php
-}
-add_action('wp_footer', 'pwcc_live_reload_js');
-
 // add_filter( 'the_title', 'woo_title_order_received', 10, 2 );
 
 
@@ -255,5 +248,14 @@ add_action('wp_footer', 'pwcc_live_reload_js');
 // 	}
 // 	return $title;
 // }
+
+// validation for phone number field
+add_action('woocommerce_checkout_process', 'custom_validate_billing_phone');
+function custom_validate_billing_phone() {
+    $is_correct = preg_match('/^[0-9\D]{10}/i', $_POST['billing_phone']);
+    if ( $_POST['billing_phone'] && !$is_correct) {
+        wc_add_notice( __( '电话号码必须使用此格式: <strong>1234567890</strong>.' ), 'error' );
+    }
+}
 
 ?>

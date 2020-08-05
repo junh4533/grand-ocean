@@ -2,7 +2,7 @@
 
 <?php get_header();?>
 
-<section id="home">
+<section class="hv-center" id="home">
     <div class="tint"></div>
     <div id="home-content">
         <h1>鲜</h1>
@@ -38,7 +38,7 @@
     <div class="container">
         <div class="row">
             <div
-                class="column d-flex align-items-center justify-content-center col-12 col-sm-12 col-md-6 col-lg-6 order-md-2 p-sm-5 mb-3">
+                class="column hv-center col-12 col-sm-12 col-md-6 col-lg-6 order-md-2 p-sm-5 mb-3">
                 <img class="about-image img-fluid"
                     src="<?php echo get_template_directory_uri(); ?>/assets/images/seafood-place.jpg"
                     alt="Exterior of Grand Ocean Seafood Wholesale Shop" class="center">
