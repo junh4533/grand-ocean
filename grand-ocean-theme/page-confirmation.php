@@ -2,7 +2,7 @@
 <?php /* Template Name: Confirmation */ ?>
 <?php get_header();?>
 
-<section id="confirmation">
+<section class="hv-center" id="confirmation">
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-5" id='receipt'>

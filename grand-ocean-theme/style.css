@@ -47,12 +47,12 @@ a {
   z-index: 0; }
 
 .btn {
-  background: #CBAF8A;
+  background: #cbaf8a;
   border-radius: 0; }
 
 .text-heading {
-  color: #C8102E;
-  border-bottom: 2px solid #C8102E;
+  color: #c8102e;
+  border-bottom: 2px solid #c8102e;
   position: relative;
   display: inline; }
   .text-heading::after {
@@ -62,15 +62,15 @@ a {
     left: 10%;
     width: 80%;
     height: 1px;
-    background-color: #C8102E; }
+    background-color: #c8102e; }
 
 #trp-floater-ls {
-  background: #C8102E;
+  background: #c8102e;
   left: initial;
   right: 2%; }
 
 #trp-floater-ls-language-list a:hover {
-  background: #CBAF8A; }
+  background: #cbaf8a; }
 
 #about-us {
   padding: 10% 0; }
@@ -106,7 +106,7 @@ a {
       font-size: 200%; }
       .navbar .navbar-nav .nav-item .nav-link {
         margin: .5rem auto;
-        color: #CBAF8A !important;
+        color: #cbaf8a !important;
         text-transform: uppercase;
         font-weight: 700;
         text-align: center;
@@ -119,7 +119,7 @@ a {
       flex-direction: row;
       justify-content: space-between; }
   .navbar #hamburger-menu {
-    color: #CBAF8A; }
+    color: #cbaf8a; }
 
 @media only screen and (min-width: 992px) {
   .navbar {
@@ -137,17 +137,17 @@ a {
 
 #footer {
   background: #222222;
-  color: #C9C1B6; }
+  color: #c9c1b6; }
   #footer i {
     font-size: 150%; }
   #footer .footer-heading {
     display: inline-block;
-    color: #CBAF8A;
+    color: #cbaf8a;
     font-weight: 900;
-    border-bottom: solid 2px #CBAF8A;
+    border-bottom: solid 2px #cbaf8a;
     margin-bottom: 1em; }
   #footer a {
-    color: #C9C1B6 !important; }
+    color: #c9c1b6 !important; }
   #footer #footer-logo-section {
     display: flex;
     flex-direction: column; }
@@ -171,7 +171,7 @@ a {
     #home #home-content h1 {
       font-size: 15rem;
       font-family: 'Long Cang', cursive;
-      color: #D8C777; }
+      color: gb(216, 199, 119); }
   #home .tint {
     background: rgba(0, 0, 0, 0.7); }
 
@@ -199,12 +199,12 @@ a {
   #about-us .button1 {
     background: transparent;
     border: 6px solid white;
-    color: #C8102E;
+    color: #c8102e;
     padding: 15px;
     font-weight: 900; }
     #about-us .button1:hover {
       border: 6px solid white;
-      background: #C8102E;
+      background: #c8102e;
       color: white; }
 
 @media only screen and (min-width: 768px) {
@@ -230,7 +230,7 @@ a {
   #about-us {
     width: 100%;
     height: 100vh;
-    background: #E6E6E6;
+    background: #e6e6e6;
     justify-content: center;
     align-items: center;
     display: flex; }
@@ -250,12 +250,67 @@ a {
         border: 10px solid #f1f1f1; } }
 
 #about-us {
-  background: #E6E6E6; }
-  #about-us .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  width: 100%;
+  height: 100vh;
+  background: #e6e6e6;
+  justify-content: center;
+  align-items: center;
+  display: flex; }
+  #about-us .column {
+    float: left;
     width: 50%; }
+    #about-us .column h1 {
+      color: #c8102e;
+      font-family: 'Lato', sans-serif;
+      text-decoration: underline white;
+      font-size: 1.3em; }
+    #about-us .column h3 {
+      color: #c8102e;
+      font-family: 'Lato', sans-serif;
+      text-decoration: underline white;
+      font-size: 0.7605em; }
+    #about-us .column p {
+      font-family: 'Lato', sans-serif;
+      font-size: 12px; }
+    #about-us .column .about-image {
+      width: 82.5px;
+      height: 82.5px;
+      object-fit: cover;
+      position: relative;
+      overflow: hidden;
+      border-radius: 50% !important;
+      border: 2px solid white; }
+    #about-us .column .button1 {
+      background-color: #e6e6e6;
+      border: 6px solid black;
+      border-color: white;
+      color: #c8102e;
+      padding: 15px;
+      position: relative;
+      align-items: center;
+      text-decoration: none;
+      font-size: 20px; }
+    #about-us .column .button1:hover {
+      background-color: #c8102e;
+      color: white;
+      border: #c8102e; }
+
+@media only screen and (min-width: 768px) {
+  #about-us .column h1 {
+    font-size: 2em; }
+  #about-us .column h3 {
+    font-size: 1.17em; }
+  #about-us .column p {
+    font-size: 16px; }
+  #about-us .column .about-image {
+    width: 252px;
+    height: 252px; } }
+
+@media only screen and (min-width: 992px) {
+  #about-us .column .about-image {
+    width: 372px;
+    height: 372px;
+    border: 10px solid #f1f1f1; } }
 
 #main {
   padding: 20px 40px;
@@ -290,7 +345,7 @@ a {
     margin-bottom: 0.5rem; }
 
 .woocommerce-loop-product__title {
-  color: #C8102E; }
+  color: #c8102e; }
 
 .woocommerce-Price-amount {
   color: #222222; }
@@ -300,12 +355,12 @@ a {
   justify-content: center; }
   .woocommerce ul.products li.product .button {
     border-radius: 0;
-    background: #E6E6E6;
+    background: #e6e6e6;
     color: #222222;
     transition: all 0.5s ease-out; }
     .woocommerce ul.products li.product .button:hover {
       color: white;
-      background: #C8102E; }
+      background: #c8102e; }
 
 .woocommerce ul.products li.product,
 .woocommerce-page ul.products li.product {
@@ -330,7 +385,7 @@ a {
   font-weight: 900;
   content: "\f07a";
   font-size: 2rem;
-  color: #C8102E; }
+  color: #c8102e; }
 
 .cart-contents:hover {
   text-decoration: none; }
@@ -345,7 +400,7 @@ a {
   width: 1rem;
   height: 1rem;
   font-size: 0.75rem;
-  color: #E6E6E6;
+  color: #e6e6e6;
   background: #222222;
   border-radius: 50%;
   padding: 3px;
@@ -371,7 +426,7 @@ a {
 .modal-footer {
   border: none; }
   .modal-footer button {
-    background-color: #E6E6E6;
+    background-color: #e6e6e6;
     border-radius: 4; }
     .modal-footer button:focus {
       box-shadow: none; }
@@ -384,19 +439,19 @@ a {
 .woocommerce table.shop_table td {
   padding: 5px 10px; }
   .woocommerce table.shop_table td a {
-    color: #C8102E;
+    color: #c8102e;
     margin-bottom: 0 !important; }
 
 .woocommerce a.remove {
-  color: #C8102E;
+  color: #c8102e;
   line-height: inherit;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.25s ease-out; }
   .woocommerce a.remove:hover {
-    background: #C8102E;
-    color: #E6E6E6; }
+    background: #c8102e;
+    color: #e6e6e6; }
 
 .woocommerce .cart-collaterals .cart_totals {
   float: none; }
@@ -405,22 +460,22 @@ a {
     font-weight: bold; }
 
 .woocommerce a.button.alt {
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
   color: #222222;
   border-radius: 0;
   transition: all 0.5s ease-out; }
   .woocommerce a.button.alt:hover {
-    background-color: #C8102E;
-    color: #E6E6E6; }
+    background-color: #c8102e;
+    color: #e6e6e6; }
 
 .out-of-stock {
-  color: #C8102E;
+  color: #c8102e;
   font-weight: bold;
   font-size: 1.2rem;
   text-transform: uppercase; }
 
 .product-disabled {
-  background-color: #E6E6E6 !important;
+  background-color: #e6e6e6 !important;
   color: #222222 !important; }
 
 #reservation {
@@ -465,7 +520,7 @@ a {
 .checkout-badge {
   width: 60px;
   height: 60px;
-  background-color: #C8102E;
+  background-color: #c8102e;
   color: white;
   margin-right: 40px;
   display: flex;
@@ -503,6 +558,9 @@ a {
   .woocommerce-input-wrapper textarea {
     padding: 8px 15px; }
 
+#order_comments {
+  height: 150px; }
+
 #billing_wechat {
   width: 50%; }
 
@@ -513,7 +571,7 @@ a {
   margin-bottom: 50px; }
 
 #place_order {
-  background-color: #D8C777;
+  background-color: gb(216, 199, 119);
   color: #222222; }
 
 .woocommerce-NoticeGroup-checkout {
@@ -535,8 +593,8 @@ a {
 
 .products-title {
   padding: 10px 20px;
-  color: #C8102E;
-  border-bottom: 2px solid #C8102E;
+  color: #c8102e;
+  border-bottom: 2px solid #c8102e;
   position: relative; }
   .products-title::after {
     content: "";
@@ -545,7 +603,7 @@ a {
     left: 10%;
     width: 80%;
     height: 1px;
-    background-color: #C8102E; }
+    background-color: #c8102e; }
 
 .shop_table {
   border-radius: 0 !important; }
@@ -578,10 +636,7 @@ a {
   width: 100%;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images5.alphacoders.com/909/thumb-1920-909997.jpg") center/cover no-repeat;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  position: relative; }
   #confirmation a {
     text-align: center;
     padding: 0;
@@ -603,7 +658,7 @@ a {
     padding-bottom: 35px;
     margin: 10% 0; }
   #confirmation .woocommerce-Price-amount.amount {
-    color: #D8C777; }
+    color: gb(216, 199, 119); }
   #confirmation h2 {
     padding-top: 30px;
     padding-bottom: 30px; }
