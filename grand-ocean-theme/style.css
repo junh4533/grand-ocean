@@ -603,6 +603,5 @@ a {
     justify-content: center; }
   #confirmation .xlwcty_wrap .xlwcty_Box {
     margin: 0; }
-
-/* Mobile devices */
-/* Tablets */
+  #confirmation .order-confirmation-container {
+    max-width: 800px !important; }
