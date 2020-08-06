@@ -48,12 +48,13 @@
             font-size: 20px;
             width: 150px;
             text-align: center;
+            transition: all 0.5s ease-out;
           }
 
         .button1:hover{
             background-color: $raspberry-red;
             color: white;
-            border: 6px solid $raspberry-red;
+            border: 6px solid white;
         }
     }
 
@@ -84,8 +85,6 @@
 }
 }
     
-    
-
  @media only screen and (min-width: 992px) {
     #about-us {
 
