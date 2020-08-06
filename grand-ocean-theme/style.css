@@ -618,14 +618,14 @@ a {
   #confirmation #step-0, #confirmation #step-1, #confirmation #step-2, #confirmation #step-3, #confirmation #step-4 {
     padding-bottom: 15px; }
   #confirmation #step-0 {
-    border-bottom: 1.25px solid #d8c777; }
+    border-bottom: solid 1px #cbaf8a; }
   #confirmation #step-1, #confirmation #step-2, #confirmation #step-3, #confirmation #step-4 {
     padding-top: 10px; }
   #confirmation h6 {
     font-size: smaller;
     color: #d8c777; }
   #confirmation i {
-    font-size: xx-large; }
+    font-size: 2.5rem; }
   #confirmation #step-0 {
     text-align: center;
     justify-content: center; }
