@@ -41,20 +41,19 @@
 
         .button1 {
             background-color: $light-gray;
-            border: 6px solid black;
-            border-color: white;
+            border: 6px solid white;
             color: $raspberry-red;
             padding: 15px;
-            position: relative;
-            align-items: center;
             text-decoration: none;
             font-size: 20px;
+            width: 150px;
+            text-align: center;
           }
 
         .button1:hover{
             background-color: $raspberry-red;
             color: white;
-            border: $raspberry-red;
+            border: 6px solid $raspberry-red;
         }
     }
 

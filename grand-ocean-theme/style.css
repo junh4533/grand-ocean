@@ -177,80 +177,6 @@ a {
 
 #about-us {
   width: 100%;
-  min-height: 100vh;
-  background: #E6E6E6;
-  justify-content: center;
-  align-items: center;
-  display: flex; }
-  #about-us .column {
-    float: left;
-    width: 50%; }
-    #about-us .column p {
-      font-family: 'Lato', sans-serif;
-      font-size: 12px; }
-    #about-us .column .about-image {
-      width: 275px;
-      height: 275px;
-      object-fit: cover;
-      position: relative;
-      overflow: hidden;
-      border-radius: 50% !important;
-      border: 5px solid #f1f1f1; }
-  #about-us .button1 {
-    background: transparent;
-    border: 6px solid white;
-    color: #c8102e;
-    padding: 15px;
-    font-weight: 900; }
-    #about-us .button1:hover {
-      border: 6px solid white;
-      background: #c8102e;
-      color: white; }
-
-@media only screen and (min-width: 768px) {
-  #about-us {
-    width: 100%;
-    background: #E6E6E6;
-    justify-content: center;
-    align-items: center;
-    display: flex; }
-    #about-us .column {
-      float: left;
-      width: 50%; }
-      #about-us .column p {
-        font-family: 'Lato', sans-serif;
-        font-size: 16px; }
-      #about-us .column .about-image {
-        object-fit: cover;
-        position: relative;
-        overflow: hidden;
-        border-radius: 50% !important; } }
-
-@media only screen and (min-width: 992px) {
-  #about-us {
-    width: 100%;
-    height: 100vh;
-    background: #e6e6e6;
-    justify-content: center;
-    align-items: center;
-    display: flex; }
-    #about-us .column {
-      float: left;
-      width: 50%; }
-      #about-us .column p {
-        font-family: 'Lato', sans-serif;
-        font-size: 16px; }
-      #about-us .column .about-image {
-        width: 372px;
-        height: 372px;
-        object-fit: cover;
-        position: relative;
-        overflow: hidden;
-        border-radius: 50% !important;
-        border: 10px solid #f1f1f1; } }
-
-#about-us {
-  width: 100%;
   height: 100vh;
   background: #e6e6e6;
   justify-content: center;
@@ -282,18 +208,17 @@ a {
       border: 2px solid white; }
     #about-us .column .button1 {
       background-color: #e6e6e6;
-      border: 6px solid black;
-      border-color: white;
+      border: 6px solid white;
       color: #c8102e;
       padding: 15px;
-      position: relative;
-      align-items: center;
       text-decoration: none;
-      font-size: 20px; }
+      font-size: 20px;
+      width: 150px;
+      text-align: center; }
     #about-us .column .button1:hover {
       background-color: #c8102e;
       color: white;
-      border: #c8102e; }
+      border: 6px solid #c8102e; }
 
 @media only screen and (min-width: 768px) {
   #about-us .column h1 {
