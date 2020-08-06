@@ -79,7 +79,7 @@ a {
   padding: 5% 0; }
 
 .navbar {
-  position: absolute;
+  position: absolute !important;
   top: 0;
   left: 0;
   z-index: 9999;
@@ -171,83 +171,9 @@ a {
     #home #home-content h1 {
       font-size: 15rem;
       font-family: 'Long Cang', cursive;
-      color: gb(216, 199, 119); }
+      color: #d8c777; }
   #home .tint {
     background: rgba(0, 0, 0, 0.7); }
-
-#about-us {
-  width: 100%;
-  min-height: 100vh;
-  background: #E6E6E6;
-  justify-content: center;
-  align-items: center;
-  display: flex; }
-  #about-us .column {
-    float: left;
-    width: 50%; }
-    #about-us .column p {
-      font-family: 'Lato', sans-serif;
-      font-size: 12px; }
-    #about-us .column .about-image {
-      width: 275px;
-      height: 275px;
-      object-fit: cover;
-      position: relative;
-      overflow: hidden;
-      border-radius: 50% !important;
-      border: 5px solid #f1f1f1; }
-  #about-us .button1 {
-    background: transparent;
-    border: 6px solid white;
-    color: #c8102e;
-    padding: 15px;
-    font-weight: 900; }
-    #about-us .button1:hover {
-      border: 6px solid white;
-      background: #c8102e;
-      color: white; }
-
-@media only screen and (min-width: 768px) {
-  #about-us {
-    width: 100%;
-    background: #E6E6E6;
-    justify-content: center;
-    align-items: center;
-    display: flex; }
-    #about-us .column {
-      float: left;
-      width: 50%; }
-      #about-us .column p {
-        font-family: 'Lato', sans-serif;
-        font-size: 16px; }
-      #about-us .column .about-image {
-        object-fit: cover;
-        position: relative;
-        overflow: hidden;
-        border-radius: 50% !important; } }
-
-@media only screen and (min-width: 992px) {
-  #about-us {
-    width: 100%;
-    height: 100vh;
-    background: #e6e6e6;
-    justify-content: center;
-    align-items: center;
-    display: flex; }
-    #about-us .column {
-      float: left;
-      width: 50%; }
-      #about-us .column p {
-        font-family: 'Lato', sans-serif;
-        font-size: 16px; }
-      #about-us .column .about-image {
-        width: 372px;
-        height: 372px;
-        object-fit: cover;
-        position: relative;
-        overflow: hidden;
-        border-radius: 50% !important;
-        border: 10px solid #f1f1f1; } }
 
 #about-us {
   width: 100%;
@@ -282,18 +208,18 @@ a {
       border: 2px solid white; }
     #about-us .column .button1 {
       background-color: #e6e6e6;
-      border: 6px solid black;
-      border-color: white;
+      border: 6px solid white;
       color: #c8102e;
       padding: 15px;
-      position: relative;
-      align-items: center;
       text-decoration: none;
-      font-size: 20px; }
+      font-size: 20px;
+      width: 150px;
+      text-align: center;
+      transition: all 0.5s ease-out; }
     #about-us .column .button1:hover {
       background-color: #c8102e;
       color: white;
-      border: #c8102e; }
+      border: 6px solid white; }
 
 @media only screen and (min-width: 768px) {
   #about-us .column h1 {
@@ -484,9 +410,9 @@ a {
   .woocommerce-checkout {
     display: block !important; }
   #customer_details {
-    display: block; }
+    display: block !important; }
   #order_review {
-    display: block; } }
+    display: block !important; } }
 
 #customer_details {
   flex: 3;
@@ -522,9 +448,6 @@ a {
   border-radius: 50%;
   font-weight: bold; }
 
-.woocommerce form .form-row label {
-  width: 100%; }
-
 .checkout-street span {
   width: 75%; }
 
@@ -546,25 +469,11 @@ a {
 .select2-container .select2-selection--single {
   margin: -3px 0 0 0 !important; }
 
-.woocommerce-input-wrapper {
-  width: 100%; }
-  .woocommerce-input-wrapper textarea {
-    padding: 8px 15px; }
-
-#order_comments {
-  height: 150px; }
-
-#billing_wechat {
-  width: 50%; }
-
-#billing_phone {
-  width: 50%; }
-
 .woocommerce-additional-fields {
   margin-bottom: 50px; }
 
 #place_order {
-  background-color: gb(216, 199, 119);
+  background-color: #d8c777;
   color: #222222; }
 
 .woocommerce-NoticeGroup-checkout {
@@ -634,6 +543,47 @@ a {
     filter: brightness(1.25);
     color: black; }
 
+.form-row {
+  display: block !important; }
+
+.select2-container--default .select2-selection--single,
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+  display: flex;
+  align-items: center;
+  color: #3a3a3a;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #222222;
+  border-radius: 0; }
+  .select2-container--default .select2-selection--single::placeholder,
+  .woocommerce form .form-row input.input-text::placeholder,
+  .woocommerce form .form-row textarea::placeholder {
+    color: #9b9b9b; }
+
+#billing_address_1 {
+  width: 50%; }
+
+#billing_country + span {
+  width: 30% !important; }
+
+#billing_state + span {
+  width: 44% !important; }
+
+.woocommerce-input-wrapper {
+  width: 100%; }
+  .woocommerce-input-wrapper textarea {
+    padding: 8px 15px; }
+
+#order_comments {
+  height: 150px; }
+
+#billing_wechat {
+  width: 20%; }
+
+#billing_phone {
+  width: 20%; }
+
 #confirmation {
   width: 100%;
   min-height: 100vh;
@@ -646,13 +596,10 @@ a {
     margin-bottom: 0; }
   #confirmation #receipt {
     text-align: center;
-    background-color: white;
-    box-shadow: 10px 13px goldenrod; }
+    background: white;
+    box-shadow: 0 0 5px #d8c777; }
   #confirmation #number, #confirmation #icon, #confirmation #step-title {
-    color: goldenrod; }
-  #confirmation p {
-    margin-bottom: 0;
-    margin: 10px; }
+    color: #cbaf8a; }
   #confirmation #order-number-row {
     border-bottom: dashed;
     border-top: dashed;
@@ -660,7 +607,7 @@ a {
     padding-bottom: 35px;
     margin: 10% 0; }
   #confirmation .woocommerce-Price-amount.amount {
-    color: gb(216, 199, 119); }
+    color: #d8c777; }
   #confirmation h2 {
     padding-top: 30px;
     padding-bottom: 30px; }
@@ -668,19 +615,23 @@ a {
     background: rgba(0, 0, 0, 0.65);
     color: white;
     padding: 25px;
-    justify-content: center; }
+    justify-content: center;
+    line-height: 2; }
   #confirmation #step-0, #confirmation #step-1, #confirmation #step-2, #confirmation #step-3, #confirmation #step-4 {
-    border-bottom: 1.25px dashed;
-    padding-bottom: 20px; }
+    padding-bottom: 15px; }
+  #confirmation #step-0 {
+    border-bottom: solid 1px #cbaf8a; }
   #confirmation #step-1, #confirmation #step-2, #confirmation #step-3, #confirmation #step-4 {
-    padding-top: 15px; }
+    padding-top: 10px; }
   #confirmation h6 {
-    font-size: smaller; }
+    font-size: smaller;
+    color: #d8c777; }
   #confirmation i {
-    font-size: larger; }
+    font-size: 2.5rem; }
   #confirmation #step-0 {
     text-align: center;
     justify-content: center; }
-
-/* Mobile devices */
-/* Tablets */
+  #confirmation .xlwcty_wrap .xlwcty_Box {
+    margin: 0; }
+  #confirmation .order-confirmation-container {
+    max-width: 800px !important; }
