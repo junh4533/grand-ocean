@@ -5,7 +5,7 @@
 <section class="hv-center" id="confirmation">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-lg-5" id='receipt'>
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5" id='receipt'>
                 <div>
                     <p>盛宴海鲜</p>
                     <p>35-20 College Point Blvd</p>
@@ -21,8 +21,8 @@
                     <!-- <h2><?php echo do_shortcode('[xlwcty_order_details]') ?></h2> -->
                 </div>
             </div>
-            <div class="col-0 col-lg-1"></div>
-            <div class="col-12 col-lg-6">
+            <div class="col-0 col-sm-0 col-md-1 col-lg-1"></div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                 <div class="confirmation-message">
                     <div id = step-0>
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/alert.png" 
