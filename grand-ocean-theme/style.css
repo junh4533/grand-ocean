@@ -594,12 +594,14 @@ a {
     padding: 25px;
     justify-content: center; }
   #confirmation #step-0, #confirmation #step-1, #confirmation #step-2, #confirmation #step-3, #confirmation #step-4 {
-    border-bottom: 1.25px dashed;
     padding-bottom: 20px; }
+  #confirmation #step-0 {
+    border-bottom: 1.25px solid gold; }
   #confirmation #step-1, #confirmation #step-2, #confirmation #step-3, #confirmation #step-4 {
     padding-top: 15px; }
   #confirmation h6 {
-    font-size: smaller; }
+    font-size: smaller;
+    color: gold; }
   #confirmation i {
     font-size: larger; }
   #confirmation #step-0 {
