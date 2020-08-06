@@ -558,6 +558,9 @@ a {
     filter: brightness(1.25);
     color: black; }
 
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
+  height: 40px; }
+
 #confirmation {
   width: 100%;
   min-height: 100vh;

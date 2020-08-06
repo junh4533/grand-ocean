@@ -50,7 +50,7 @@
                 </p>
                 <h3 class="text-heading">营业时间</h3>
                 <p class="my-5">我们每周（包括周末）每天上午10:00至下午5:00营业！假期的营业时间可能会更改。</p>
-                <a class="button1 btn" href="<?php echo get_site_url(); ?>#products">
+                <a class="button1" href="<?php echo get_site_url(); ?>#products">
                     今天的精选
                 </a>
             </div>
