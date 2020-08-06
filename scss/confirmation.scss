@@ -43,11 +43,14 @@
         color: white;
         padding: 25px;
         justify-content: center;
+        // text-align: center;
+        line-height: 2;
     }
 
     #step-0, #step-1, #step-2, #step-3, #step-4{
         // padding-top: 15px;
-        padding-bottom: 20px;
+        padding-bottom: 15px;
+        // margin: 10% 0;
     }
 
     #step-0{
@@ -55,7 +58,7 @@
     }
 
     #step-1, #step-2, #step-3, #step-4{
-        padding-top: 15px;
+        padding-top: 10px;
     }
 
     h6{
@@ -64,7 +67,7 @@
     }
 
     i{
-        font-size: larger;
+        font-size: xx-large;
     }
 
     #step-0{

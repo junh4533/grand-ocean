@@ -613,18 +613,19 @@ a {
     background: rgba(0, 0, 0, 0.65);
     color: white;
     padding: 25px;
-    justify-content: center; }
+    justify-content: center;
+    line-height: 2; }
   #confirmation #step-0, #confirmation #step-1, #confirmation #step-2, #confirmation #step-3, #confirmation #step-4 {
-    padding-bottom: 20px; }
+    padding-bottom: 15px; }
   #confirmation #step-0 {
     border-bottom: 1.25px solid #d8c777; }
   #confirmation #step-1, #confirmation #step-2, #confirmation #step-3, #confirmation #step-4 {
-    padding-top: 15px; }
+    padding-top: 10px; }
   #confirmation h6 {
     font-size: smaller;
     color: #d8c777; }
   #confirmation i {
-    font-size: larger; }
+    font-size: xx-large; }
   #confirmation #step-0 {
     text-align: center;
     justify-content: center; }
