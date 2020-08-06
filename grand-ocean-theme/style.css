@@ -171,7 +171,7 @@ a {
     #home #home-content h1 {
       font-size: 15rem;
       font-family: 'Long Cang', cursive;
-      color: gb(216, 199, 119); }
+      color: #d8c777; }
   #home .tint {
     background: rgba(0, 0, 0, 0.7); }
 
@@ -571,7 +571,7 @@ a {
   margin-bottom: 50px; }
 
 #place_order {
-  background-color: gb(216, 199, 119);
+  background-color: #d8c777;
   color: #222222; }
 
 .woocommerce-NoticeGroup-checkout {
@@ -644,13 +644,10 @@ a {
     margin-bottom: 0; }
   #confirmation #receipt {
     text-align: center;
-    background-color: white;
-    box-shadow: 10px 13px goldenrod; }
+    background: white;
+    box-shadow: 0 0 5px #d8c777; }
   #confirmation #number, #confirmation #icon, #confirmation #step-title {
-    color: goldenrod; }
-  #confirmation p {
-    margin-bottom: 0;
-    margin: 10px; }
+    color: #d8c777; }
   #confirmation #order-number-row {
     border-bottom: dashed;
     border-top: dashed;
@@ -658,7 +655,7 @@ a {
     padding-bottom: 35px;
     margin: 10% 0; }
   #confirmation .woocommerce-Price-amount.amount {
-    color: gb(216, 199, 119); }
+    color: #d8c777; }
   #confirmation h2 {
     padding-top: 30px;
     padding-bottom: 30px; }
@@ -679,6 +676,8 @@ a {
   #confirmation #step-0 {
     text-align: center;
     justify-content: center; }
+  #confirmation .xlwcty_wrap .xlwcty_Box {
+    margin: 0; }
 
 /* Mobile devices */
 /* Tablets */

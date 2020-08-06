@@ -4,11 +4,7 @@
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://images5.alphacoders.com/909/thumb-1920-909997.jpg') center / cover no-repeat;
     position: relative;
     
-    // .container{
-    //     margin-top: 40%;
-    // }
-
-    a{
+    a {
         text-align: center;
         padding: 0;
         color: white;
@@ -17,17 +13,12 @@
 
     #receipt{
         text-align: center;
-        background-color: white;
-        box-shadow: 10px 13px goldenrod;
+        background: white;
+        box-shadow: 0 0 5px $gold;
     }
 
     #number, #icon, #step-title{
-        color: goldenrod;
-    }
-
-    p{
-        margin-bottom: 0;
-        margin: 10px;
+        color: $gold;
     }
 
     #order-number-row {
@@ -50,18 +41,13 @@
     .confirmation-message{
         background: rgba(0, 0, 0, 0.65);
         color: white;
-        // margin-top: 50px;
-        // margin-bottom: 30px;
         padding: 25px;
         justify-content: center;
-        // text-align: center;
     }
 
     #step-0, #step-1, #step-2, #step-3, #step-4{
         border-bottom: 1.25px dashed;
-        // padding-top: 15px;
         padding-bottom: 20px;
-        // margin: 10% 0;
     }
 
     #step-1, #step-2, #step-3, #step-4{
@@ -79,5 +65,11 @@
     #step-0{
         text-align: center;
         justify-content: center;
+    }
+
+    .xlwcty_wrap {
+        .xlwcty_Box {
+            margin: 0;
+        }
     }
 }
