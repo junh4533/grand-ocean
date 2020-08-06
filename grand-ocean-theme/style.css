@@ -79,7 +79,7 @@ a {
   padding: 5% 0; }
 
 .navbar {
-  position: absolute;
+  position: absolute !important;
   top: 0;
   left: 0;
   z-index: 9999;
