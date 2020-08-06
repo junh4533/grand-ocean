@@ -55,8 +55,6 @@
 
 // PRODUCT ADD CART BUTTON
 .woocommerce ul.products {
-    display: flex;
-    justify-content: center;
 
     li.product .button {
         border-radius: 0;
@@ -73,14 +71,16 @@
 
 .woocommerce ul.products li.product,
 .woocommerce-page ul.products li.product {
-    margin: 0 10%;
+
 }
 
 // QUANTITY
 .woocommerce .quantity {
 
     // TEXT
-    .qty {}
+    .qty {
+        
+    }
 }
 
 .cart-icon {
@@ -139,7 +139,6 @@
 
 // CART MODAL
 .modal-dialog {
-    width: 80% !important;
     max-width: 900px !important;
 }
 
@@ -156,14 +155,15 @@
 
     button {
         background-color: $light-gray;
-        border-radius: 4;
+        border-radius: 0;
 
         &:focus {
             box-shadow: none;
         }
 
         &:hover {
-            color: $dark-gray;
+            color: white;
+            background-color: $raspberry-red;
         }
     }
 }
@@ -248,11 +248,11 @@
 
 @media only screen and (max-width: 800px) {
     .woocommerce-checkout {
-        display: block;
+        display: block !important;
     }
 
     #customer_details {
-        display: block
+        display: block;
     }
 
     #order_review {
@@ -388,6 +388,9 @@
     color: $raspberry-red;
     border-bottom: 2px solid $raspberry-red;
     position: relative;
+    font-size: calc(1vw + 20px);
+    overflow: hidden;
+    white-space: nowrap;
 
     &::after {
         content: "";
@@ -426,7 +429,16 @@
     }
 }
 
+#shipping_method {
+    padding: 5px !important;
+    li {
+        margin-bottom: 0;
+    }
+
+}
+
 #place_order {
+    border-radius: 0;
     transition: all 0.25s ease-out;
     &:hover {
         filter: brightness(1.25);
