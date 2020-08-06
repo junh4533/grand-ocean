@@ -18,7 +18,7 @@
     }
 
     #number, #icon, #step-title{
-        color: $gold;
+        color: $beige-gold;
     }
 
     #order-number-row {
@@ -46,8 +46,12 @@
     }
 
     #step-0, #step-1, #step-2, #step-3, #step-4{
-        border-bottom: 1.25px dashed;
+        // padding-top: 15px;
         padding-bottom: 20px;
+    }
+
+    #step-0{
+        border-bottom: 1.25px solid $gold;
     }
 
     #step-1, #step-2, #step-3, #step-4{
@@ -56,6 +60,7 @@
 
     h6{
         font-size: smaller;
+        color: $gold;
     }
 
     i{

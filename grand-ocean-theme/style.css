@@ -79,7 +79,7 @@ a {
   padding: 5% 0; }
 
 .navbar {
-  position: absolute;
+  position: absolute !important;
   top: 0;
   left: 0;
   z-index: 9999;
@@ -597,7 +597,7 @@ a {
     background: white;
     box-shadow: 0 0 5px #d8c777; }
   #confirmation #number, #confirmation #icon, #confirmation #step-title {
-    color: #d8c777; }
+    color: #cbaf8a; }
   #confirmation #order-number-row {
     border-bottom: dashed;
     border-top: dashed;
@@ -615,12 +615,14 @@ a {
     padding: 25px;
     justify-content: center; }
   #confirmation #step-0, #confirmation #step-1, #confirmation #step-2, #confirmation #step-3, #confirmation #step-4 {
-    border-bottom: 1.25px dashed;
     padding-bottom: 20px; }
+  #confirmation #step-0 {
+    border-bottom: 1.25px solid #d8c777; }
   #confirmation #step-1, #confirmation #step-2, #confirmation #step-3, #confirmation #step-4 {
     padding-top: 15px; }
   #confirmation h6 {
-    font-size: smaller; }
+    font-size: smaller;
+    color: #d8c777; }
   #confirmation i {
     font-size: larger; }
   #confirmation #step-0 {
