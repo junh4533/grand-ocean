@@ -248,15 +248,15 @@
 
 @media only screen and (max-width: 800px) {
     .woocommerce-checkout {
-        display: block;
+        display: block !important;
     }
 
     #customer_details {
-        display: block
+        display: block !important;
     }
 
     #order_review {
-        display: block;
+        display: block !important;
     }
 }
 
@@ -301,9 +301,9 @@
     font-weight: bold;
 }
 
-.woocommerce form .form-row label {
-    width: 100%;
-}
+// .woocommerce form .form-row label {
+//     width: 100%;
+// }
 
 .checkout-street span {
     width: 75%;
@@ -330,26 +330,6 @@
 
 .select2-container .select2-selection--single {
     margin: -3px 0 0 0 !important;
-}
-
-.woocommerce-input-wrapper {
-    width: 100%;
-    textarea {
-        padding: 8px 15px;
-    }
-}
-
-
-#order_comments {
-    height: 150px;
-}
-
-#billing_wechat {
-    width: 50%;
-}
-
-#billing_phone {
-    width: 50%;
 }
 
 .woocommerce-additional-fields {
@@ -428,12 +408,62 @@
 
 #place_order {
     transition: all 0.25s ease-out;
+
     &:hover {
         filter: brightness(1.25);
         color: black;
     }
 }
 
-.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
+.form-row {
+    display: block !important;
+}
+
+// CSS for woocommerce form input fields 
+.select2-container--default .select2-selection--single,
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+    display: flex;
+    align-items: center;
+    color: $medium-gray;
     height: 40px;
+    background-color: #fff;
+    border: 1px solid $dark-gray;
+    border-radius: 0;
+    
+    &::placeholder {
+        color: $light-medium-gray;
+    }
+}
+
+#billing_address_1 {
+    width: 50%;
+}
+
+#billing_country + span {
+    width: 30% !important;
+}
+
+#billing_state + span {
+    width: 44% !important;
+}
+
+.woocommerce-input-wrapper {
+    width: 100%;
+
+    textarea {
+        padding: 8px 15px;
+    }
+}
+
+#order_comments {
+    height: 150px;
+}
+
+#billing_wechat {
+    width: 20%;
+}
+
+#billing_phone {
+    width: 20%;
 }

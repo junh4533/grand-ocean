@@ -415,11 +415,11 @@ a {
 
 @media only screen and (max-width: 800px) {
   .woocommerce-checkout {
-    display: block; }
+    display: block !important; }
   #customer_details {
-    display: block; }
+    display: block !important; }
   #order_review {
-    display: block; } }
+    display: block !important; } }
 
 #customer_details {
   flex: 3;
@@ -455,9 +455,6 @@ a {
   border-radius: 50%;
   font-weight: bold; }
 
-.woocommerce form .form-row label {
-  width: 100%; }
-
 .checkout-street span {
   width: 75%; }
 
@@ -478,20 +475,6 @@ a {
 
 .select2-container .select2-selection--single {
   margin: -3px 0 0 0 !important; }
-
-.woocommerce-input-wrapper {
-  width: 100%; }
-  .woocommerce-input-wrapper textarea {
-    padding: 8px 15px; }
-
-#order_comments {
-  height: 150px; }
-
-#billing_wechat {
-  width: 50%; }
-
-#billing_phone {
-  width: 50%; }
 
 .woocommerce-additional-fields {
   margin-bottom: 50px; }
@@ -558,8 +541,46 @@ a {
     filter: brightness(1.25);
     color: black; }
 
-.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
-  height: 40px; }
+.form-row {
+  display: block !important; }
+
+.select2-container--default .select2-selection--single,
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+  display: flex;
+  align-items: center;
+  color: #3a3a3a;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #222222;
+  border-radius: 0; }
+  .select2-container--default .select2-selection--single::placeholder,
+  .woocommerce form .form-row input.input-text::placeholder,
+  .woocommerce form .form-row textarea::placeholder {
+    color: #9b9b9b; }
+
+#billing_address_1 {
+  width: 50%; }
+
+#billing_country + span {
+  width: 30% !important; }
+
+#billing_state + span {
+  width: 44% !important; }
+
+.woocommerce-input-wrapper {
+  width: 100%; }
+  .woocommerce-input-wrapper textarea {
+    padding: 8px 15px; }
+
+#order_comments {
+  height: 150px; }
+
+#billing_wechat {
+  width: 20%; }
+
+#billing_phone {
+  width: 20%; }
 
 #confirmation {
   width: 100%;
