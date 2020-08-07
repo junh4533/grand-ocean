@@ -3,7 +3,12 @@
 <?php get_header();?>
 
 <script> 
-    function PrintReceipt(){
+    function PrintElem(elem)
+    {
+        Popup(jQuery('<div>').append(jQuery(elem).clone()).html());
+    }
+
+    function Popup(data){
         var mywindow = window.open('', '', 'height=800,width=1200');
 
         // mywindow.document.write('<html><head><title>' + document.title  + '</title>');
@@ -17,27 +22,27 @@
             '<html>' + 
                 '<head>' + 
                     '<title>' + document.title  + '</title>' + 
-                    '<link rel="stylesheet" href="style.css" type="text/css" media="print"/>' + 
+                    '<link rel="stylesheet" href="style.css" type="text/css"/>' + 
                 '</head>' + 
                 '<body>' + 
-                    '<h1>' + document.title  + '</h1>' + 
-                    '<div class="myDiv">' +
-                        document.getElementById('receipt').innerHTML + 
-                    '</div>' + 
+                    // '<div class="myDiv">' +
+                        data +
+                        // document.getElementById('receipt').innerHTML + 
+                    // '</div>' + 
                 '</body>'+
             '</html>'
         );
 
-        mywindow.document.close(); 
-        mywindow.focus(); 
+        // mywindow.document.close(); 
+        // mywindow.focus(); 
 
-        setTimeout(function(){ 
-            mywindow.print(); 
-            mywindow.close(); 
-        }, 10000);
+        // setTimeout(function(){ 
+        //     mywindow.print(); 
+        //     mywindow.close(); 
+        // }, 10000);
         
         mywindow.print();
-        mywindow.close();
+        // mywindow.close();
 
         return true;
     }
@@ -64,7 +69,7 @@
                     </div>
                 </div>
 
-                <input type="button" value="Print Your Receipt!" onclick="PrintReceipt()">  
+                <input type="button" value="Print Your Receipt!" onclick="PrintElem('#receipt')">  
             </div>
             <div class="col-xl-1"></div>
             <div class="col-12 col-sm-9 col-md-11 col-xl-6 my-3 order-confirmation-container hv-center">
