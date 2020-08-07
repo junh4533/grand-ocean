@@ -2,6 +2,27 @@
 <?php /* Template Name: Confirmation */ ?>
 <?php get_header();?>
 
+<script> 
+    function PrintReceipt(){
+        var mywindow = window.open('', 'PRINT', 'height=400,width=600');
+
+        mywindow.document.write('<html><head><title>' + document.title  + '</title>');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write('<h1>' + document.title  + '</h1>');
+        mywindow.document.write('<h1>' + 'Here is a copy of your receipt:'  + '</h1>');
+        mywindow.document.write(document.getElementById('receipt').innerHTML);
+        mywindow.document.write('</body></html>');
+
+        mywindow.document.close(); 
+        mywindow.focus(); 
+
+        mywindow.print();
+        mywindow.close();
+
+        return true;
+    }
+</script> 
+
 <section class="hv-center" id="confirmation">
     <div class="container-fluid">
         <div class="row hv-center">
@@ -22,6 +43,8 @@
                         <h2><?php echo do_shortcode('[xlwcty_order_details]') ?></h2>
                     </div>
                 </div>
+
+                <input type="button" value="Print Your Receipt!" onclick="PrintReceipt()">  
             </div>
             <div class="col-xl-1"></div>
             <div class="col-12 col-sm-9 col-md-6 col-xl-6 my-3 order-confirmation-container hv-center">
