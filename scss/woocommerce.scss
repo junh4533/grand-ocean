@@ -10,12 +10,20 @@
     margin-top: 5rem;
 }
 
-.products li {
-    font-size: 0.9rem;
-    text-align: center;
-    border-radius: 0.3rem;
-    box-sizing: border-box;
-    padding: 10px 5px !important;
+.products  {
+    li {
+        font-size: 0.9rem;
+        text-align: center;
+        border-radius: 0.3rem;
+        box-sizing: border-box;
+        padding: 10px 5px !important;
+    }
+    
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     p {
         padding: 0px 10px;
