@@ -5,7 +5,7 @@
 <section class="hv-center" id="confirmation">
     <div class="container-fluid">
         <div class="row hv-center">
-            <div class="col-12 col-sm-8 col-md-5 col-xl-4 my-3 order-confirmation-container">
+            <div class="col-12 col-sm-8 col-md-8 col-xl-4 my-3 order-confirmation-container">
                 <div class="p-3" id="receipt">
                     <div>
                         <p>盛宴海鲜</p>
@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="col-xl-1"></div>
-            <div class="col-12 col-sm-9 col-md-6 col-xl-6 my-3 order-confirmation-container hv-center">
+            <div class="col-12 col-sm-9 col-md-11 col-xl-6 my-3 order-confirmation-container hv-center">
                 <div class="confirmation-message d-inline-block hv-center flex-column p-5">
                     <div id=step-0>
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/alert.png" alt="alert icon"
