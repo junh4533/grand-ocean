@@ -102,7 +102,7 @@
                     </div>
 
                     <div id='step-4'>
-                        <h6 class="mt-5"><em>* Failure of confirming will result in the cancellation of your order!</em></h6>
+                        <h6 class="mt-5"><em>* 如果您不确认订单，我们将取消您的订单!</em></h6>
                     </div>
                 </div>
             </div>

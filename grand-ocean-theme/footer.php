@@ -5,8 +5,8 @@
             <div class="col-6 col-xl-2 order-xl-2 px-sm-4 my-2">
                 <p class="footer-heading">网页网址</p>
                 <a href="<?php echo get_site_url(); ?>">主页</a>
-                <a href="<?php echo get_site_url(); ?>/#products">今天的精选</a>
-                <a href="<?php echo get_site_url(); ?>/#products">联系我们</a>
+                <a href="<?php echo get_site_url(); ?>#products">今天的精选</a>
+                <a href="<?php echo get_site_url(); ?>#footer">联系我们</a>
                 <div class="my-3">   
                     <a class="d-inline" href="<?php echo get_site_url(); ?>/en">English</a>
                     <p class="d-inline mx-1">•</p>
