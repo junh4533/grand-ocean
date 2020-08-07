@@ -17,11 +17,13 @@
             '<html>' + 
                 '<head>' + 
                     '<title>' + document.title  + '</title>' + 
-                    '<link rel="stylesheet" media="print" href="style.css" type="text/css" />' + 
+                    '<link rel="stylesheet" href="style.css" type="text/css" media="print"/>' + 
                 '</head>' + 
                 '<body>' + 
                     '<h1>' + document.title  + '</h1>' + 
-                    document.getElementById('receipt').innerHTML + 
+                    '<div class="myDiv">' +
+                        document.getElementById('receipt').innerHTML + 
+                    '</div>' + 
                 '</body>'+
             '</html>'
         );

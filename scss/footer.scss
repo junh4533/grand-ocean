@@ -1,6 +1,7 @@
 #footer {
     background: $dark-gray;
     color: $beige;
+    
 
     i {
         font-size: 150%;
@@ -34,3 +35,39 @@
     
     }
 }
+
+@media only screen and (max-width: 414px) {
+    #footer{
+        #site-links {
+            padding-left: 2.5rem !important;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+    #footer{
+        .row{
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1366px) {
+    #footer{
+
+        #footer-logo{
+            max-width: 60%;
+        }
+    
+        img {
+            max-width: 60%;
+        }
+    }
+
+}
+
+
+

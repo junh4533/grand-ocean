@@ -156,6 +156,21 @@ a {
   #footer #footer-logo {
     max-height: 15vh; }
 
+@media only screen and (max-width: 414px) {
+  #footer #site-links {
+    padding-left: 2.5rem !important; } }
+
+@media only screen and (max-width: 576px) {
+  #footer .row {
+    display: flex;
+    justify-content: center; } }
+
+@media only screen and (min-width: 1366px) {
+  #footer #footer-logo {
+    max-width: 60%; }
+  #footer img {
+    max-width: 60%; } }
+
 #home {
   width: 100%;
   height: 100vh;
@@ -175,7 +190,7 @@ a {
 
 #about-us {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: #e6e6e6;
   justify-content: center;
   align-items: center;
@@ -218,6 +233,17 @@ a {
       background-color: #c8102e;
       color: white;
       border: 6px solid white; }
+
+@media only screen and (min-width: 375px) {
+  #about-us .column h1 {
+    font-size: 2em; }
+  #about-us .column h3 {
+    font-size: 1.17em; }
+  #about-us .column p {
+    font-size: 16px; }
+  #about-us .column .about-image {
+    width: 170px;
+    height: 170px; } }
 
 @media only screen and (min-width: 768px) {
   #about-us .column h1 {
@@ -652,3 +678,12 @@ a {
     margin: 0; }
   #confirmation .order-confirmation-container {
     max-width: 800px !important; }
+  @media print {
+    #confirmation body * {
+      visibility: hidden; }
+    #confirmation #receipt, #confirmation #receipt * {
+      visibility: visible; }
+    #confirmation #receipt {
+      position: absolute;
+      left: 0;
+      top: 0; } }
