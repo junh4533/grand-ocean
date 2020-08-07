@@ -78,12 +78,12 @@ function quantity_inputs_for_loop_ajax_add_to_cart( $html, $product ) {
 add_action( 'wp_head' , 'hide_ajax_view_cart_button' );
 function hide_ajax_view_cart_button(){
     if( is_shop() || is_product_category() || is_product_tag() ): ?>
-    <style>
-        a.added_to_cart.wc-forward {
-            display: none;
-        }
-    </style>
-    <?php endif;
+<style>
+    a.added_to_cart.wc-forward {
+        display: none;
+    }
+</style>
+<?php endif;
 }
 
 add_action( 'wp_ajax_product_remove', 'product_remove' );
@@ -126,16 +126,16 @@ function woo_cart_but() {
         $cart_url = wc_get_cart_url();  // Set Cart URL
   
         ?>
-        <div class="cart-icon"><span class="cart-contents" data-toggle="modal" data-target="#myModal" title="My Basket">
-	    <?php
+<div class="cart-icon"><span class="cart-contents" data-toggle="modal" data-target="#myModal" title="My Basket">
+        <?php
         if ( $cart_count > 0 ) {
        ?>
-            <span class="cart-contents-count"><?php echo $cart_count; ?></span>
+        <span class="cart-contents-count"><?php echo $cart_count; ?></span>
         <?php
         }
         ?>
-        </span></div>
-        <?php
+    </span></div>
+<?php
 	        
     return ob_get_clean();
  
@@ -153,15 +153,16 @@ function woo_cart_but_count( $fragments ) {
     $cart_url = wc_get_cart_url();
     
     ?>
-    <span class="cart-contents menu-item" data-toggle="modal" data-target="#myModal" title="<?php _e( 'View your shopping cart' ); ?>">
-	<?php
+<span class="cart-contents menu-item" data-toggle="modal" data-target="#myModal"
+    title="<?php _e( 'View your shopping cart' ); ?>">
+    <?php
     if ( $cart_count > 0 ) {
         ?>
-        <span class="cart-contents-count"><?php echo $cart_count; ?></span>
-        <?php            
+    <span class="cart-contents-count"><?php echo $cart_count; ?></span>
+    <?php            
     }
         ?></span>
-    <?php
+<?php
  
     $fragments['span.cart-contents'] = ob_get_clean();
      

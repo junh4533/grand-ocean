@@ -10,12 +10,20 @@
     margin-top: 5rem;
 }
 
-.products li {
-    font-size: 0.9rem;
-    text-align: center;
-    border-radius: 0.3rem;
-    box-sizing: border-box;
-    padding: 10px 5px !important;
+.products  {
+    li {
+        font-size: 0.9rem;
+        text-align: center;
+        border-radius: 0.3rem;
+        box-sizing: border-box;
+        padding: 10px 5px !important;
+    }
+    
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     p {
         padding: 0px 10px;
@@ -252,7 +260,11 @@
     }
 
     #customer_details {
+<<<<<<< HEAD
         display: block;
+=======
+        display: block !important;
+>>>>>>> 4583104cafdb0f65e8c31215e7bf3dccaeedc495
     }
 
     #order_review {
@@ -404,7 +416,7 @@
 }
 
 @media only screen and (min-width: 400px) {
-    .checkout-zipcode {
+    #billing-zipcode {
         width: 15%;
     }
 }
@@ -479,3 +491,17 @@
 #billing_phone {
     width: 20%;
 }
+
+// hide WC additonal fields from reservation page 
+.woocommerce-billing-fields,
+.woocommerce-additional-fields
+ {
+    h3 {
+        display: none;
+    }
+    .checkout-header {
+        display: inline-block !important;
+    }
+}
+
+

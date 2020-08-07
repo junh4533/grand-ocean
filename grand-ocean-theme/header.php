@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 
 <head>
     <meta charset="utf-8">
@@ -33,10 +33,10 @@
                     <a class="nav-link" href="<?php echo get_site_url(); ?>">主页</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo get_site_url(); ?>#products">今天的精选</a>
+                    <a class="nav-link" href="<?php echo get_site_url(); ?>#about-us">我们的故事</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo get_site_url(); ?>#about-us">我们的故事</a>
+                    <a class="nav-link" href="<?php echo get_site_url(); ?>#products">今天的精选</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo get_site_url(); ?>#footer">联系我们</a>

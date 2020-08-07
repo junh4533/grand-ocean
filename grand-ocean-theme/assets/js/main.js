@@ -1,13 +1,15 @@
 jQuery(document).ready(function () {
     let first_header = jQuery('.woocommerce-billing-fields h3');
-    first_header.text('顾客信息');
-    first_header.addClass('checkout-header');
+    // first_header.text('顾客信息');
+    first_header.after('<h3 class="checkout-header">顾客信息</h3><hr/>');
+    // first_header.addClass('checkout-header');
     let second_header = jQuery('.checkout-phone');
     second_header.after('<h3 class="checkout-header">地址</h3><hr/>');
     let third_header = jQuery('.woocommerce-additional-fields h3');
-    third_header.text('细节');
-    third_header.addClass('checkout-header');
-    third_header.after('<hr />');
+    third_header.after('<h3 class="checkout-header">细节</h3><hr/>');
+    // third_header.text('细节');
+    // third_header.addClass('checkout-header');
+    // third_header.after('<hr />');
     jQuery('.woocommerce-checkout').addClass("row");
     jQuery('#customer_details').addClass('col-12', 'col-lg-7', 'py-5');
     jQuery('#order_review').addClass('col-12', 'col-lg-5', 'py-5');
