@@ -410,7 +410,7 @@ a {
   .woocommerce-checkout {
     display: block !important; }
   #customer_details {
-    display: block !important; }
+    display: block; }
   #order_review {
     display: block !important; } }
 
