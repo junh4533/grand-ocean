@@ -1,6 +1,6 @@
 #about-us {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: $light-gray;
     justify-content: center;
     align-items: center;
@@ -59,6 +59,29 @@
     }
 
 }
+
+@media only screen and (min-width: 375px) {
+    #about-us{
+        .column{
+                h1 {
+                    font-size: 2em;
+                }
+        
+                h3 {
+                    font-size: 1.17em;
+                }
+        
+                p {
+                    font-size: 16px;
+                }
+        
+                .about-image {
+                    width: 170px;
+                    height: 170px;
+                }
+        }
+    }
+    }
 
 @media only screen and (min-width: 768px) {
 #about-us{
