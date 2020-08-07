@@ -3,9 +3,11 @@
     min-height: 100vh;
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://images5.alphacoders.com/909/thumb-1920-909997.jpg') center / cover no-repeat;
     position: relative;
-    .container-fluid {
+
+    .container-fluid{
         margin-top: 15vh;
     }
+    
     a {
         text-align: center;
         padding: 0;
