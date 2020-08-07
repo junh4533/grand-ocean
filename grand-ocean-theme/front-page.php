@@ -8,6 +8,31 @@
         <h1>鲜</h1>
     </div>
 </section>
+
+<section id="about-us">
+    <div class="container mt-2">
+        <div class="row">
+            <div
+                class="column hv-center col-12 col-sm-12 col-md-6 col-lg-6 order-md-2 p-sm-5 mb-3">
+                <img class="about-image"
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/seafood-place.jpg"
+                    alt="Exterior of Grand Ocean Seafood Wholesale Shop" class="center">
+            </div>
+            <div class="column col-12 col-sm-12 col-md-6 col-lg-6 order-md-1 mb-3">
+                <h1 class="text-heading">我们的故事</h1>
+                <p class="my-5">
+                    盛宴海鲜是一家位于纽约大学城的海鲜批发商店。自2015年以来，我们一直在努力工作，以最低的价格为您带来最新鲜的海鲜。我们种类繁多的海鲜非常适合餐厅，海鲜市场，小型家庭聚会和大型活动餐饮。我们每周7天为纽约市5区供应海鲜。立即订购新鲜海鲜！
+                </p>
+                <h3 class="text-heading">营业时间</h3>
+                <p class="my-5">我们每周（包括周末）每天上午10:00至下午5:00营业！假期的营业时间可能会更改。</p>
+                <a class="button1" href="<?php echo get_site_url(); ?>#products">
+                    今天的精选
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="products">
     <div class="modal fade in" id="myModal" role="dialog">
         <div class="modal-dialog">
@@ -33,29 +58,4 @@
         <?php echo do_shortcode("[products columns='4' class='products']"); ?>
     </div>
 </section>
-
-<section id="about-us">
-    <div class="container">
-        <div class="row">
-            <div
-                class="column hv-center col-12 col-sm-12 col-md-6 col-lg-6 order-md-2 p-sm-5 mb-3">
-                <img class="about-image"
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/seafood-place.jpg"
-                    alt="Exterior of Grand Ocean Seafood Wholesale Shop" class="center">
-            </div>
-            <div class="column col-12 col-sm-12 col-md-6 col-lg-6 order-md-1 mb-3">
-                <h1 class="text-heading">我们的故事</h1>
-                <p class="my-5">
-                    盛宴海鲜是一家位于纽约大学城的海鲜批发商店。自2015年以来，我们一直在努力工作，以最低的价格为您带来最新鲜的海鲜。我们种类繁多的海鲜非常适合餐厅，海鲜市场，小型家庭聚会和大型活动餐饮。我们每周7天为纽约市5区供应海鲜。立即订购新鲜海鲜！
-                </p>
-                <h3 class="text-heading">营业时间</h3>
-                <p class="my-5">我们每周（包括周末）每天上午10:00至下午5:00营业！假期的营业时间可能会更改。</p>
-                <a class="button1" href="<?php echo get_site_url(); ?>#products">
-                    今天的精选
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
 <?php get_footer();?>
