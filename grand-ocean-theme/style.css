@@ -557,7 +557,7 @@ a {
   border-radius: 0; }
 
 @media only screen and (min-width: 400px) {
-  .checkout-zipcode {
+  #billing-zipcode {
     width: 15%; } }
 
 #shipping_method {
@@ -613,6 +613,14 @@ a {
 #billing_phone {
   width: 20%; }
 
+.woocommerce-billing-fields h3,
+.woocommerce-additional-fields h3 {
+  display: none; }
+
+.woocommerce-billing-fields .checkout-header,
+.woocommerce-additional-fields .checkout-header {
+  display: inline-block !important; }
+
 #confirmation {
   width: 100%;
   min-height: 100vh;
@@ -666,3 +674,12 @@ a {
     margin: 0; }
   #confirmation .order-confirmation-container {
     max-width: 800px !important; }
+  @media print {
+    #confirmation body * {
+      visibility: hidden; }
+    #confirmation #receipt, #confirmation #receipt * {
+      visibility: visible; }
+    #confirmation #receipt {
+      position: absolute;
+      left: 0;
+      top: 0; } }
