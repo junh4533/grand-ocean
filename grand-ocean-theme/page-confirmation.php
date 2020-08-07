@@ -4,18 +4,36 @@
 
 <script> 
     function PrintReceipt(){
-        var mywindow = window.open('', 'PRINT', 'height=400,width=600');
+        var mywindow = window.open('', '', 'height=800,width=1200');
 
-        mywindow.document.write('<html><head><title>' + document.title  + '</title>');
-        mywindow.document.write('</head><body >');
-        mywindow.document.write('<h1>' + document.title  + '</h1>');
-        mywindow.document.write('<h1>' + 'Here is a copy of your receipt:'  + '</h1>');
-        mywindow.document.write(document.getElementById('receipt').innerHTML);
-        mywindow.document.write('</body></html>');
+        // mywindow.document.write('<html><head><title>' + document.title  + '</title>');
+        // mywindow.document.write('</head><body >');
+        // mywindow.document.write('<h1>' + document.title  + '</h1>');
+        // mywindow.document.write('<h1>' + 'Here is a copy of your receipt:'  + '</h1>');
+        // mywindow.document.write(document.getElementById('receipt').innerHTML);
+        // mywindow.document.write('</body></html>');
+
+        mywindow.document.write(
+            '<html>' + 
+                '<head>' + 
+                    '<title>' + document.title  + '</title>' + 
+                    '<link rel="stylesheet" media="print" href="style.css" type="text/css" />' + 
+                '</head>' + 
+                '<body>' + 
+                    '<h1>' + document.title  + '</h1>' + 
+                    document.getElementById('receipt').innerHTML + 
+                '</body>'+
+            '</html>'
+        );
 
         mywindow.document.close(); 
         mywindow.focus(); 
 
+        setTimeout(function(){ 
+            mywindow.print(); 
+            mywindow.close(); 
+        }, 10000);
+        
         mywindow.print();
         mywindow.close();
 
