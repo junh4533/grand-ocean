@@ -54,7 +54,7 @@
     <?php echo do_shortcode("[woo_cart_but]"); ?>
     
     <div id="main" class="container">
-        <h3 class="products-title">TODAY'S SELECTION</h3>
+        <h3 class="products-title">今天的精选</h3>
         <?php echo do_shortcode("[products columns='4' class='products']"); ?>
     </div>
 </section>
