@@ -69,16 +69,16 @@
             <div class="col-xl-1"></div>
             <div class="col-12 col-sm-9 col-md-11 col-xl-6 my-3 order-confirmation-container hv-center">
                 <div class="confirmation-message d-inline-block hv-center flex-column p-5">
-                    <div id=step-0>
+                    <div class="hv-center" id=step-0>
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/alert.png" alt="alert icon"
                             width="50px" height="50px" />
-                        <h3 class="mb-5">Reservation not yet completed!</h3>
+                        <h3>订单尚未完成!</h3>
                     </div>
 
                     <div class="my-3 w-100" id='step-1'>
-                        <h5 id='step-title'>Step 1: </h5>
+                        <h5 id='step-title'>第一步:</h5>
                         <br>
-                        <h5>Contact us via the below phone number/WeChat:</h5>
+                        <h5>电话/微信联系我们</h5>
                         <br>
                         <br>
                         <a class="d-inline mr-5" href="<?php echo get_site_url(); ?>/#footer">
@@ -92,15 +92,15 @@
                     </div>
 
                     <div class="my-3 w-75" id='step-2'>
-                        <h5 id='step-title'>Step 2: </h5>
+                        <h5 id='step-title'>第二步:</h5>
                         <br>
-                        <h5>Confirm your order with us!</h5>
+                        <h5>确认您的订单。</h5>
                     </div>
 
                     <div class="my-3 w-75" id='step-3'>
                         <h5 id='step-title'>Step 3: </h5>
                         <br>
-                        <h5>Wait for our delivery and enjoy the fresh seafood!</h5>
+                        <h5>等待我们的送货，享受新鲜的海鲜!</h5>
                     </div>
 
                     <div id='step-4'>

@@ -8,9 +8,9 @@
                 <a href="<?php echo get_site_url(); ?>/#products">今天的精选</a>
                 <a href="<?php echo get_site_url(); ?>/#products">联系我们</a>
                 <div class="my-3">   
-                    <a class="d-inline" href="<?php echo get_site_url(); ?>">English</a>
+                    <a class="d-inline" href="<?php echo get_site_url(); ?>/en">English</a>
                     <p class="d-inline mx-1">•</p>
-                    <a class="d-inline" href="<?php echo get_site_url(); ?>/zh/">中文</a>
+                    <a class="d-inline" href="<?php echo get_site_url(); ?>">中文</a>
                 </div>
             </div>
 

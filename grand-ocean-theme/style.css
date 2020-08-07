@@ -535,7 +535,7 @@ a {
   border-radius: 0; }
 
 @media only screen and (min-width: 400px) {
-  .checkout-zipcode {
+  #billing-zipcode {
     width: 15%; } }
 
 #shipping_method {
@@ -590,6 +590,14 @@ a {
 
 #billing_phone {
   width: 20%; }
+
+.woocommerce-billing-fields h3,
+.woocommerce-additional-fields h3 {
+  display: none; }
+
+.woocommerce-billing-fields .checkout-header,
+.woocommerce-additional-fields .checkout-header {
+  display: inline-block !important; }
 
 #confirmation {
   width: 100%;

@@ -412,7 +412,7 @@
 }
 
 @media only screen and (min-width: 400px) {
-    .checkout-zipcode {
+    #billing-zipcode {
         width: 15%;
     }
 }
@@ -487,3 +487,17 @@
 #billing_phone {
     width: 20%;
 }
+
+// hide WC additonal fields from reservation page 
+.woocommerce-billing-fields,
+.woocommerce-additional-fields
+ {
+    h3 {
+        display: none;
+    }
+    .checkout-header {
+        display: inline-block !important;
+    }
+}
+
+
