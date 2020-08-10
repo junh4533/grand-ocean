@@ -57,17 +57,19 @@
 
                     <div id="order-number-row">
                         <h3>订单号</br></h3>
-                        <h2><?php echo preg_replace("/[^0-9]+/" , "" , do_shortcode("[xlwcty_order]")) ?></h2>
+                        <h2 id="order-detail"><?php echo preg_replace("/[^0-9]+/" , "" , do_shortcode("[xlwcty_order]")) ?></h2>
                     </div>
 
                     <div>
-                        <h2><?php echo do_shortcode("[xlwcty_order_details]") ?></h2>
+                        <h2 id="order-detail"><?php echo do_shortcode("[xlwcty_order_details]") ?></h2>
                     </div>
                 </div>
 
                 <input type="button" value="Print Your Receipt!" onclick="PrintElem('#receipt')">  
             </div>
+
             <div class="col-xl-1"></div>
+
             <div class="col-12 col-sm-9 col-md-11 col-xl-6 my-3 order-confirmation-container hv-center">
                 <div class="confirmation-message d-inline-block hv-center flex-column p-5">
                     <div class="hv-center" id="step-0">
@@ -82,11 +84,11 @@
                         <h5>电话/微信联系我们</h5>
                         <br>
                         <br>
-                        <a class="d-inline mr-5" href="<?php echo get_site_url(); ?>/#footer">
+                        <a class="d-inline mr-5" id="contact" href="<?php echo get_site_url(); ?>/#footer">
                             <i class="fab fa-weixin mr-3" id="icon"></i>
                             <h5>Lisa307266</h5>
                         </a>
-                        <a class="d-inline" href="tel:347-532-0987">
+                        <a class="d-inline" id="contact" href="tel:347-532-0987">
                             <i class="fas fa-phone mr-3" id="icon"></i>
                             <h5>(347) 532-0987</h5>
                         </a>
@@ -105,11 +107,12 @@
                     </div>
 
                     <div id="step-4">
-                        <h6 class="mt-5"><em>* 如果您不确认订单，我们将取消您的订单!</em></h6>
+                        <h6 class="mt-5" id="footnote"><em>* 如果您不确认订单，我们将取消您的订单!</em></h6>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </section>
 
 <?php get_footer();?>
