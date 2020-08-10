@@ -18,8 +18,11 @@
             <div class="col-6 col-xl-2 order-xl-3 px-1 px-sm-5 px-xl-3 my-5">
                 <p class="footer-heading">联系方式</p>
                 <p>盛宴海鲜</p>
-                <p>Lisa Qiu</p>
-                <a href="tel:347-532-0987">(347) 532-0987</a>
+                <p>Lisa Qiu</p> 
+                <div class="my-3">
+                    <i class="fas fa-phone d-inline mr-2"></i>
+                    <a class="d-inline" href="tel:347-532-0987">(347) 532-0987</a>
+                </div>
                 <div class="my-3">
                     <i class="fab fa-weixin d-inline mr-2"></i>
                     <p class="d-inline">微信: &nbsp; Lisa307266</p>

@@ -22,7 +22,10 @@
             '<html>' + 
                 '<head>' + 
                     '<title>' + document.title  + '</title>' + 
-                    '<link rel="stylesheet" href="style.css" type="text/css"/>' + 
+                    // '<link rel="stylesheet" href="<?php $root = get_template_directory_uri(); + "/style.css" ?>/style.css" type="text/css"/>' + 
+                    '<style>' +
+                        <?php echo file_get_contents($root); ?> +
+                    '</style>' +
                 '</head>' + 
                 '<body>' + 
                     // '<div class="myDiv">' +

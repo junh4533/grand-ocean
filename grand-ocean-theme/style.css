@@ -99,7 +99,9 @@ a {
     .navbar .navbar-toggler:hover {
       filter: brightness(1.25); }
   .navbar .navbar-nav {
-    height: 100vh; }
+    height: 100vh;
+    font-size: 75%;
+    flex: .65; }
     .navbar .navbar-nav .nav-item {
       margin: 0;
       width: 100%;
@@ -114,7 +116,6 @@ a {
         .navbar .navbar-nav .nav-item .nav-link:hover {
           filter: brightness(1.25); }
     .navbar .navbar-nav .nav-icon-row {
-      width: 40%;
       display: flex;
       flex-direction: row;
       justify-content: space-between; }
@@ -123,23 +124,19 @@ a {
 
 @media only screen and (min-width: 992px) {
   .navbar {
-    background-color: transparent; }
+    background-color: transparent;
+    font-size: 150%; }
     .navbar .navbar-nav {
       height: initial; }
       .navbar .navbar-nav .nav-item {
         margin: 0;
-        font-size: 100%;
-        width: 140px; }
-      .navbar .navbar-nav .nav-icon-row {
-        width: 20%; }
-        .navbar .navbar-nav .nav-icon-row .nav-item {
-          width: 2rem !important; } }
+        font-size: 100%; }
+      .navbar .navbar-nav .nav-icon-row .nav-item {
+        width: 2rem !important; } }
 
 #footer {
   background: #222222;
   color: #c9c1b6; }
-  #footer i {
-    font-size: 150%; }
   #footer .footer-heading {
     display: inline-block;
     color: #cbaf8a;
