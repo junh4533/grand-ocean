@@ -65,7 +65,7 @@
                     </div>
                 </div>
 
-                <input type="button" value="Print Your Receipt!" onclick="PrintElem('#receipt')">  
+                <!-- <input type="button" value="Print Your Receipt!" onclick="PrintElem('#receipt')">  -->
             </div>
             <div class="col-xl-1"></div>
             <div class="col-12 col-sm-9 col-md-11 col-xl-6 my-3 order-confirmation-container hv-center">
@@ -99,7 +99,7 @@
                     </div>
 
                     <div class="my-3 w-75" id="step-3">
-                        <h5 id="step-title">Step 3: </h5>
+                        <h5 id="step-title">第三步: </h5>
                         <br>
                         <h5>等待我们的送货，享受新鲜的海鲜!</h5>
                     </div>
