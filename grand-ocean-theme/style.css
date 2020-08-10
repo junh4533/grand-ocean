@@ -19,6 +19,19 @@ body {
   font-family: 'Lato', sans-serif;
   margin: 0 !important; }
 
+.hv-center {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.tint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; }
+
 h1,
 h2,
 h3,
@@ -32,19 +45,6 @@ p,
 a {
   margin-bottom: 1rem;
   display: block; }
-
-.hv-center {
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-.tint {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0; }
 
 .btn {
   background: #cbaf8a;
@@ -98,6 +98,8 @@ a {
       outline: none; }
     .navbar .navbar-toggler:hover {
       filter: brightness(1.25); }
+  .navbar #hamburger-menu {
+    color: #cbaf8a; }
   .navbar .navbar-nav {
     height: 100vh;
     font-size: 75%;
@@ -120,8 +122,6 @@ a {
       display: flex;
       flex-direction: row;
       justify-content: space-between; }
-  .navbar #hamburger-menu {
-    color: #cbaf8a; }
 
 @media only screen and (min-width: 992px) {
   .navbar {
@@ -137,6 +137,8 @@ a {
 #footer {
   background: #222222;
   color: #c9c1b6; }
+  #footer #footer-logo {
+    max-height: 15vh; }
   #footer .footer-heading {
     display: inline-block;
     color: #cbaf8a;
@@ -144,14 +146,7 @@ a {
     border-bottom: solid 2px #cbaf8a;
     margin-bottom: 1em; }
   #footer a {
-    color: #c9c1b6 !important; }
-  #footer #footer-logo-section {
-    display: flex;
-    flex-direction: column; }
-    #footer #footer-logo-section #footer-logo {
-      width: 80%; }
-  #footer #footer-logo {
-    max-height: 15vh; }
+    color: #c9c1b6; }
 
 @media only screen and (max-width: 414px) {
   #footer #site-links {
@@ -638,7 +633,9 @@ a {
     text-align: center;
     background: white;
     box-shadow: 0 0 5px #d8c777; }
-  #confirmation #number, #confirmation #icon, #confirmation #step-title {
+  #confirmation #number,
+  #confirmation #icon,
+  #confirmation #step-title {
     color: #cbaf8a; }
   #confirmation #order-number-row {
     border-bottom: dashed;
@@ -657,11 +654,18 @@ a {
     padding: 25px;
     justify-content: center;
     line-height: 2; }
-  #confirmation #step-0, #confirmation #step-1, #confirmation #step-2, #confirmation #step-3, #confirmation #step-4 {
+  #confirmation #step-0,
+  #confirmation #step-1,
+  #confirmation #step-2,
+  #confirmation #step-3,
+  #confirmation #step-4 {
     padding-bottom: 15px; }
   #confirmation #step-0 {
     border-bottom: solid 1px #cbaf8a; }
-  #confirmation #step-1, #confirmation #step-2, #confirmation #step-3, #confirmation #step-4 {
+  #confirmation #step-1,
+  #confirmation #step-2,
+  #confirmation #step-3,
+  #confirmation #step-4 {
     padding-top: 10px; }
   #confirmation h6 {
     font-size: smaller;
@@ -678,7 +682,8 @@ a {
   @media print {
     #confirmation body * {
       visibility: hidden; }
-    #confirmation #receipt, #confirmation #receipt * {
+    #confirmation #receipt,
+    #confirmation #receipt * {
       visibility: visible; }
     #confirmation #receipt {
       position: absolute;

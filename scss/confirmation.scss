@@ -1,13 +1,13 @@
 #confirmation {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://images5.alphacoders.com/909/thumb-1920-909997.jpg') center / cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images5.alphacoders.com/909/thumb-1920-909997.jpg') center / cover no-repeat;
     position: relative;
 
-    .container-fluid{
+    .container-fluid {
         margin-top: 15vh;
     }
-    
+
     a {
         text-align: center;
         padding: 0;
@@ -15,13 +15,15 @@
         margin-bottom: 0;
     }
 
-    #receipt{
+    #receipt {
         text-align: center;
         background: white;
         box-shadow: 0 0 5px $gold;
     }
 
-    #number, #icon, #step-title{
+    #number,
+    #icon,
+    #step-title {
         color: $beige-gold;
     }
 
@@ -37,12 +39,12 @@
         color: $gold;
     }
 
-    h2{
+    h2 {
         padding-top: 30px;
         padding-bottom: 30px;
     }
 
-    .confirmation-message{
+    .confirmation-message {
         background: rgba(0, 0, 0, 0.65);
         color: white;
         padding: 25px;
@@ -51,30 +53,37 @@
         line-height: 2;
     }
 
-    #step-0, #step-1, #step-2, #step-3, #step-4{
+    #step-0,
+    #step-1,
+    #step-2,
+    #step-3,
+    #step-4 {
         // padding-top: 15px;
         padding-bottom: 15px;
         // margin: 10% 0;
     }
 
-    #step-0{
+    #step-0 {
         border-bottom: solid 1px $beige-gold;
     }
 
-    #step-1, #step-2, #step-3, #step-4{
+    #step-1,
+    #step-2,
+    #step-3,
+    #step-4 {
         padding-top: 10px;
     }
 
-    h6{
+    h6 {
         font-size: smaller;
         color: $gold;
     }
 
-    i{
+    i {
         font-size: 2.5rem;
     }
 
-    #step-0{
+    #step-0 {
         text-align: center;
         justify-content: center;
     }
@@ -91,17 +100,20 @@
 
     @media print {
         body * {
-          visibility: hidden;
+            visibility: hidden;
         }
-        #receipt, #receipt * {
-          visibility: visible;
+
+        #receipt,
+        #receipt * {
+            visibility: visible;
         }
+
         #receipt {
-          position: absolute;
-          left: 0;
-          top: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
         }
-      }      
+    }
 }
 
 // @media only screen and (min-width: 1920px) {

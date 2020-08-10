@@ -12,10 +12,8 @@
 <section id="about-us">
     <div class="container mt-2">
         <div class="row">
-            <div
-                class="column hv-center col-12 col-sm-12 col-md-6 col-lg-6 order-md-2 p-sm-5 mb-3">
-                <img class="about-image"
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/abalone.png"
+            <div class="column hv-center col-12 col-sm-12 col-md-6 col-lg-6 order-md-2 p-sm-5 mb-3">
+                <img class="about-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/abalone.png"
                     alt="Abalone" class="center">
             </div>
             <div class="column col-12 col-sm-12 col-md-6 col-lg-6 order-md-1 mb-3">
@@ -52,10 +50,11 @@
         </div>
     </div>
     <?php echo do_shortcode("[woo_cart_but]"); ?>
-    
+
     <div id="main" class="container">
         <h3 class="products-title">今天的精选</h3>
         <?php echo do_shortcode("[products columns='4' class='products']"); ?>
     </div>
 </section>
+
 <?php get_footer();?>

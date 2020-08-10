@@ -31,6 +31,10 @@
         }
     }
 
+    #hamburger-menu {
+        color: $beige-gold;
+    }
+
     // fullscreen dropdown 
     .navbar-nav {
         height: 100vh;
@@ -38,15 +42,11 @@
         flex: .65;
 
         .nav-item {
-            // margin: 0;
-            // padding: 0 5%;
             margin: 0 .5em !important;
             width: 100%;
             font-size: 200%;
 
             .nav-link {
-                // padding: 0;
-                // margin: .5rem auto;
                 color: $beige-gold !important;
                 text-transform: uppercase;
                 font-weight: 700;
@@ -69,10 +69,6 @@
             justify-content: space-between;
         }
     }
-
-    #hamburger-menu {
-        color: $beige-gold;
-    }
 }
 
 @media only screen and (min-width: 992px) {
@@ -84,7 +80,6 @@
             height: initial;
 
             .nav-item {
-                // margin: 0;
                 font-size: 100%;
             }
     

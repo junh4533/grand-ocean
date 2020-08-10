@@ -34,7 +34,7 @@
                 <img class="img-fluid mx-auto my-3" id="footer-logo"
                     src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-white.png" alt="Logo White">
             </div>
-            <div class="col-10 col-sm-6 col-xl-5 order-xl-4 text-center px-sm-5 my-5" id="footer-logo-section">
+            <div class="col-10 col-sm-6 col-xl-5 order-xl-4 text-center px-sm-5 my-5">
                 <a
                     class="text-center"
                     href="https://www.google.com/maps?q=35-20+College+Point+Blvd+Flushing,+NY+11354&rlz=1C1GCEA_enUS885US885&um=1&ie=UTF-8&sa=X&ved=2ahUKEwiPk6vaivPqAhXsmOAKHVwWBdYQ_AUoAXoECA0QAw">
