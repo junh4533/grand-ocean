@@ -609,65 +609,58 @@ a {
 #confirmation {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images5.alphacoders.com/909/thumb-1920-909997.jpg") center/cover no-repeat;
+  background: rgba(0, 0, 0, 0.5), url("assets/images/bg.jpg") center/cover no-repeat;
   position: relative; }
   #confirmation .container-fluid {
     margin-top: 15vh; }
-  #confirmation a {
-    text-align: center;
-    padding: 0;
-    color: white;
-    margin-bottom: 0; }
+  #confirmation .order-confirmation-container {
+    max-width: 800px !important; }
   #confirmation #receipt {
     text-align: center;
     background: white;
     box-shadow: 0 0 5px #d8c777; }
-  #confirmation #number,
-  #confirmation #icon,
-  #confirmation #step-title {
-    color: #cbaf8a; }
   #confirmation #order-number-row {
     border-bottom: dashed;
     border-top: dashed;
     padding-top: 35px;
     padding-bottom: 35px;
     margin: 10% 0; }
-  #confirmation .woocommerce-Price-amount.amount {
-    color: #d8c777; }
-  #confirmation h2 {
+  #confirmation #order-detail {
     padding-top: 30px;
     padding-bottom: 30px; }
+  #confirmation .woocommerce-Price-amount.amount {
+    color: #d8c777; }
+  #confirmation .xlwcty_wrap .xlwcty_Box {
+    margin: 0; }
   #confirmation .confirmation-message {
     background: rgba(0, 0, 0, 0.65);
     color: white;
     padding: 25px;
     justify-content: center;
     line-height: 2; }
-  #confirmation #step-0,
-  #confirmation #step-1,
-  #confirmation #step-2,
-  #confirmation #step-3,
-  #confirmation #step-4 {
+  #confirmation #step-0, #confirmation #step-1, #confirmation #step-2, #confirmation #step-3, #confirmation #step-4 {
     padding-bottom: 15px; }
   #confirmation #step-0 {
-    border-bottom: solid 1px #cbaf8a; }
+    border-bottom: solid 1px #cbaf8a;
+    text-align: center;
+    justify-content: center; }
   #confirmation #step-1,
   #confirmation #step-2,
   #confirmation #step-3,
   #confirmation #step-4 {
     padding-top: 10px; }
-  #confirmation h6 {
+  #confirmation #number, #confirmation #icon, #confirmation #step-title {
+    color: #cbaf8a; }
+  #confirmation #icon {
+    font-size: 2.5rem; }
+  #confirmation #contact {
+    text-align: center;
+    padding: 0;
+    color: white;
+    margin-bottom: 0; }
+  #confirmation #footnote {
     font-size: smaller;
     color: #d8c777; }
-  #confirmation i {
-    font-size: 2.5rem; }
-  #confirmation #step-0 {
-    text-align: center;
-    justify-content: center; }
-  #confirmation .xlwcty_wrap .xlwcty_Box {
-    margin: 0; }
-  #confirmation .order-confirmation-container {
-    max-width: 800px !important; }
   @media print {
     #confirmation body * {
       visibility: hidden; }
