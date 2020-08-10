@@ -258,4 +258,52 @@ function custom_validate_billing_phone() {
     }
 }
 
+// Show product gallery
+add_action( 'woocommerce_before_shop_loop_item_title', 'action_template_loop_product_thumbnail', 9 );
+function action_template_loop_product_thumbnail() {
+    global $product;
+    remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );
+
+    $product_id = $product->get_id();
+    $product_sku = $product->get_sku();
+    $attachment_ids = $product->get_gallery_image_ids();
+    if(!empty($attachment_ids)) {
+        $html = '<div id="' . $product_sku . '" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">';
+        $counter = 0;
+        foreach($attachment_ids as $image_id) {
+            if(!$counter) {
+                $html .= '<div class="carousel-item active">';
+                $counter++;
+            } else {
+                $html .= '<div class="carousel-item">';
+            }            
+            $html .= '<img class="d-block w-100" src="' . wp_get_attachment_image_url($image_id) . '" />';
+            $html .= '</div>';
+            
+        }
+        $html .= '</div>
+        <a class="carousel-control-prev" href="#' . $product_sku . '" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#' . $product_sku . '" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>';
+        echo $html;
+    } else {
+        echo $product->get_image();
+        // echo '<img width="200" src="https://media.nesta.org.uk/images/Predictions-2019_Twitter_02.width-1200.png"></img>';
+    }
+    // $file = get_field('archive_video', $product->get_id());
+
+    // if( isset($file['url']) && ! empty($file['url']) ) {
+
+
+        //echo '<img width="200" src="https://media.nesta.org.uk/images/Predictions-2019_Twitter_02.width-1200.png"></img>';
+    // }
+}
+
 ?>
