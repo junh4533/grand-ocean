@@ -87,7 +87,7 @@
 
     // TEXT
     .qty {
-        
+
     }
 }
 
@@ -260,7 +260,11 @@
     }
 
     #customer_details {
+<<<<<<< HEAD
+        display: block;
+=======
         display: block !important;
+>>>>>>> 4583104cafdb0f65e8c31215e7bf3dccaeedc495
     }
 
     #order_review {

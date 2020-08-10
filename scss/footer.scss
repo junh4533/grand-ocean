@@ -2,11 +2,6 @@
     background: $dark-gray;
     color: $beige;
     
-
-    i {
-        font-size: 150%;
-    }
-
     .footer-heading {
         display: inline-block;
         color: $beige-gold;
@@ -32,6 +27,16 @@
     }
     
 }
+
+@media only screen and (max-width: 414px) {
+    #footer{
+        #site-links {
+            padding-left: 2.5rem !important;
+        }
+    }
+
+}
+
 @media only screen and (max-width: 576px) {
     #footer{
         .row{
@@ -41,6 +46,7 @@
     }
 
 }
+
 @media only screen and (min-width: 1366px) {
     #footer{
 
