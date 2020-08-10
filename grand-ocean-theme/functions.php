@@ -240,33 +240,33 @@ function change_default_checkout_state() {
 // add_filter( 'the_title', 'woo_title_order_received', 10, 2 );
 
 
-// add_action( 'template_redirect', 'woo_custom_redirect_after_purchase' );
-// function woo_custom_redirect_after_purchase() {
-// 	global $wp;
-// 	if ( is_checkout() && !empty( $wp->query_vars['order-received'] ) ) {
-// 		wp_redirect(get_template_directory_uri() + "/confirmation");
-// 		exit;
-// 	}
-// }
+add_action( 'template_redirect', 'woo_custom_redirect_after_purchase' );
+function woo_custom_redirect_after_purchase() {
+	global $wp;
+	if ( is_checkout() && !empty( $wp->query_vars['order-received'] ) ) {
+		wp_redirect(get_template_directory_uri() + "/confirmation");
+		exit;
+	}
+}
 
-// add_action( 'woocommerce_thankyou', 'bbloomer_redirectcustom');
+add_action( 'woocommerce_thankyou', 'bbloomer_redirectcustom');
   
-// function bbloomer_redirectcustom( $order_id ){
-//     $order = wc_get_order( $order_id );
-//     $url = 'https://google.com';
-//     if ( ! $order->has_status( 'failed' ) ) {
-//         wp_safe_redirect( $url );
-//         exit;
-//     }
-// }
+function bbloomer_redirectcustom( $order_id ){
+    $order = wc_get_order( $order_id );
+    $url = 'https://google.com';
+    if ( ! $order->has_status( 'failed' ) ) {
+        wp_safe_redirect( $url );
+        exit;
+    }
+}
 
-// function woo_title_order_received( $title, $id ) {
-// 	if ( function_exists( 'is_order_received_page' ) && 
-// 	     is_order_received_page() && get_the_ID() === $id ) {
-// 		$title = "Thank you for your order! :)";
-// 	}
-// 	return $title;
-// }
+function woo_title_order_received( $title, $id ) {
+	if ( function_exists( 'is_order_received_page' ) && 
+	     is_order_received_page() && get_the_ID() === $id ) {
+		$title = "Thank you for your order! :)";
+	}
+	return $title;
+}
 
 // validation for phone number field
 add_action('woocommerce_checkout_process', 'custom_validate_billing_phone');
