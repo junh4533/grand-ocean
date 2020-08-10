@@ -18,12 +18,6 @@
         box-sizing: border-box;
         padding: 10px 5px !important;
     }
-    
-    ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 
     p {
         padding: 0px 10px;
@@ -91,6 +85,7 @@
     }
 }
 
+// SHOPPING CART ICON
 .cart-icon {
     padding: 10px 20px;
     width: fit-content;
@@ -110,7 +105,7 @@
 .cart-contents:before {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
-    content: "\f07a";
+    content: "\f291";
     font-size: 2rem;
     color: $raspberry-red;
 }
@@ -200,10 +195,16 @@
     align-items: center;
     transition: all 0.25s ease-out;
 
+    // PREVENT DEFAULT HOVER EFFECT 
     &:hover {
-        background: $raspberry-red;
-        color: $light-gray;
+        color: $raspberry-red !important;
+        background-color: transparent;
     }
+}
+
+// REMOVE ABILITY TO LINK TO SINGLE PRODUCT FROM CART
+.product-name a {
+    pointer-events: none;
 }
 
 // CART TOTAL SECTION
@@ -250,6 +251,7 @@
     margin-top: 10vh;
 }
 
+// CART MODAL CONTENT
 .woocommerce-checkout {
     display: flex;
 }
@@ -260,11 +262,7 @@
     }
 
     #customer_details {
-<<<<<<< HEAD
-        display: block;
-=======
         display: block !important;
->>>>>>> 4583104cafdb0f65e8c31215e7bf3dccaeedc495
     }
 
     #order_review {
@@ -317,6 +315,7 @@
 //     width: 100%;
 // }
 
+// CUSTOM FIELDS
 .checkout-street span {
     width: 75%;
 }
@@ -353,6 +352,7 @@
     color: $dark-gray;
 }
 
+// ERROR ON CHECKOUT
 .woocommerce-NoticeGroup-checkout {
     width: 100%;
     padding: 0px 50px;
@@ -366,11 +366,13 @@
     cursor: pointer;
 }
 
+// REMOVE QUANTITY FROM CART MODAL
 .woocommerce-cart-form input.qty {
     pointer-events: none !important;
     border: none;
 }
 
+// REMOVE UPDATE CART BUTTON
 [name=update_cart] {
     display: none !important;
 }
@@ -399,6 +401,7 @@
     border-radius: 0 !important;
 }
 
+// CHECKOUT DETAILS BOX
 .woocommerce form .form-row input.input-text,
 .woocommerce form .form-row textarea {
     box-sizing: border-box;
@@ -504,4 +507,22 @@
     }
 }
 
+// PRODUCT ARCHIVES BOOTSTRAP CAROUSEL
+.carousel-control {
+    opacity: 1;
+    transition: all 0.5s ease-out;
+    &:hover {
+        background-color: $raspberry-red;
+        opacity: 0.8;
+        .carousel-icon {
+            color: white !important;
+        }
+    }
+    height: 100%;
+}
 
+.carousel-icon {
+    transition: all 0.25s ease-out;
+    color: $raspberry-red;
+    font-size: 1rem;
+}

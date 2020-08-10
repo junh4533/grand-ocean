@@ -273,11 +273,6 @@ a {
   box-sizing: border-box;
   padding: 10px 5px !important; }
 
-.products ul {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
 .products p {
   padding: 0px 10px;
   margin-bottom: 0.5rem;
@@ -331,7 +326,7 @@ a {
 .cart-contents:before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
-  content: "\f07a";
+  content: "\f291";
   font-size: 2rem;
   color: #c8102e; }
 
@@ -398,8 +393,11 @@ a {
   align-items: center;
   transition: all 0.25s ease-out; }
   .woocommerce a.remove:hover {
-    background: #c8102e;
-    color: #e6e6e6; }
+    color: #c8102e !important;
+    background-color: transparent; }
+
+.product-name a {
+  pointer-events: none; }
 
 .woocommerce .cart-collaterals .cart_totals {
   float: none; }
@@ -439,7 +437,7 @@ a {
   .woocommerce-checkout {
     display: block !important; }
   #customer_details {
-    display: block; }
+    display: block !important; }
   #order_review {
     display: block !important; } }
 
@@ -620,6 +618,21 @@ a {
 .woocommerce-billing-fields .checkout-header,
 .woocommerce-additional-fields .checkout-header {
   display: inline-block !important; }
+
+.carousel-control {
+  opacity: 1;
+  transition: all 0.5s ease-out;
+  height: 100%; }
+  .carousel-control:hover {
+    background-color: #c8102e;
+    opacity: 0.8; }
+    .carousel-control:hover .carousel-icon {
+      color: white !important; }
+
+.carousel-icon {
+  transition: all 0.25s ease-out;
+  color: #c8102e;
+  font-size: 1rem; }
 
 #confirmation {
   width: 100%;

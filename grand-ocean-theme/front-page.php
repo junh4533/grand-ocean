@@ -55,7 +55,7 @@
     
     <div id="main" class="container">
         <h3 class="products-title">今天的精选</h3>
-        <?php echo do_shortcode("[products columns='4' class='products']"); ?>
+        <?php echo do_shortcode("[products columns='3' class='products']"); ?>
     </div>
 </section>
 <?php get_footer();?>

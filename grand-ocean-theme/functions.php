@@ -35,6 +35,25 @@ add_action( 'after_setup_theme', 'customtheme_add_woocommerce_support' );
 add_action('wp_enqueue_scripts', 'load_stylesheets');
 add_action('wp_enqueue_scripts', 'load_scripts');
 
+// ADDING UNIT ATTRIBUTE NEXT TO PRICE
+function bd_rrp_sale_price_html( $price, $product ) {
+    $unit = $product->get_attribute('Unit');
+    if ($unit) {
+        $unit = ' <span class="product-unit">per ' . $unit . '</span>';
+    }
+    if ( $product->is_on_sale() ) :
+      $has_sale_text = array(
+        '<ins>' => '<br>Sale: <ins>',
+        '<del>' => '<del>' . $unit
+      );
+      $return_string = str_replace(array_keys( $has_sale_text ), array_values( $has_sale_text ), $price);
+    else :
+      $return_string = $price . $unit;
+    endif;
+  
+    return $return_string;
+  }
+add_filter( 'woocommerce_get_price_html', 'bd_rrp_sale_price_html', 100, 2 );
 //Minimum Quantity
 
 /*
@@ -283,12 +302,12 @@ function action_template_loop_product_thumbnail() {
             
         }
         $html .= '</div>
-        <a class="carousel-control-prev" href="#' . $product_sku . '" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <a class="carousel-control-prev carousel-control" href="#' . $product_sku . '" role="button" data-slide="prev">
+          <i class="fas fa-chevron-left carousel-icon"></i>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#' . $product_sku . '" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <a class="carousel-control-next carousel-control" href="#' . $product_sku . '" role="button" data-slide="next">
+          <i class="fas fa-chevron-right carousel-icon"></i>
           <span class="sr-only">Next</span>
         </a>
       </div>';
