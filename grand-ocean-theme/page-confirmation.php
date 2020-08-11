@@ -2,48 +2,6 @@
 <?php /* Template Name: Confirmation */ ?>
 <?php get_header();?>
 
-<script> 
-    function PrintElem(elem)
-    {
-        Popup(jQuery("<div>").append(jQuery(elem).clone()).html());
-    }
-
-    function Popup(data){
-        var mywindow = window.open("", "", "height=800,width=1200");
-
-        mywindow.document.write(
-            "<html>" + 
-                "<head>" + 
-                    "<title>" + document.title  + "</title>" + 
-                    // "<link rel="stylesheet" href="<?php $root = get_template_directory_uri(); + "/style.css" ?>/style.css" type="text/css"/>" + 
-                    "<style>" +
-                        <?php echo file_get_contents($root); ?> +
-                    "</style>" +
-                "</head>" + 
-                "<body>" + 
-                    // "<div class="myDiv">" +
-                        data +
-                        // document.getElementById('receipt').innerHTML + 
-                    // "</div>" + 
-                "</body>"+
-            "</html>"
-        );
-
-        // mywindow.document.close(); 
-        // mywindow.focus(); 
-
-        // setTimeout(function(){ 
-        //     mywindow.print(); 
-        //     mywindow.close(); 
-        // }, 10000);
-        
-        mywindow.print();
-        // mywindow.close();
-
-        return true;
-    }
-</script> 
-
 <section class="hv-center" id="confirmation">
     <div class="container-fluid">
         <div class="row hv-center">
@@ -64,7 +22,6 @@
                         <h2 id="order-detail"><?php echo do_shortcode("[xlwcty_order_details]") ?></h2>
                     </div>
                 </div>
-
                 <!-- <input type="button" value="Print Your Receipt!" onclick="PrintElem('#receipt')">  -->
             </div>
 
