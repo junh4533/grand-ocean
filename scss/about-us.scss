@@ -13,14 +13,14 @@
         h1 {
             color: $raspberry-red;
             font-family: 'Lato', sans-serif;
-            text-decoration: underline white;
+            // text-decoration: underline white;
             font-size: 1.3em;
         }
 
         h3 {
             color: $raspberry-red;
             font-family: 'Lato', sans-serif;
-            text-decoration: underline white;
+            // text-decoration: underline white;
             font-size: 0.7605em;
         }
 
@@ -49,9 +49,9 @@
             width: fit-content;
             text-align: center;
             transition: all 0.5s ease-out;
-          }
+        }
 
-        .button1:hover{
+        .button1:hover {
             background-color: $raspberry-red;
             color: white;
             border: 6px solid white;
@@ -61,35 +61,32 @@
 }
 
 @media only screen and (min-width: 768px) {
-#about-us{
-
-    .column{
+    #about-us {
+        .column {
 
             h1 {
                 font-size: 2em;
             }
-    
+
             h3 {
                 font-size: 1.17em;
             }
-    
+
             p {
                 font-size: 16px;
             }
-    
+
             .about-image {
                 width: 252px;
                 height: 252px;
             }
+        }
     }
 }
-}
-    
- @media only screen and (min-width: 992px) {
+
+@media only screen and (min-width: 992px) {
     #about-us {
-
         .column {
-
             .about-image {
                 width: 372px;
                 height: 372px;
@@ -97,4 +94,4 @@
             }
         }
     }
-} 
+}
