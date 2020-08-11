@@ -19,6 +19,19 @@ body {
   font-family: 'Lato', sans-serif;
   margin: 0 !important; }
 
+.hv-center {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.tint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; }
+
 h1,
 h2,
 h3,
@@ -32,19 +45,6 @@ p,
 a {
   margin-bottom: 1rem;
   display: block; }
-
-.hv-center {
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-.tint {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0; }
 
 .btn {
   background: #cbaf8a;
@@ -98,14 +98,17 @@ a {
       outline: none; }
     .navbar .navbar-toggler:hover {
       filter: brightness(1.25); }
+  .navbar #hamburger-menu {
+    color: #cbaf8a; }
   .navbar .navbar-nav {
-    height: 100vh; }
+    height: 100vh;
+    font-size: 75%;
+    flex: .65; }
     .navbar .navbar-nav .nav-item {
-      margin: 0;
+      margin: 0 .5em !important;
       width: 100%;
       font-size: 200%; }
       .navbar .navbar-nav .nav-item .nav-link {
-        margin: .5rem auto;
         color: #cbaf8a !important;
         text-transform: uppercase;
         font-weight: 700;
@@ -113,33 +116,29 @@ a {
         transition: all 0.25s ease-out; }
         .navbar .navbar-nav .nav-item .nav-link:hover {
           filter: brightness(1.25); }
+      .navbar .navbar-nav .nav-item a {
+        margin: 0; }
     .navbar .navbar-nav .nav-icon-row {
-      width: 40%;
       display: flex;
       flex-direction: row;
       justify-content: space-between; }
-  .navbar #hamburger-menu {
-    color: #cbaf8a; }
 
 @media only screen and (min-width: 992px) {
   .navbar {
-    background-color: transparent; }
+    background-color: transparent;
+    font-size: 150%; }
     .navbar .navbar-nav {
       height: initial; }
       .navbar .navbar-nav .nav-item {
-        margin: 0;
-        font-size: 100%;
-        width: 140px; }
-      .navbar .navbar-nav .nav-icon-row {
-        width: 20%; }
-        .navbar .navbar-nav .nav-icon-row .nav-item {
-          width: 2rem !important; } }
+        font-size: 100%; }
+      .navbar .navbar-nav .nav-icon-row .nav-item {
+        width: 2rem !important; } }
 
 #footer {
   background: #222222;
   color: #c9c1b6; }
-  #footer i {
-    font-size: 150%; }
+  #footer #footer-logo {
+    max-height: 15vh; }
   #footer .footer-heading {
     display: inline-block;
     color: #cbaf8a;
@@ -147,14 +146,11 @@ a {
     border-bottom: solid 2px #cbaf8a;
     margin-bottom: 1em; }
   #footer a {
-    color: #c9c1b6 !important; }
-  #footer #footer-logo-section {
-    display: flex;
-    flex-direction: column; }
-    #footer #footer-logo-section #footer-logo {
-      width: 80%; }
-  #footer #footer-logo {
-    max-height: 15vh; }
+    color: #c9c1b6; }
+
+@media only screen and (max-width: 414px) {
+  #footer #site-links {
+    padding-left: 2.5rem !important; } }
 
 @media only screen and (max-width: 576px) {
   #footer .row {
@@ -197,19 +193,17 @@ a {
     #about-us .column h1 {
       color: #c8102e;
       font-family: 'Lato', sans-serif;
-      text-decoration: underline white;
       font-size: 1.3em; }
     #about-us .column h3 {
       color: #c8102e;
       font-family: 'Lato', sans-serif;
-      text-decoration: underline white;
       font-size: 0.7605em; }
     #about-us .column p {
       font-family: 'Lato', sans-serif;
       font-size: 12px; }
     #about-us .column .about-image {
-      width: 140px;
-      height: 140px;
+      width: 27vh;
+      height: 27vh;
       object-fit: cover;
       position: relative;
       overflow: hidden;
@@ -222,24 +216,13 @@ a {
       padding: 15px;
       text-decoration: none;
       font-size: 20px;
-      width: 150px;
+      width: fit-content;
       text-align: center;
       transition: all 0.5s ease-out; }
     #about-us .column .button1:hover {
       background-color: #c8102e;
       color: white;
       border: 6px solid white; }
-
-@media only screen and (min-width: 375px) {
-  #about-us .column h1 {
-    font-size: 2em; }
-  #about-us .column h3 {
-    font-size: 1.17em; }
-  #about-us .column p {
-    font-size: 16px; }
-  #about-us .column .about-image {
-    width: 170px;
-    height: 170px; } }
 
 @media only screen and (min-width: 768px) {
   #about-us .column h1 {
@@ -634,35 +617,40 @@ a {
   color: #c8102e;
   font-size: 1rem; }
 
+.product-unit {
+  color: #c8102e !important; }
+
+.cart-empty {
+  border-top-color: #c8102e !important; }
+  .cart-empty::before {
+    color: #c8102e !important; }
+
 #confirmation {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images5.alphacoders.com/909/thumb-1920-909997.jpg") center/cover no-repeat;
+  background: rgba(0, 0, 0, 0.5), url("assets/images/bg.jpg") center/cover no-repeat;
   position: relative; }
   #confirmation .container-fluid {
     margin-top: 15vh; }
-  #confirmation a {
-    text-align: center;
-    padding: 0;
-    color: white;
-    margin-bottom: 0; }
+  #confirmation .order-confirmation-container {
+    max-width: 800px !important; }
   #confirmation #receipt {
     text-align: center;
     background: white;
     box-shadow: 0 0 5px #d8c777; }
-  #confirmation #number, #confirmation #icon, #confirmation #step-title {
-    color: #cbaf8a; }
   #confirmation #order-number-row {
     border-bottom: dashed;
     border-top: dashed;
     padding-top: 35px;
     padding-bottom: 35px;
     margin: 10% 0; }
-  #confirmation .woocommerce-Price-amount.amount {
-    color: #d8c777; }
-  #confirmation h2 {
+  #confirmation #order-detail {
     padding-top: 30px;
     padding-bottom: 30px; }
+  #confirmation .woocommerce-Price-amount.amount {
+    color: #d8c777; }
+  #confirmation .xlwcty_wrap .xlwcty_Box {
+    margin: 0; }
   #confirmation .confirmation-message {
     background: rgba(0, 0, 0, 0.65);
     color: white;
@@ -672,25 +660,31 @@ a {
   #confirmation #step-0, #confirmation #step-1, #confirmation #step-2, #confirmation #step-3, #confirmation #step-4 {
     padding-bottom: 15px; }
   #confirmation #step-0 {
-    border-bottom: solid 1px #cbaf8a; }
-  #confirmation #step-1, #confirmation #step-2, #confirmation #step-3, #confirmation #step-4 {
-    padding-top: 10px; }
-  #confirmation h6 {
-    font-size: smaller;
-    color: #d8c777; }
-  #confirmation i {
-    font-size: 2.5rem; }
-  #confirmation #step-0 {
+    border-bottom: solid 1px #cbaf8a;
     text-align: center;
     justify-content: center; }
-  #confirmation .xlwcty_wrap .xlwcty_Box {
-    margin: 0; }
-  #confirmation .order-confirmation-container {
-    max-width: 800px !important; }
+  #confirmation #step-1,
+  #confirmation #step-2,
+  #confirmation #step-3,
+  #confirmation #step-4 {
+    padding-top: 10px; }
+  #confirmation #number, #confirmation #icon, #confirmation #step-title {
+    color: #cbaf8a; }
+  #confirmation #icon {
+    font-size: 2.5rem; }
+  #confirmation #contact {
+    text-align: center;
+    padding: 0;
+    color: white;
+    margin-bottom: 0; }
+  #confirmation #footnote {
+    font-size: smaller;
+    color: #d8c777; }
   @media print {
     #confirmation body * {
       visibility: hidden; }
-    #confirmation #receipt, #confirmation #receipt * {
+    #confirmation #receipt,
+    #confirmation #receipt * {
       visibility: visible; }
     #confirmation #receipt {
       position: absolute;

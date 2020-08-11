@@ -526,3 +526,16 @@
     color: $raspberry-red;
     font-size: 1rem;
 }
+
+// TEXT DISPLAYED AFTER PRICE INDICATING UNIT
+.product-unit {
+    color: $raspberry-red !important;
+}
+
+// CART EMPTY STYLING
+.cart-empty {
+    border-top-color: $raspberry-red !important;
+    &::before {
+        color: $raspberry-red !important;
+    }
+}

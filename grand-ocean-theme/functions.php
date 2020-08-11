@@ -240,33 +240,33 @@ function change_default_checkout_state() {
 // add_filter( 'the_title', 'woo_title_order_received', 10, 2 );
 
 
-// add_action( 'template_redirect', 'woo_custom_redirect_after_purchase' );
-// function woo_custom_redirect_after_purchase() {
-// 	global $wp;
-// 	if ( is_checkout() && !empty( $wp->query_vars['order-received'] ) ) {
-// 		wp_redirect(get_template_directory_uri() + "/confirmation");
-// 		exit;
-// 	}
-// }
+add_action( 'template_redirect', 'woo_custom_redirect_after_purchase' );
+function woo_custom_redirect_after_purchase() {
+	global $wp;
+	if ( is_checkout() && !empty( $wp->query_vars['order-received'] ) ) {
+		wp_redirect(get_template_directory_uri() + "/confirmation");
+		exit;
+	}
+}
 
-// add_action( 'woocommerce_thankyou', 'bbloomer_redirectcustom');
+add_action( 'woocommerce_thankyou', 'bbloomer_redirectcustom');
   
-// function bbloomer_redirectcustom( $order_id ){
-//     $order = wc_get_order( $order_id );
-//     $url = 'https://google.com';
-//     if ( ! $order->has_status( 'failed' ) ) {
-//         wp_safe_redirect( $url );
-//         exit;
-//     }
-// }
+function bbloomer_redirectcustom( $order_id ){
+    $order = wc_get_order( $order_id );
+    $url = 'https://google.com';
+    if ( ! $order->has_status( 'failed' ) ) {
+        wp_safe_redirect( $url );
+        exit;
+    }
+}
 
-// function woo_title_order_received( $title, $id ) {
-// 	if ( function_exists( 'is_order_received_page' ) && 
-// 	     is_order_received_page() && get_the_ID() === $id ) {
-// 		$title = "Thank you for your order! :)";
-// 	}
-// 	return $title;
-// }
+function woo_title_order_received( $title, $id ) {
+	if ( function_exists( 'is_order_received_page' ) && 
+	     is_order_received_page() && get_the_ID() === $id ) {
+		$title = "Thank you for your order! :)";
+	}
+	return $title;
+}
 
 // validation for phone number field
 add_action('woocommerce_checkout_process', 'custom_validate_billing_phone');
@@ -285,18 +285,17 @@ function action_template_loop_product_thumbnail() {
 
     $product_id = $product->get_id();
     $product_sku = $product->get_sku();
+    $product_thumbnail = $product->get_image_id();
     $attachment_ids = $product->get_gallery_image_ids();
     if(!empty($attachment_ids)) {
         $html = '<div id="' . $product_sku . '" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">';
-        $counter = 0;
+        $html .= '<div class="carousel-item active">';
+        $html .= '<img class="d-block w-100" src="' . wp_get_attachment_image_url($product_thumbnail) . '" />';
+        $html .= '</div>';
+
         foreach($attachment_ids as $image_id) {
-            if(!$counter) {
-                $html .= '<div class="carousel-item active">';
-                $counter++;
-            } else {
-                $html .= '<div class="carousel-item">';
-            }            
+            $html .= '<div class="carousel-item">';
             $html .= '<img class="d-block w-100" src="' . wp_get_attachment_image_url($image_id) . '" />';
             $html .= '</div>';
             
@@ -323,6 +322,12 @@ function action_template_loop_product_thumbnail() {
 
         //echo '<img width="200" src="https://media.nesta.org.uk/images/Predictions-2019_Twitter_02.width-1200.png"></img>';
     // }
+}
+
+// CHANGING SHIPPING LABELS IN CART/CHECKOUT
+add_filter( 'woocommerce_shipping_package_name', 'custom_shipping_package_name' );
+function custom_shipping_package_name( $name ) {
+  return 'Delivery';
 }
 
 ?>
