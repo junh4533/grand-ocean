@@ -619,6 +619,14 @@ a {
   color: #c8102e;
   font-size: 1rem; }
 
+.product-unit {
+  color: #c8102e !important; }
+
+.cart-empty {
+  border-top-color: #c8102e !important; }
+  .cart-empty::before {
+    color: #c8102e !important; }
+
 #confirmation {
   width: 100%;
   min-height: 100vh;

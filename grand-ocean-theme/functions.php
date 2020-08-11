@@ -285,18 +285,17 @@ function action_template_loop_product_thumbnail() {
 
     $product_id = $product->get_id();
     $product_sku = $product->get_sku();
+    $product_thumbnail = $product->get_image_id();
     $attachment_ids = $product->get_gallery_image_ids();
     if(!empty($attachment_ids)) {
         $html = '<div id="' . $product_sku . '" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">';
-        $counter = 0;
+        $html .= '<div class="carousel-item active">';
+        $html .= '<img class="d-block w-100" src="' . wp_get_attachment_image_url($product_thumbnail) . '" />';
+        $html .= '</div>';
+
         foreach($attachment_ids as $image_id) {
-            if(!$counter) {
-                $html .= '<div class="carousel-item active">';
-                $counter++;
-            } else {
-                $html .= '<div class="carousel-item">';
-            }            
+            $html .= '<div class="carousel-item">';
             $html .= '<img class="d-block w-100" src="' . wp_get_attachment_image_url($image_id) . '" />';
             $html .= '</div>';
             
@@ -323,6 +322,12 @@ function action_template_loop_product_thumbnail() {
 
         //echo '<img width="200" src="https://media.nesta.org.uk/images/Predictions-2019_Twitter_02.width-1200.png"></img>';
     // }
+}
+
+// CHANGING SHIPPING LABELS IN CART/CHECKOUT
+add_filter( 'woocommerce_shipping_package_name', 'custom_shipping_package_name' );
+function custom_shipping_package_name( $name ) {
+  return 'Delivery';
 }
 
 ?>
