@@ -3,7 +3,6 @@
 <?php get_header();?>
 
 <section class="hv-center" id="home">
-    <div class="tint"></div>
     <div id="home-content">
         <h1>鲜</h1>
     </div>

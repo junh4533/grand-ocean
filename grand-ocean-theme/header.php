@@ -14,7 +14,6 @@
 <body <?php body_class(); //displays class names for the body ?>>
 
     <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="tint"></div>
         <!-- Brand -->
         <a class="navbar-brand" href="<?php echo get_site_url(); ?>">
             <img id="navbar-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-glow.png"

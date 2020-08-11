@@ -1,7 +1,7 @@
 #home {
     width: 100%;
     height: 100vh;
-    background: url('assets/images/bg.jpg') center / cover no-repeat;
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('assets/images/bg.jpg') center / cover no-repeat;
     position: relative;
 
     #home-content {
@@ -15,9 +15,5 @@
             font-family: 'Long Cang', cursive;
             color: $gold;
         }
-    }
-
-    .tint {
-        background: rgba(0, 0, 0, .7);
     }
 }
