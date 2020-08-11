@@ -2,7 +2,7 @@
 <?php /* Template Name: Confirmation */ ?>
 <?php get_header();?>
 
-<script> 
+<!-- <script> 
     function PrintElem(elem)
     {
         Popup(jQuery('<div>').append(jQuery(elem).clone()).html());
@@ -18,20 +18,20 @@
         // mywindow.document.write(document.getElementById('receipt').innerHTML);
         // mywindow.document.write('</body></html>');
 
-        mywindow.document.write(
-            '<html>' + 
-                '<head>' + 
-                    '<title>' + document.title  + '</title>' + 
-                    '<link rel="stylesheet" href="style.css" type="text/css"/>' + 
-                '</head>' + 
-                '<body>' + 
-                    // '<div class="myDiv">' +
-                        data +
-                        // document.getElementById('receipt').innerHTML + 
-                    // '</div>' + 
-                '</body>'+
-            '</html>'
-        );
+        // mywindow.document.write(
+        //     '<html>' + 
+        //         '<head>' + 
+        //             '<title>' + document.title  + '</title>' + 
+        //             '<link rel="stylesheet" href="style.css" type="text/css"/>' + 
+        //         '</head>' + 
+        //         '<body>' + 
+        //             // '<div class="myDiv">' +
+        //                 data +
+        //                 // document.getElementById('receipt').innerHTML + 
+        //             // '</div>' + 
+        //         '</body>'+
+        //     '</html>'
+        // );
 
         // mywindow.document.close(); 
         // mywindow.focus(); 
@@ -41,12 +41,12 @@
         //     mywindow.close(); 
         // }, 10000);
         
-        mywindow.print();
+        // mywindow.print();
         // mywindow.close();
 
         return true;
     }
-</script> 
+</script>  -->
 
 <section class="hv-center" id="confirmation">
     <div class="container-fluid">
@@ -69,7 +69,7 @@
                     </div>
                 </div>
 
-                <input type="button" value="Print Your Receipt!" onclick="PrintElem('#receipt')">  
+                <!-- <input type="button" value="Print Your Receipt!" onclick="PrintElem('#receipt')"> -->
             </div>
             <div class="col-xl-1"></div>
             <div class="col-12 col-sm-9 col-md-11 col-xl-6 my-3 order-confirmation-container hv-center">
