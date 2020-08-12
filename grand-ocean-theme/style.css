@@ -197,7 +197,7 @@ a {
       overflow: hidden;
       border-radius: 50% !important;
       border: 5px solid white; }
-    #about-us .column .button1 {
+    #about-us .column .abt-us-button {
       background-color: #e6e6e6;
       border: 6px solid white;
       color: #c8102e;
@@ -207,7 +207,7 @@ a {
       width: fit-content;
       text-align: center;
       transition: all 0.5s ease-out; }
-    #about-us .column .button1:hover {
+    #about-us .column .abt-us-button:hover {
       background-color: #c8102e;
       color: white;
       border: 6px solid white; }
